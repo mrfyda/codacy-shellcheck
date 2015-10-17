@@ -1,0 +1,10 @@
+{
+  "name": "shellcheck",
+  "patterns": [
+    {
+      "patternId": "2148",
+      "level": "Error",
+      "category": "ErrorProne"
+    }
+  ]
+}

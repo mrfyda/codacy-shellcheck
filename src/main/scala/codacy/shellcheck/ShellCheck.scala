@@ -22,52 +22,29 @@ object ShellCheck extends Tool {
           paths.map(_.toString).toSeq
       }
 
-      val patternsToLint = ToolHelper.getPatternsToLint(conf)
-      val configuration = Seq()// Seq("-c", writeConfigFile(patternsToLint))
-
-      val command = Seq("shellcheck", "-f", "json") ++ configuration ++ filesToLint
+      val command = Seq("shellcheck", "-f", "json") ++ filesToLint
 
       CommandRunner.exec(command) match {
         case Right(resultFromTool) =>
-          parseToolResult(resultFromTool.stdout, path)
+          val patternsToLint = ToolHelper.getPatternsToLint(conf)
+          parseToolResult(resultFromTool.stdout, path, patternsToLint)
         case Left(failure) => throw failure
       }
     }
   }
 
-/*  def extractIssuesAndErrors(filePath: String, messages: Option[JsArray])(implicit basePath: String): Seq[Result] = {
-    messages.map(
-      messagesArr =>
-        messagesArr.value.flatMap {
-          message =>
-              val path = SourcePath(FileHelper.stripPath(filePath, basePath))
-              val msg = (message \ "message").asOpt[String].getOrElse("Fatal Error")
-              val patternId = PatternId("fatal")
-              val line = ResultLine((message \ "line").asOpt[Int].getOrElse(1))
-
-              val fileError = FileError(path, Some(ErrorMessage(msg)))
-              val issue = Issue(path, ResultMessage(msg), patternId, line)
-
-              Seq(fileError, issue)
-        }
-    ).getOrElse(Seq())
-  }*/
-
-  def resultFromToolResult(toolResult: JsArray)(implicit basePath: String): Seq[Result] = {
-    toolResult.value.flatMap {
+  def parseToolResult(resultFromTool: Seq[String], path: Path, patterns: Seq[PatternDef]): Seq[Result] = {
+    Json.parse(resultFromTool.mkString).asOpt[Seq[ShellCheckResult]].map {
       result =>
-        result.asOpt[ShellCheckResult].map {
-          shellCheckResult =>
-            Issue(SourcePath(FileHelper.stripPath(shellCheckResult.file, basePath)), ResultMessage(shellCheckResult.message), PatternId(shellCheckResult.code.toString), ResultLine(shellCheckResult.line))
+        result.collect {
+          case shellCheckResult if patterns.map(_.patternId.value).contains(s"SC${shellCheckResult.code}") =>
+            Issue(
+              SourcePath(FileHelper.stripPath(shellCheckResult.file, path.toString)),
+              ResultMessage(shellCheckResult.message),
+              PatternId(s"SC${shellCheckResult.code}"),
+              ResultLine(shellCheckResult.line))
         }
     }
-  }
-
-  def parseToolResult(resultFromTool: Seq[String], path: Path): Iterable[Result] = {
-    implicit val basePath = path.toString
-
-    val jsonParsed = Json.parse(resultFromTool.mkString)
-    jsonParsed.asOpt[JsArray].fold(Seq[Result]())(resultFromToolResult)
-  }
+  }.getOrElse(Seq.empty)
 
 }

@@ -2,6 +2,36 @@
   "name": "shellcheck",
   "patterns": [
     {
+      "patternId": "SC2001",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "SC2002",
+      "level": "Info",
+      "category": "Performance"
+    },
+    {
+      "patternId": "SC2003",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "SC2004",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "SC2006",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "SC2008",
+      "level": "Info",
+      "category": "ErrorProne"
+    },
+    {
       "patternId": "SC2148",
       "level": "Error",
       "category": "ErrorProne"

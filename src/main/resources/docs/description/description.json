@@ -1,8 +1,44 @@
 [
   {
+    "patternId": "SC2001",
+    "title": "Enforce simplification of search/replace",
+    "description": "Enforces the use of simple search/replace instead of sed.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "SC2002",
+    "title": "Prohibit useless cat usage",
+    "description": "Prohibits using cat to read files as input to a program.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "SC2003",
+    "title": "Prohibit use of expr",
+    "description": "Prohibits uses of the antiquated expr utility.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "SC2004",
+    "title": "Prohibit $ on arithmetic variables",
+    "description": "Prohibits $ in arithmetic contexts.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "SC2006",
+    "title": "Prohibit backtick substitution",
+    "description": "Prohibits backtick command substitutions.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "SC2008",
+    "title": "Prohibit piping output to echo",
+    "description": "Prohibits piping command output to echo.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "SC2148",
     "title": "Enforce use of shebang",
-    "description": "Enforce the use of the shebang directive.",
-    "timeToFix": 1
+    "description": "Enforces the use of the shebang directive.",
+    "timeToFix": 5
   }
 ]

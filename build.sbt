@@ -27,8 +27,7 @@ version in Docker := "1.0"
 organization := "com.codacy"
 
 val installAll =
-  """apk update && apk add bash curl &&
-    |mkdir -p .cabal/bin/ &&
+  """mkdir -p .cabal/bin/ &&
     |cp -R /root/.cabal/bin/ .cabal/ &&
     |chmod -R +x .cabal/bin/""".stripMargin.replaceAll(System.lineSeparator(), " ")
 

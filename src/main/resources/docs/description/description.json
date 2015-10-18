@@ -1,6 +1,6 @@
 [
   {
-    "patternId": "2148",
+    "patternId": "SC2148",
     "title": "Enforce use of shebang",
     "description": "Enforce the use of the shebang directive.",
     "timeToFix": 1

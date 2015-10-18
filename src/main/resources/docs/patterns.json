@@ -2,7 +2,7 @@
   "name": "shellcheck",
   "patterns": [
     {
-      "patternId": "2148",
+      "patternId": "SC2148",
       "level": "Error",
       "category": "ErrorProne"
     }

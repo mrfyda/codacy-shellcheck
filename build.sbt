@@ -28,8 +28,9 @@ organization := "com.codacy"
 
 val installAll =
   """apk update && apk add bash curl &&
-    |cabal update &&
-    |cabal install shellcheck""".stripMargin.replaceAll(System.lineSeparator(), " ")
+    |mkdir -p .cabal/bin/ &&
+    |cp -R /root/.cabal/bin/ .cabal/ &&
+    |chmod -R +x .cabal/bin/""".stripMargin.replaceAll(System.lineSeparator(), " ")
 
 mappings in Universal <++= (resourceDirectory in Compile) map { (resourceDir: File) =>
   val src = resourceDir / "docs"
@@ -49,11 +50,10 @@ daemonUser in Docker := dockerUser
 
 daemonGroup in Docker := dockerGroup
 
-dockerBaseImage := "rtfpessoa/alpine-ghc-oraclejdk8"
+dockerBaseImage := "mrfyda/alpine-ghc-oraclejdk8-shellcheck"
 
 dockerCommands := dockerCommands.value.flatMap {
   case cmd@Cmd("WORKDIR", _) => List(cmd,
-    Cmd("RUN", installAll),
     Cmd("RUN", installAll)
   )
   case cmd@(Cmd("ADD", "opt /opt")) => List(cmd,

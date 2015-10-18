@@ -2,12 +2,30 @@
 
 for i in {0..99}
 do
-   curl -s -o SC1`printf %03d $i`.md https://raw.githubusercontent.com/wiki/koalaman/shellcheck/SC1`printf %03d $i`.md
+   NAME=SC1`printf %03d $i`
+   FILENAME=${NAME}.md
+
+   echo "Downloading ${NAME}..."
+
+   curl -s -o ${FILENAME} https://raw.githubusercontent.com/wiki/koalaman/shellcheck/${FILENAME}
+   echo "" >> ${FILENAME}
+   echo "[Source](https://github.com/koalaman/shellcheck/wiki/${NAME})" >> ${FILENAME}
+   echo "" >> ${FILENAME}
 done
 
 for i in {0..199}
 do
-   curl -s -o SC2`printf %03d $i`.md https://raw.githubusercontent.com/wiki/koalaman/shellcheck/SC2`printf %03d $i`.md
+   NAME=SC2`printf %03d $i`
+   FILENAME=${NAME}.md
+
+   echo "Downloading ${NAME}..."
+
+   curl -s -o ${FILENAME} https://raw.githubusercontent.com/wiki/koalaman/shellcheck/${FILENAME}
+   echo "" >> ${FILENAME}
+   echo "[Source](https://github.com/koalaman/shellcheck/wiki/${NAME})" >> ${FILENAME}
+   echo "" >> ${FILENAME}
 done
+
+echo "Deleting extra files..."
 
 rm -f `fgrep -lir 'Not Found' *.md`

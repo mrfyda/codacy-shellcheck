@@ -13,8 +13,8 @@
   },
   {
     "patternId": "SC2003",
-    "title": "Prohibit use of expr",
-    "description": "Prohibits uses of the antiquated expr utility.",
+    "title": "Prohibit usage of expr",
+    "description": "Prohibits usages of the antiquated expr utility.",
     "timeToFix": 5
   },
   {
@@ -33,6 +33,102 @@
     "patternId": "SC2008",
     "title": "Prohibit piping output to echo",
     "description": "Prohibits piping command output to echo.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "SC2009",
+    "title": "Enforce usage of pgrep",
+    "description": "Enforces usage of pgrep over ps aux with grep.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "SC2010",
+    "title": "Prohibit usage of ls with grep",
+    "description": "Prohibits usage of ls with grep.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "SC2012",
+    "title": "Enforce usage of find over ls",
+    "description": "Enforces usage of find over ls.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "SC2013",
+    "title": "Enforce for loops by line",
+    "description": "Enforces looping over lines rather than words.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "SC2014",
+    "title": "Prohibit early command substitutions evaluation in find",
+    "description": "Prohibits any command substitutions from being executed before the find command.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "SC2015",
+    "title": "Prohibit usage of A && B || C as if-then-else",
+    "description": "Prohibits usage of A && B || C not to be confused with if-then-else.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "SC2016",
+    "title": "Prohibit usage of single quotes",
+    "description": "Prohibits usage of single quotes.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "SC2017",
+    "title": "Enforce multiplication before division",
+    "description": "Enforces using a\\*c/b rather than a/b\\*c.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "SC2020",
+    "title": "Prohibit usage of tr with words",
+    "description": "Prohibits usage of tr with words",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "SC2022",
+    "title": "Prevent problematic regular expression in grep",
+    "description": "Prevents problematic regular expression in grep.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "SC2024",
+    "title": "Prohibit sudo redirects",
+    "description": "Prohibits sudo redirects.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "SC2025",
+    "title": "Enforce escaping sequences in \\[..\\]",
+    "description": "Enforces escaping sequences in \\[..\\].",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "SC2026",
+    "title": "Prevent bad quoting",
+    "description": "Prevents bad quote nesting.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "SC2027",
+    "title": "Prevent variable unquoting",
+    "description": "Prevents variables from being accidentally unquoted from surrounding quotes.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "SC2028",
+    "title": "Prohibit usage of escape sequences with echo",
+    "description": "Prohibits usage of backslash with echo.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "SC2029",
+    "title": "Prevent early expansion of variables with ssh",
+    "description": "Prevents early expansion of variables with ssh.",
     "timeToFix": 5
   },
   {

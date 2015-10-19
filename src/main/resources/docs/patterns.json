@@ -32,6 +32,86 @@
       "category": "ErrorProne"
     },
     {
+      "patternId": "SC2009",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
+      "patternId": "SC2010",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
+      "patternId": "SC2012",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
+      "patternId": "SC2013",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
+      "patternId": "SC2014",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
+      "patternId": "SC2015",
+      "level": "Info",
+      "category": "ErrorProne"
+    },
+    {
+      "patternId": "SC2016",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "SC2017",
+      "level": "Info",
+      "category": "BestPractice"
+    },
+    {
+      "patternId": "SC2020",
+      "level": "Info",
+      "category": "ErrorProne"
+    },
+    {
+      "patternId": "SC2022",
+      "level": "Info",
+      "category": "ErrorProne"
+    },
+    {
+      "patternId": "SC2024",
+      "level": "Info",
+      "category": "ErrorProne"
+    },
+    {
+      "patternId": "SC2025",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "SC2026",
+      "level": "Info",
+      "category": "ErrorProne"
+    },
+    {
+      "patternId": "SC2027",
+      "level": "Info",
+      "category": "ErrorProne"
+    },
+    {
+      "patternId": "SC2028",
+      "level": "Info",
+      "category": "ErrorProne"
+    },
+    {
+      "patternId": "SC2029",
+      "level": "Info",
+      "category": "ErrorProne"
+    },
+    {
       "patternId": "SC2148",
       "level": "Error",
       "category": "ErrorProne"

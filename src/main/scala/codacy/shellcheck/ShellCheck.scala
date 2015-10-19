@@ -39,9 +39,10 @@ object ShellCheck extends Tool {
 
   def parseToolResult(resultFromTool: Seq[String], path: Path, patterns: Seq[PatternDef]): Seq[Result] = {
     Json.parse(resultFromTool.mkString).asOpt[Seq[ShellCheckResult]].map {
-      result =>
-        result.collect {
+      results =>
+        results.collect {
           case shellCheckResult if patterns.map(_.patternId.value).contains(s"SC${shellCheckResult.code}") =>
+            println(shellCheckResult)
             Issue(
               SourcePath(FileHelper.stripPath(shellCheckResult.file, path.toString)),
               ResultMessage(shellCheckResult.message),

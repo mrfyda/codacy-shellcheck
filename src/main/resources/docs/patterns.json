@@ -112,6 +112,26 @@
       "category": "ErrorProne"
     },
     {
+      "patternId": "SC2031",
+      "level": "Info",
+      "category": "ErrorProne"
+    },
+    {
+      "patternId": "SC2033",
+      "level": "Info",
+      "category": "ErrorProne"
+    },
+    {
+      "patternId": "SC2034",
+      "level": "Info",
+      "category": "ErrorProne"
+    },
+    {
+      "patternId": "SC2036",
+      "level": "Info",
+      "category": "ErrorProne"
+    },
+    {
       "patternId": "SC2148",
       "level": "Error",
       "category": "ErrorProne"

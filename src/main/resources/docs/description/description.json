@@ -132,6 +132,30 @@
     "timeToFix": 5
   },
   {
+    "patternId": "SC2031",
+    "title": "Prevent modification of variables in subshells",
+    "description": "Prevents modification of a variable in a subshell.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "SC2033",
+    "title": "Prevent shell functions as arguments to external commands",
+    "description": "Prevents shell functions from being passed to external commands.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "SC2034",
+    "title": "Prohibit unused variables",
+    "description": "Prohibits usage of unused variables.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "SC2036",
+    "title": "Enforce usage of substitution to assign pipe result",
+    "description": "Enforces usage of command substitution to assign pipeline result.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "SC2148",
     "title": "Enforce use of shebang",
     "description": "Enforces the use of the shebang directive.",

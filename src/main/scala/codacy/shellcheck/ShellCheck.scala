@@ -3,9 +3,8 @@ package codacy.shellcheck
 import java.nio.file.Path
 
 import codacy.dockerApi._
-import codacy.dockerApi.utils.CommandRunner
+import codacy.dockerApi.utils.{CommandRunner, FileHelper, ToolHelper}
 import play.api.libs.json._
-import seedtools.{FileHelper, ToolHelper}
 
 import scala.util.Try
 
@@ -17,39 +16,44 @@ object ShellCheckResult {
 
 object ShellCheck extends Tool {
 
-  override def apply(path: Path, conf: Option[Seq[PatternDef]], files: Option[Set[Path]])(implicit spec: Spec): Try[Iterable[Result]] = {
+  override def apply(path: Path, conf: Option[List[PatternDef]], files: Option[Set[Path]])
+                    (implicit spec: Spec): Try[List[Result]] = {
     Try {
       val filesToLint: Seq[String] = files.fold {
         FileHelper.listAllFiles(path)
           .map(_.getAbsolutePath).filter(_.endsWith(".sh"))
       } {
         paths =>
-          paths.map(_.toString).toSeq
+          paths.map(_.toString).toList
       }
 
-      val command = Seq(".cabal/bin/shellcheck", "-f", "json") ++ filesToLint
+      val command = List(".cabal/bin/shellcheck", "-f", "json") ++ filesToLint
       CommandRunner.exec(command) match {
         case Right(resultFromTool) =>
-          val patternsToLint = ToolHelper.getPatternsToLint(conf)
-          parseToolResult(resultFromTool.stdout, path, patternsToLint)
-        case Left(failure) => throw failure
+          parseToolResult(resultFromTool.stdout, path, conf)
+        case Left(failure) =>
+          throw failure
       }
     }
   }
 
-  def parseToolResult(resultFromTool: Seq[String], path: Path, patterns: Seq[PatternDef]): Seq[Result] = {
-    Json.parse(resultFromTool.mkString).asOpt[Seq[ShellCheckResult]].map {
-      results =>
-        results.collect {
-          case shellCheckResult if patterns.map(_.patternId.value).contains(s"SC${shellCheckResult.code}") =>
-            println(shellCheckResult)
-            Issue(
-              SourcePath(FileHelper.stripPath(shellCheckResult.file, path.toString)),
-              ResultMessage(shellCheckResult.message),
-              PatternId(s"SC${shellCheckResult.code}"),
-              ResultLine(shellCheckResult.line))
-        }
+  private def parseToolResult(resultFromTool: List[String], path: Path, conf: Option[List[PatternDef]])
+                             (implicit spec: Spec): List[Result] = {
+    val results = Try(Json.parse(resultFromTool.mkString)).toOption
+      .flatMap(_.asOpt[List[ShellCheckResult]]).getOrElse(List.empty)
+      .map { result =>
+        Issue(
+          SourcePath(FileHelper.stripPath(result.file, path.toString)),
+          ResultMessage(result.message),
+          PatternId(s"SC${result.code}"),
+          ResultLine(result.line))
+      }
+
+    ToolHelper.getPatternsToLint(conf).fold {
+      results
+    } { patterns =>
+      results.filter { r => patterns.map(_.patternId).contains(r.patternId) }
     }
-  }.getOrElse(Seq.empty)
+  }
 
 }

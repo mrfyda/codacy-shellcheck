@@ -12,9 +12,9 @@ and $srcDir must contain a valid .codacy.json configuration
 
 ## Docs
 
-[Docker Docs](http://docs.codacy.com/v1.5/docs/tool-developer-guide)
+[Docker Docs](https://support.codacy.com/hc/en-us/articles/207994725-Tool-Developer-Guide)
 
-[Scala Docker Template Docs](http://docs.codacy.com/v1.5/docs/tool-developer-guide-scala)
+[Scala Docker Template Docs](https://support.codacy.com/hc/en-us/articles/207280379-Tool-Developer-Guide-Using-Scala)
 
 ## Test
 

@@ -1,15 +1,17 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/e6e9a17f8190438e83874c1b3f7cb62f)](https://www.codacy.com/app/Codacy/codacy-shellcheck?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=codacy/codacy-shellcheck&amp;utm_campaign=Badge_Grade)
 [![Build Status](https://circleci.com/gh/codacy/codacy-shellcheck.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/codacy/codacy-shellcheck)
 
-create the docker: sbt docker:publishLocal
+# Codacy ShellCheck
 
-the docker is supposed to be run with the following command:
+Create the docker: `sbt docker:publishLocal`
 
-```
+The docker is supposed to be run with the following command:
+
+```sh
 docker run -it -v $srcDir:/src  <DOCKER_NAME>:<DOCKER_VERSION>
 ```
 
-and $srcDir must contain a valid .codacy.json configuration
+and $srcDir must contain a valid `.codacy.json` configuration
 
 ## Docs
 
@@ -40,3 +42,7 @@ Codacy supports PHP, Python, Ruby, Java, JavaScript, and Scala, among others.
 ### Free for Open Source
 
 Codacy is free for Open Source projects.
+
+## License
+
+Licensed under the Apache License, Version 2.0.

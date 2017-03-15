@@ -27,7 +27,7 @@ object ShellCheck extends Tool {
           paths.map(_.toString).toList
       }
 
-      val command = List(".cabal/bin/shellcheck", "-f", "json") ++ filesToLint
+      val command = List("shellcheck", "-f", "json") ++ filesToLint
       CommandRunner.exec(command) match {
         case Right(resultFromTool) =>
           parseToolResult(resultFromTool.stdout, path, conf)

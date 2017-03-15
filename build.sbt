@@ -27,9 +27,7 @@ version in Docker := "1.0"
 organization := "com.codacy"
 
 val installAll =
-  """mkdir -p .cabal/bin/ &&
-    |cp -R /root/.cabal/bin/ .cabal/ &&
-    |chmod -R +x .cabal/bin/""".stripMargin.replaceAll(System.lineSeparator(), " ")
+  """apk --no-cache add bash"""
 
 mappings in Universal <++= (resourceDirectory in Compile) map { (resourceDir: File) =>
   val src = resourceDir / "docs"
@@ -49,7 +47,7 @@ daemonUser in Docker := dockerUser
 
 daemonGroup in Docker := dockerGroup
 
-dockerBaseImage := "mrfyda/alpine-ghc-oraclejdk8-shellcheck"
+dockerBaseImage := "mrfyda/alpine-jre-shellcheck:v0.4.5"
 
 dockerCommands := dockerCommands.value.flatMap {
   case cmd@Cmd("WORKDIR", _) => List(cmd,

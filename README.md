@@ -23,6 +23,17 @@ and $srcDir must contain a valid `.codacy.json` configuration
 
 Follow the instructions at [codacy-plugins-test](https://github.com/codacy/codacy-plugins-test/blob/master/README.md#test-definition)
 
+## Generating the documentation
+
+Update the `VERSION` variable an run:
+
+```bash
+cd docs
+./generate.sh
+```
+
+This will create updated `patterns.json`, `description.json` and the individual documentation Markdown files.
+
 ## What is Codacy?
 
 [Codacy](https://www.codacy.com/) is an Automated Code Review Tool that monitors your technical debt, helps you improve your code quality, teaches best practices to your developers, and helps you save time in Code Reviews.

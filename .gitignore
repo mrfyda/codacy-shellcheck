@@ -6,4 +6,5 @@
 /target/
 .idea
 .DS_Store
+docs/shellcheck
 docs/shellcheck.wiki

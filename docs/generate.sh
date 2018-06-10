@@ -4,6 +4,7 @@ DOCS_HOME="../../src/main/resources/docs/"
 DESCRIPTION_HOME="${DOCS_HOME}description/"
 VERSION="0.5.0"
 
+git clone https://github.com/koalaman/shellcheck.git
 git clone https://github.com/koalaman/shellcheck.wiki.git
 
 cd shellcheck.wiki
@@ -12,7 +13,18 @@ cd shellcheck.wiki
 for f in SC*; do
   pattern_id=${f%.*}
   [ -n "$patterns" ] && patterns+=","
-  patterns+=$(jq -cMn --arg patternId "$pattern_id" '{"patternId": $patternId, "level": "Info", "category": "CodeStyle"}')
+  internal_id=`echo $pattern_id | grep -o '[0-9]\+'`
+  severity=`grep -hR $internal_id ../shellcheck`
+  case $severity in
+    *"err"*) level="Error" ;;
+    *"ErrorC"*) level="Error" ;;
+    *"warn"*) level="Warning" ;;
+    *"WarningC"*) level="Warning" ;;
+    *"info"*) level="Info" ;;
+    *"InfoC"*) level="Info" ;;
+    *) level="Info" ;;
+  esac
+  patterns+=$(jq -cMn --arg patternId "$pattern_id" --arg level "$level" '{"patternId": $patternId, "level": $level, "category": "CodeStyle"}')
 done
 
 jq -Mn --arg version "$VERSION" --argjson patterns "[$patterns]" '{"name": "shellcheck", "version": $version, "patterns": $patterns}' > "${DOCS_HOME}patterns.json"

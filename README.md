@@ -25,7 +25,7 @@ Follow the instructions at [codacy-plugins-test](https://github.com/codacy/codac
 
 ## Generating the documentation
 
-Update the `VERSION` variable an run:
+Update the `VERSION` variable and run:
 
 ```bash
 cd docs

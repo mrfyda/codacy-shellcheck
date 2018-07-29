@@ -460,7 +460,7 @@
     {
       "patternId": "SC2002",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "Performance"
     },
     {
       "patternId": "SC2003",
@@ -490,37 +490,37 @@
     {
       "patternId": "SC2008",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "ErrorProne"
     },
     {
       "patternId": "SC2009",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "BestPractice"
     },
     {
       "patternId": "SC2010",
       "level": "Warning",
-      "category": "CodeStyle"
+      "category": "BestPractice"
     },
     {
       "patternId": "SC2012",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "BestPractice"
     },
     {
       "patternId": "SC2013",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "BestPractice"
     },
     {
       "patternId": "SC2014",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "BestPractice"
     },
     {
       "patternId": "SC2015",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "ErrorProne"
     },
     {
       "patternId": "SC2016",
@@ -530,7 +530,7 @@
     {
       "patternId": "SC2017",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "BestPractice"
     },
     {
       "patternId": "SC2018",
@@ -545,7 +545,7 @@
     {
       "patternId": "SC2020",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "ErrorProne"
     },
     {
       "patternId": "SC2021",
@@ -555,12 +555,12 @@
     {
       "patternId": "SC2022",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "ErrorProne"
     },
     {
       "patternId": "SC2024",
       "level": "Warning",
-      "category": "CodeStyle"
+      "category": "ErrorProne"
     },
     {
       "patternId": "SC2025",
@@ -570,22 +570,22 @@
     {
       "patternId": "SC2026",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "ErrorProne"
     },
     {
       "patternId": "SC2027",
       "level": "Warning",
-      "category": "CodeStyle"
+      "category": "ErrorProne"
     },
     {
       "patternId": "SC2028",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "ErrorProne"
     },
     {
       "patternId": "SC2029",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "ErrorProne"
     },
     {
       "patternId": "SC2030",
@@ -595,7 +595,7 @@
     {
       "patternId": "SC2031",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "ErrorProne"
     },
     {
       "patternId": "SC2032",
@@ -605,12 +605,12 @@
     {
       "patternId": "SC2033",
       "level": "Warning",
-      "category": "CodeStyle"
+      "category": "ErrorProne"
     },
     {
       "patternId": "SC2034",
       "level": "Warning",
-      "category": "CodeStyle"
+      "category": "ErrorProne"
     },
     {
       "patternId": "SC2035",
@@ -620,7 +620,7 @@
     {
       "patternId": "SC2036",
       "level": "Warning",
-      "category": "CodeStyle"
+      "category": "ErrorProne"
     },
     {
       "patternId": "SC2037",
@@ -1050,7 +1050,7 @@
     {
       "patternId": "SC2148",
       "level": "Error",
-      "category": "CodeStyle"
+      "category": "ErrorProne"
     },
     {
       "patternId": "SC2149",

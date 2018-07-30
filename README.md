@@ -8,7 +8,7 @@ Create the docker: `sbt docker:publishLocal`
 The docker is supposed to be run with the following command:
 
 ```sh
-docker run -it -v $srcDir:/src  <DOCKER_NAME>:<DOCKER_VERSION>
+docker run -it - $srcDir:/src  <DOCKER_NAME>:<DOCKER_VERSION>
 ```
 
 and $srcDir must contain a valid `.codacy.json` configuration

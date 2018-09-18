@@ -1,5 +1,6 @@
 package codacy.shellcheck
 
+import java.io.File
 import java.nio.file.Path
 
 import codacy.dockerApi._
@@ -28,7 +29,7 @@ object ShellCheck extends Tool {
       }
 
       val command = List("shellcheck", "-f", "json") ++ filesToLint
-      CommandRunner.exec(command) match {
+      CommandRunner.exec(command, Option(new File(path))) match {
         case Right(resultFromTool) =>
           parseToolResult(resultFromTool.stdout, path, conf)
         case Left(failure) =>

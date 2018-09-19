@@ -2,16 +2,16 @@ import com.typesafe.sbt.packager.docker.{Cmd, ExecCmd}
 
 name := """codacy-engine-shellcheck"""
 
-version := "1.0-SNAPSHOT"
+version := "1.0.0-SNAPSHOT"
 
-val languageVersion = "2.11.7"
+val languageVersion = "2.11.12"
 
 scalaVersion := languageVersion
 
-resolvers ++= Seq(
-  "Sonatype OSS Snapshots" at "https://oss.sonatype.org/content/repositories/releases",
-  "Typesafe Repo" at "http://repo.typesafe.com/typesafe/releases/"
-)
+resolvers := Seq(
+  "Sonatype OSS Snapshots".at("https://oss.sonatype.org/content/repositories/releases"),
+  "Typesafe Repo".at("http://repo.typesafe.com/typesafe/releases/")
+) ++ resolvers.value
 
 libraryDependencies ++= Seq(
   "com.typesafe.play" %% "play-json" % "2.3.9",

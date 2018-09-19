@@ -8,10 +8,10 @@ val languageVersion = "2.11.7"
 
 scalaVersion := languageVersion
 
-resolvers ++= Seq(
-  "Sonatype OSS Snapshots" at "https://oss.sonatype.org/content/repositories/releases",
-  "Typesafe Repo" at "http://repo.typesafe.com/typesafe/releases/"
-)
+resolvers := Seq(
+  "Sonatype OSS Snapshots".at("https://oss.sonatype.org/content/repositories/releases"),
+  "Typesafe Repo".at("http://repo.typesafe.com/typesafe/releases/")
+) ++ resolvers.value
 
 libraryDependencies ++= Seq(
   "com.typesafe.play" %% "play-json" % "2.3.9",

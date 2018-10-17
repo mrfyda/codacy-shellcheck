@@ -1,44 +1,40 @@
 import com.typesafe.sbt.packager.docker.{Cmd, ExecCmd}
 
-name := """codacy-engine-shellcheck"""
+organization := "codacy"
+
+name := "codacy-shellcheck"
 
 version := "1.0.0-SNAPSHOT"
 
-val languageVersion = "2.11.12"
+val languageVersion = "2.12.7"
 
 scalaVersion := languageVersion
 
-resolvers := Seq(
+resolvers ++= Seq(
   "Sonatype OSS Snapshots".at("https://oss.sonatype.org/content/repositories/releases"),
   "Typesafe Repo".at("http://repo.typesafe.com/typesafe/releases/")
-) ++ resolvers.value
-
-libraryDependencies ++= Seq(
-  "com.typesafe.play" %% "play-json" % "2.3.9",
-  "com.codacy" %% "codacy-engine-scala-seed" % "2.6.31"
 )
 
-enablePlugins(JavaAppPackaging)
+libraryDependencies ++= Seq(
+    "com.codacy" %% "codacy-engine-scala-seed" % "3.0.183" withSources()
+)
+
+enablePlugins(AshScriptPlugin)
 
 enablePlugins(DockerPlugin)
 
 version in Docker := "1.0"
 
-organization := "com.codacy"
+mappings in Universal ++= {
+  (resourceDirectory in Compile) map { (resourceDir: File) =>
+    val src = resourceDir / "docs"
+    val dest = "/docs"
 
-val installAll =
-  """apk --no-cache add bash"""
-
-mappings in Universal <++= (resourceDirectory in Compile) map { (resourceDir: File) =>
-  val src = resourceDir / "docs"
-  val dest = "/docs"
-
-  for {
-    path <- (src ***).get
-    if !path.isDirectory
-  } yield path -> path.toString.replaceFirst(src.toString, dest)
-}
-
+    for {
+      path <- src.allPaths.get if !path.isDirectory
+    } yield path -> path.toString.replaceFirst(src.toString, dest)
+  }
+}.value
 
 val dockerUser = "docker"
 val dockerGroup = "docker"
@@ -50,13 +46,11 @@ daemonGroup in Docker := dockerGroup
 dockerBaseImage := "mrfyda/alpine-jre-shellcheck:v0.4.5"
 
 dockerCommands := dockerCommands.value.flatMap {
-  case cmd@Cmd("WORKDIR", _) => List(cmd,
-    Cmd("RUN", installAll)
-  )
-  case cmd@(Cmd("ADD", "opt /opt")) => List(cmd,
-    Cmd("RUN", "mv /opt/docker/docs /docs"),
-    Cmd("RUN", "adduser -u 2004 -D docker"),
-    ExecCmd("RUN", Seq("chown", "-R", s"$dockerUser:$dockerGroup", "/docs"): _*)
-  )
+  case cmd @ Cmd("ADD", _) =>
+    List(
+      Cmd("RUN", s"adduser -u 2004 -D $dockerUser"),
+      cmd,
+      Cmd("RUN", "mv /opt/docker/docs /docs")
+    )
   case other => List(other)
 }

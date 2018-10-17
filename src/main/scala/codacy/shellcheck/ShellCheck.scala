@@ -1,12 +1,18 @@
 package codacy.shellcheck
 
-import java.io.File
-import java.nio.file.Path
+import java.io.{File => JFile}
+import java.nio.file.{Path, Paths}
+import java.util
 
-import codacy.dockerApi._
-import codacy.dockerApi.utils.{CommandRunner, FileHelper, ToolHelper}
-import play.api.libs.json._
+import better.files._
+import File._
+import com.codacy.plugins.api._
+import com.codacy.plugins.api.results.{Parameter, Pattern, Result, Tool}
+import com.codacy.tools.scala.seed.utils._
+import com.codacy.tools.scala.seed.utils.ToolHelper._
+import play.api.libs.json.{JsString, Json}
 
+import scala.collection.JavaConversions._
 import scala.util.Try
 
 case class ShellCheckResult(file: String, line: Int, column: Int, level: String, code: Int, message: String)
@@ -17,40 +23,43 @@ object ShellCheckResult {
 
 object ShellCheck extends Tool {
 
-  override def apply(path: Path, conf: Option[List[PatternDef]], files: Option[Set[Path]])
-                    (implicit spec: Spec): Try[List[Result]] = {
-    Try {
+   def apply(source: Source.Directory,
+             configuration: Option[List[Pattern.Definition]],
+             files: Option[Set[Source.File]],
+             options: Map[Options.Key, Options.Value])(implicit specification: Tool.Specification): Try[List[Result]] = {
+     Try {
       val filesToLint: Seq[String] = files.fold {
-        FileHelper.listAllFiles(path)
-          .map(_.getAbsolutePath).filter(_.endsWith(".sh"))
+        File(source.path).listRecursively
+          .filter(f => f.extension == Option(".sh"))
+          .map(_.toString).toList
       } {
         paths =>
           paths.map(_.toString).toList
       }
 
       val command = List("shellcheck", "-x", "-f", "json") ++ filesToLint
-      CommandRunner.exec(command, Option(new File(path.toString))) match {
+      CommandRunner.exec(command, Option(new JFile(source.path.toString))) match {
         case Right(resultFromTool) =>
-          parseToolResult(resultFromTool.stdout, path, conf)
+          parseToolResult(resultFromTool.stdout, source, configuration)
         case Left(failure) =>
           throw failure
       }
     }
   }
 
-  private def parseToolResult(resultFromTool: List[String], path: Path, conf: Option[List[PatternDef]])
-                             (implicit spec: Spec): List[Result] = {
+  private def parseToolResult(resultFromTool: List[String], path: Source.Directory, configuration: Option[List[Pattern.Definition]])
+                             (implicit spec: Tool.Specification): List[Result] = {
     val results = Try(Json.parse(resultFromTool.mkString)).toOption
       .flatMap(_.asOpt[List[ShellCheckResult]]).getOrElse(List.empty)
       .map { result =>
-        Issue(
-          SourcePath(FileHelper.stripPath(result.file, path.toString)),
-          ResultMessage(result.message),
-          PatternId(s"SC${result.code}"),
-          ResultLine(result.line))
+        Result.Issue(
+          Source.File(result.file),
+          Result.Message(result.message),
+          Pattern.Id(s"SC${result.code}"),
+          Source.Line(result.line))
       }
 
-    ToolHelper.getPatternsToLint(conf).fold {
+    configuration.withDefaultParameters.fold {
       results
     } { patterns =>
       results.filter { r => patterns.map(_.patternId).contains(r.patternId) }

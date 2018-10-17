@@ -28,7 +28,7 @@ object ShellCheck extends Tool {
           paths.map(_.toString).toList
       }
 
-      val command = List("shellcheck", "-f", "json") ++ filesToLint
+      val command = List("shellcheck", "-x", "-f", "json") ++ filesToLint
       CommandRunner.exec(command, Option(new File(path.toString))) match {
         case Right(resultFromTool) =>
           parseToolResult(resultFromTool.stdout, path, conf)

@@ -16,7 +16,7 @@ resolvers ++= Seq(
 )
 
 libraryDependencies ++= Seq(
-    "com.codacy" %% "codacy-engine-scala-seed" % "3.0.183" withSources()
+  "com.codacy" %% "codacy-engine-scala-seed" % "3.0.244" withSources()
 )
 
 enablePlugins(AshScriptPlugin)
@@ -43,7 +43,7 @@ daemonUser in Docker := dockerUser
 
 daemonGroup in Docker := dockerGroup
 
-dockerBaseImage := "mrfyda/alpine-jre-shellcheck:v0.4.5"
+dockerBaseImage := s"codacy/alpine-jre-shellcheck"
 
 dockerCommands := dockerCommands.value.flatMap {
   case cmd @ Cmd("ADD", _) =>

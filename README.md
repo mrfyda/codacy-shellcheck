@@ -25,7 +25,13 @@ Follow the instructions at [codacy-plugins-test](https://github.com/codacy/codac
 
 ## Generating the documentation
 
-Update the `VERSION` variable and run:
+1. Update the version tag in `Dockerfile` and run:
+
+```bash
+docker build -t codacy/alpine-jre-shellcheck -f Dockerfile .
+```
+
+2. Update the `VERSION` variable in `generate.sh` and run:
 
 ```bash
 cd docs

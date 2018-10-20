@@ -47,7 +47,7 @@ object ShellCheck extends Tool {
     }
   }
 
-  private def parseToolResult(resultFromTool: List[String], path: Source.Directory, configuration: Option[List[Pattern.Definition]])
+  private[this] def parseToolResult(resultFromTool: List[String], path: Source.Directory, configuration: Option[List[Pattern.Definition]])
                              (implicit spec: Tool.Specification): List[Result] = {
     val results = Try(Json.parse(resultFromTool.mkString)).toOption
       .flatMap(_.asOpt[List[ShellCheckResult]]).getOrElse(List.empty)

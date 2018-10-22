@@ -18,6 +18,10 @@ jobs:
           name: Compile test project
           working_directory: ~/codacy-plugins-test
           command: sbt compile
+      - run:
+          name: Publish base docker image
+          working_directory: ~/workdir
+          command: docker build -t codacy/alpine-jre-shellcheck -f Dockerfile .
       - run: 
           name: Publish tool docker locally
           working_directory: ~/workdir

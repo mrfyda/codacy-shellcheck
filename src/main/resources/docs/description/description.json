@@ -48,21 +48,15 @@
     "timeToFix": 5
   },
   {
+    "patternId": "SC1012",
+    "title": "`\\t` is just literal `t` here. For tab, use `\"$(printf '\\t')\"` instead.",
+    "description": "`\\t` is just literal `t` here. For tab, use `\"$(printf '\\t')\"` instead.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "SC1014",
     "title": "Use 'if cmd; then ..' to check exit code, or 'if [ \"$(cmd)\" = .. ]' to check output.",
     "description": "Use 'if cmd; then ..' to check exit code, or 'if [ \"$(cmd)\" = .. ]' to check output.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "SC1015",
-    "title": "This is a unicode double quote. Delete and retype it.",
-    "description": "This is a unicode double quote. Delete and retype it.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "SC1016",
-    "title": "This is a Unicode single quote. Delete and retype it.",
-    "description": "This is a Unicode single quote. Delete and retype it.",
     "timeToFix": 5
   },
   {
@@ -75,6 +69,12 @@
     "patternId": "SC1018",
     "title": "This is a unicode non-breaking space. Delete it and retype as space.",
     "description": "This is a unicode non-breaking space. Delete it and retype as space.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "SC1019",
+    "title": "Expected this to be an argument to the unary condition.",
+    "description": "Expected this to be an argument to the unary condition.",
     "timeToFix": 5
   },
   {
@@ -163,8 +163,14 @@
   },
   {
     "patternId": "SC1046",
-    "title": "Couldn't find 'fi' for this 'if'",
-    "description": "Couldn't find 'fi' for this 'if'",
+    "title": "Couldn't find 'fi' for this 'if'.",
+    "description": "Couldn't find 'fi' for this 'if'.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "SC1047",
+    "title": "\"Expected 'fi' matching previously mentioned 'if'.",
+    "description": "\"Expected 'fi' matching previously mentioned 'if'.",
     "timeToFix": 5
   },
   {
@@ -177,6 +183,12 @@
     "patternId": "SC1049",
     "title": "Did you forget the 'then' for this 'if'?",
     "description": "Did you forget the 'then' for this 'if'?",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "SC1050",
+    "title": "Expected 'then'.",
+    "description": "Expected 'then'.",
     "timeToFix": 5
   },
   {
@@ -201,6 +213,24 @@
     "patternId": "SC1054",
     "title": "You need a space after the '{'.",
     "description": "You need a space after the '{'.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "SC1058",
+    "title": "Expected `do`.",
+    "description": "Expected `do`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "SC1061",
+    "title": "Couldn't find 'done' for this 'do'.",
+    "description": "Couldn't find 'done' for this 'do'.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "SC1062",
+    "title": "Expected 'done' matching previously mentioned 'do'.",
+    "description": "Expected 'done' matching previously mentioned 'do'.",
     "timeToFix": 5
   },
   {
@@ -571,20 +601,14 @@
   },
   {
     "patternId": "SC2006",
-    "title": "Use $(STATEMENT) instead of legacy \\`STATEMENT\\`",
-    "description": "Use $(STATEMENT) instead of legacy \\`STATEMENT\\`",
+    "title": "Use `$(...)` notation instead of legacy backticked `` `...` ``.",
+    "description": "Use `$(...)` notation instead of legacy backticked `` `...` ``.",
     "timeToFix": 5
   },
   {
     "patternId": "SC2007",
     "title": "Use $((..)) instead of deprecated $[..]",
     "description": "Use $((..)) instead of deprecated $[..]",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "SC2008",
-    "title": "echo doesn't read from stdin, are you sure you should be piping to it?",
-    "description": "echo doesn't read from stdin, are you sure you should be piping to it?",
     "timeToFix": 5
   },
   {
@@ -673,8 +697,8 @@
   },
   {
     "patternId": "SC2025",
-    "title": "Make sure all escape sequences are enclosed in \\[..\\] to prevent line wrapping issues",
-    "description": "Make sure all escape sequences are enclosed in \\[..\\] to prevent line wrapping issues",
+    "title": "Make sure all escape sequences are enclosed in `\\[..\\]` to prevent line wrapping issues",
+    "description": "Make sure all escape sequences are enclosed in `\\[..\\]` to prevent line wrapping issues",
     "timeToFix": 5
   },
   {
@@ -759,12 +783,6 @@
     "patternId": "SC2039",
     "title": "In POSIX sh, *something* is undefined.",
     "description": "In POSIX sh, *something* is undefined.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "SC2040",
-    "title": "#!/bin/sh was specified, so ____ is not supported, even when sh is actually bash.",
-    "description": "#!/bin/sh was specified, so ____ is not supported, even when sh is actually bash.",
     "timeToFix": 5
   },
   {
@@ -919,8 +937,8 @@
   },
   {
     "patternId": "SC2070",
-    "title": "-n doesn't work with unquoted arguments. Quote or use [\\[ ]].",
-    "description": "-n doesn't work with unquoted arguments. Quote or use [\\[ ]].",
+    "title": "`-n` doesn't work with unquoted arguments. Quote or use ``[[ ]]``.",
+    "description": "`-n` doesn't work with unquoted arguments. Quote or use ``[[ ]]``.",
     "timeToFix": 5
   },
   {
@@ -957,6 +975,18 @@
     "patternId": "SC2078",
     "title": "This expression is constant. Did you forget a `$` somewhere?",
     "description": "This expression is constant. Did you forget a `$` somewhere?",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "SC2079",
+    "title": "(( )) doesn't support decimals. Use bc or awk.",
+    "description": "(( )) doesn't support decimals. Use bc or awk.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "SC2080",
+    "title": "Numbers with leading 0 are considered octal.",
+    "description": "Numbers with leading 0 are considered octal.",
     "timeToFix": 5
   },
   {
@@ -1020,6 +1050,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "SC2093",
+    "title": "Remove \"exec \" if script should continue after this command.",
+    "description": "Remove \"exec \" if script should continue after this command.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "SC2094",
     "title": "SC2094 Make sure not to read and write the same file in the same pipeline.",
     "description": "SC2094 Make sure not to read and write the same file in the same pipeline.",
@@ -1050,9 +1086,27 @@
     "timeToFix": 5
   },
   {
+    "patternId": "SC2099",
+    "title": "Use `$((..))` for arithmetics, e.g. `i=$((i + 2))`",
+    "description": "Use `$((..))` for arithmetics, e.g. `i=$((i + 2))`",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "SC2100",
+    "title": "Use `$((..))` for arithmetics, e.g. `i=$((i + 2))`",
+    "description": "Use `$((..))` for arithmetics, e.g. `i=$((i + 2))`",
+    "timeToFix": 5
+  },
+  {
     "patternId": "SC2101",
     "title": "Named class needs outer [], e.g. [[:digit:]\\].",
     "description": "Named class needs outer [], e.g. [[:digit:]\\].",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "SC2102",
+    "title": "Ranges can only match single chars (mentioned due to duplicates).",
+    "description": "Ranges can only match single chars (mentioned due to duplicates).",
     "timeToFix": 5
   },
   {
@@ -1194,12 +1248,6 @@
     "timeToFix": 5
   },
   {
-    "patternId": "SC2130",
-    "title": "-eq is for integer comparisons. Use = instead.",
-    "description": "-eq is for integer comparisons. Use = instead.",
-    "timeToFix": 5
-  },
-  {
     "patternId": "SC2139",
     "title": "This expands when defined, not when used. Consider escaping.",
     "description": "This expands when defined, not when used. Consider escaping.",
@@ -1257,12 +1305,6 @@
     "patternId": "SC2148",
     "title": "Tips depend on target shell and yours is unknown. Add a shebang.",
     "description": "Tips depend on target shell and yours is unknown. Add a shebang.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "SC2149",
-    "title": "Remove $/${} for numeric index, or escape it for string.",
-    "description": "Remove $/${} for numeric index, or escape it for string.",
     "timeToFix": 5
   },
   {
@@ -1443,6 +1485,12 @@
     "patternId": "SC2180",
     "title": "Bash does not support multidimensional arrays. Use 1D or associative arrays.",
     "description": "Bash does not support multidimensional arrays. Use 1D or associative arrays.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "SC2181",
+    "title": "Check exit code directly with e.g. 'if mycmd;', not indirectly with $?.",
+    "description": "Check exit code directly with e.g. 'if mycmd;', not indirectly with $?.",
     "timeToFix": 5
   },
   {

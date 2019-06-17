@@ -16,7 +16,7 @@ resolvers ++= Seq(
 )
 
 libraryDependencies ++= Seq(
-  "com.codacy" %% "codacy-engine-scala-seed" % "3.0.244" withSources()
+  "com.codacy" %% "codacy-engine-scala-seed" % "3.0.9" withSources()
 )
 
 enablePlugins(AshScriptPlugin)

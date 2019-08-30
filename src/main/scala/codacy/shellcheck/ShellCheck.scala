@@ -23,18 +23,20 @@ object ShellCheckResult {
 
 object ShellCheck extends Tool {
 
-   def apply(source: Source.Directory,
-             configuration: Option[List[Pattern.Definition]],
-             files: Option[Set[Source.File]],
-             options: Map[Options.Key, Options.Value])(implicit specification: Tool.Specification): Try[List[Result]] = {
-     Try {
+  def apply(
+      source: Source.Directory,
+      configuration: Option[List[Pattern.Definition]],
+      files: Option[Set[Source.File]],
+      options: Map[Options.Key, Options.Value]
+  )(implicit specification: Tool.Specification): Try[List[Result]] = {
+    Try {
       val filesToLint: Seq[String] = files.fold {
         File(source.path).listRecursively
           .filter(f => f.extension == Option(".sh"))
-          .map(_.toString).toList
-      } {
-        paths =>
-          paths.map(_.toString).toList
+          .map(_.toString)
+          .toList
+      } { paths =>
+        paths.map(_.toString).toList
       }
 
       val command = List("shellcheck", "-x", "-f", "json") ++ filesToLint
@@ -47,22 +49,29 @@ object ShellCheck extends Tool {
     }
   }
 
-  private[this] def parseToolResult(resultFromTool: List[String], path: Source.Directory, configuration: Option[List[Pattern.Definition]])
-                             (implicit spec: Tool.Specification): List[Result] = {
+  private[this] def parseToolResult(
+      resultFromTool: List[String],
+      path: Source.Directory,
+      configuration: Option[List[Pattern.Definition]]
+  )(implicit spec: Tool.Specification): List[Result] = {
     val results = Try(Json.parse(resultFromTool.mkString)).toOption
-      .flatMap(_.asOpt[List[ShellCheckResult]]).getOrElse(List.empty)
+      .flatMap(_.asOpt[List[ShellCheckResult]])
+      .getOrElse(List.empty)
       .map { result =>
         Result.Issue(
           Source.File(result.file),
           Result.Message(result.message),
           Pattern.Id(s"SC${result.code}"),
-          Source.Line(result.line))
+          Source.Line(result.line)
+        )
       }
 
     configuration.withDefaultParameters.fold {
       results
     } { patterns =>
-      results.filter { r => patterns.map(_.patternId).contains(r.patternId) }
+      results.filter { r =>
+        patterns.map(_.patternId).contains(r.patternId)
+      }
     }
   }
 

@@ -1,18 +1,14 @@
 package codacy.shellcheck
 
 import java.io.{File => JFile}
-import java.nio.file.{Path, Paths}
-import java.util
 
 import better.files._
-import File._
 import com.codacy.plugins.api._
-import com.codacy.plugins.api.results.{Parameter, Pattern, Result, Tool}
+import com.codacy.plugins.api.results.{Pattern, Result, Tool}
 import com.codacy.tools.scala.seed.utils._
 import com.codacy.tools.scala.seed.utils.ToolHelper._
-import play.api.libs.json.{JsString, Json}
+import play.api.libs.json.Json
 
-import scala.collection.JavaConversions._
 import scala.util.Try
 
 case class ShellCheckResult(file: String, line: Int, column: Int, level: String, code: Int, message: String)

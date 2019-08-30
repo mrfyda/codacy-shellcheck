@@ -6,7 +6,7 @@ name := "codacy-shellcheck"
 
 version := "1.0.0-SNAPSHOT"
 
-val languageVersion = "2.12.7"
+val languageVersion = "2.12.9"
 
 scalaVersion := languageVersion
 
@@ -15,7 +15,7 @@ resolvers ++= Seq(
   "Typesafe Repo".at("http://repo.typesafe.com/typesafe/releases/")
 )
 
-libraryDependencies ++= Seq("com.codacy" %% "codacy-engine-scala-seed" % "3.0.9" withSources ())
+libraryDependencies ++= Seq("com.codacy" %% "codacy-engine-scala-seed" % "3.0.296" withSources ())
 
 enablePlugins(AshScriptPlugin)
 

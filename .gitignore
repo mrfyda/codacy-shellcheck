@@ -5,6 +5,8 @@
 /project/target/
 /target/
 .idea
+.metals
+.bloop
 .DS_Store
 docs/shellcheck
 docs/shellcheck.wiki

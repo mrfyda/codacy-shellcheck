@@ -6,7 +6,7 @@ name := "codacy-shellcheck"
 
 version := "1.0.0-SNAPSHOT"
 
-val languageVersion = "2.12.7"
+val languageVersion = "2.12.9"
 
 scalaVersion := languageVersion
 
@@ -15,9 +15,7 @@ resolvers ++= Seq(
   "Typesafe Repo".at("http://repo.typesafe.com/typesafe/releases/")
 )
 
-libraryDependencies ++= Seq(
-  "com.codacy" %% "codacy-engine-scala-seed" % "3.0.9" withSources()
-)
+libraryDependencies ++= Seq("com.codacy" %% "codacy-engine-scala-seed" % "3.0.296" withSources ())
 
 enablePlugins(AshScriptPlugin)
 
@@ -47,10 +45,6 @@ dockerBaseImage := s"codacy/alpine-jre-shellcheck"
 
 dockerCommands := dockerCommands.value.flatMap {
   case cmd @ Cmd("ADD", _) =>
-    List(
-      Cmd("RUN", s"adduser -u 2004 -D $dockerUser"),
-      cmd,
-      Cmd("RUN", "mv /opt/docker/docs /docs")
-    )
+    List(Cmd("RUN", s"adduser -u 2004 -D $dockerUser"), cmd, Cmd("RUN", "mv /opt/docker/docs /docs"))
   case other => List(other)
 }

@@ -30,6 +30,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "SC1008",
+    "title": "This shebang was unrecognized. ShellCheck only supports sh/bash/dash/ksh. Add a 'shell' directive to specify.",
+    "description": "This shebang was unrecognized. ShellCheck only supports sh/bash/dash/ksh. Add a 'shell' directive to specify.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "SC1009",
     "title": "The mentioned parser error was in ...",
     "description": "The mentioned parser error was in ...",
@@ -249,6 +255,12 @@
     "patternId": "SC1066",
     "title": "Don't use $ on the left side of assignments.",
     "description": "Don't use $ on the left side of assignments.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "SC1067",
+    "title": "For indirection, use arrays, `declare \"var$n=value\"`, or (for sh) read/eval",
+    "description": "For indirection, use arrays, `declare \"var$n=value\"`, or (for sh) read/eval",
     "timeToFix": 5
   },
   {
@@ -570,6 +582,24 @@
     "timeToFix": 5
   },
   {
+    "patternId": "SC1132",
+    "title": "This `&` terminates the command. Escape it or add space after `&` to silence.",
+    "description": "This `&` terminates the command. Escape it or add space after `&` to silence.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "SC1133",
+    "title": "Unexpected start of line. If breaking lines, |/||/&& should be at the end of the previous one.",
+    "description": "Unexpected start of line. If breaking lines, |/||/&& should be at the end of the previous one.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "SC1135",
+    "title": "Prefer escape over ending quote to make `$` literal. Instead of `\"It costs $\"5`, use `\"It costs \\$5\"`",
+    "description": "Prefer escape over ending quote to make `$` literal. Instead of `\"It costs $\"5`, use `\"It costs \\$5\"`",
+    "timeToFix": 5
+  },
+  {
     "patternId": "SC2001",
     "title": "SC2001: See if you can use ${variable//search/replace} instead.",
     "description": "SC2001: See if you can use ${variable//search/replace} instead.",
@@ -625,8 +655,8 @@
   },
   {
     "patternId": "SC2012",
-    "title": "Use find instead of ls to better handle non-alphanumeric filenames.",
-    "description": "Use find instead of ls to better handle non-alphanumeric filenames.",
+    "title": "Use `find` instead of `ls` to better handle non-alphanumeric filenames.",
+    "description": "Use `find` instead of `ls` to better handle non-alphanumeric filenames.",
     "timeToFix": 5
   },
   {
@@ -822,6 +852,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "SC2049",
+    "title": "=~ is for regex, but this looks like a glob. Use = instead.",
+    "description": "=~ is for regex, but this looks like a glob. Use = instead.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "SC2050",
     "title": "This expression is constant. Did you forget the `$` on a variable?",
     "description": "This expression is constant. Did you forget the `$` on a variable?",
@@ -847,8 +883,8 @@
   },
   {
     "patternId": "SC2055",
-    "title": "You probably wanted && here",
-    "description": "You probably wanted && here",
+    "title": "You probably wanted && here, otherwise it's always true.",
+    "description": "You probably wanted && here, otherwise it's always true.",
     "timeToFix": 5
   },
   {
@@ -951,6 +987,12 @@
     "patternId": "SC2072",
     "title": "Decimals are not supported. Either use integers only, or use bc or awk to compare.",
     "description": "Decimals are not supported. Either use integers only, or use bc or awk to compare.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "SC2073",
+    "title": "Escape `\\<` to prevent it redirecting (or switch to `[[ .. ]]`).",
+    "description": "Escape `\\<` to prevent it redirecting (or switch to `[[ .. ]]`).",
     "timeToFix": 5
   },
   {
@@ -1423,14 +1465,20 @@
   },
   {
     "patternId": "SC2169",
-    "title": "In dash, [\\[ ]] is not supported.",
-    "description": "In dash, [\\[ ]] is not supported.",
+    "title": "In dash, *something* is not supported.",
+    "description": "In dash, *something* is not supported.",
     "timeToFix": 5
   },
   {
     "patternId": "SC2170",
     "title": "Numerical -eq does not dereference in [..]. Expand or use string operator.",
     "description": "Numerical -eq does not dereference in [..]. Expand or use string operator.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "SC2171",
+    "title": "Found trailing ] outside test. Add missing [ or quote if intentional.",
+    "description": "Found trailing ] outside test. Add missing [ or quote if intentional.",
     "timeToFix": 5
   },
   {
@@ -1485,12 +1533,6 @@
     "patternId": "SC2180",
     "title": "Bash does not support multidimensional arrays. Use 1D or associative arrays.",
     "description": "Bash does not support multidimensional arrays. Use 1D or associative arrays.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "SC2181",
-    "title": "Check exit code directly with e.g. 'if mycmd;', not indirectly with $?.",
-    "description": "Check exit code directly with e.g. 'if mycmd;', not indirectly with $?.",
     "timeToFix": 5
   },
   {
@@ -1645,8 +1687,8 @@
   },
   {
     "patternId": "SC2206",
-    "title": "Quote to prevent word splitting, or split robustly with mapfile or read -a.",
-    "description": "Quote to prevent word splitting, or split robustly with mapfile or read -a.",
+    "title": "Quote to prevent word splitting/globbing, or split robustly with mapfile or read -a.",
+    "description": "Quote to prevent word splitting/globbing, or split robustly with mapfile or read -a.",
     "timeToFix": 5
   },
   {
@@ -1815,6 +1857,102 @@
     "patternId": "SC2235",
     "title": "Use `{ ..; }` instead of `(..)` to avoid subshell overhead.",
     "description": "Use `{ ..; }` instead of `(..)` to avoid subshell overhead.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "SC2236",
+    "title": "Use `-n` instead of `! -z`.",
+    "description": "Use `-n` instead of `! -z`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "SC2237",
+    "title": "Use `[ -n .. ]` instead of `! [ -z .. ]`.",
+    "description": "Use `[ -n .. ]` instead of `! [ -z .. ]`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "SC2238",
+    "title": "Redirecting to/from command name instead of file. Did you want pipes/xargs (or quote to ignore)?",
+    "description": "Redirecting to/from command name instead of file. Did you want pipes/xargs (or quote to ignore)?",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "SC2239",
+    "title": "Ensure the shebang uses the absolute path to the interpreter.",
+    "description": "Ensure the shebang uses the absolute path to the interpreter.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "SC2240",
+    "title": "The dot command does not support arguments in sh/dash. Set them as variables.",
+    "description": "The dot command does not support arguments in sh/dash. Set them as variables.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "SC2241",
+    "title": "The exit status can only be one integer 0-255. Use stdout for other data.",
+    "description": "The exit status can only be one integer 0-255. Use stdout for other data.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "SC2242",
+    "title": "Can only exit with status 0-255. Other data should be written to stdout/stderr.",
+    "description": "Can only exit with status 0-255. Other data should be written to stdout/stderr.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "SC2243",
+    "title": "Prefer explicit -n to check for output (or run command without [/[[ to check for success)",
+    "description": "Prefer explicit -n to check for output (or run command without [/[[ to check for success)",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "SC2244",
+    "title": "Prefer explicit -n to check non-empty string (or use =/-ne to check boolean/integer).",
+    "description": "Prefer explicit -n to check non-empty string (or use =/-ne to check boolean/integer).",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "SC2245",
+    "title": "-d only applies to the first expansion of this glob. Use a loop to check any/all.",
+    "description": "-d only applies to the first expansion of this glob. Use a loop to check any/all.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "SC2246",
+    "title": "This shebang specifies a directory. Ensure the interpreter is a file.",
+    "description": "This shebang specifies a directory. Ensure the interpreter is a file.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "SC2247",
+    "title": "Flip leading $ and \" if this should be a quoted substitution.",
+    "description": "Flip leading $ and \" if this should be a quoted substitution.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "SC2249",
+    "title": "Consider adding a default *) case, even if it just exits with error.",
+    "description": "Consider adding a default *) case, even if it just exits with error.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "SC2251",
+    "title": "This ! is not on a condition and skips errexit. Use `&& exit 1` instead, or make sure $? is checked.",
+    "description": "This ! is not on a condition and skips errexit. Use `&& exit 1` instead, or make sure $? is checked.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "SC2252",
+    "title": "You probably wanted && here, otherwise it's always true.",
+    "description": "You probably wanted && here, otherwise it's always true.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "SC2253",
+    "title": "Use -R to recurse, or explicitly a-r to remove read permissions.",
+    "description": "Use -R to recurse, or explicitly a-r to remove read permissions.",
     "timeToFix": 5
   }
 ]

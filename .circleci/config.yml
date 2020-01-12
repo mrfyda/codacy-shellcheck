@@ -1,7 +1,8 @@
 version: 2.1
 
 orbs:
-  codacy: codacy/base@0.3.3
+  codacy: codacy/base@2.0.1
+  codacy_plugins_test: codacy/plugins-test@0.7.1
 
 workflows:
   version: 2
@@ -10,37 +11,26 @@ workflows:
       - codacy/checkout_and_version:
           write_sbt_version: true
       - codacy/sbt:
-          name: populate_cache
-          cmd: |
-            git clone --depth 1 git://github.com/codacy/codacy-plugins-test.git codacy-plugins-test
-            sbt ";set scalafmtUseIvy in ThisBuild := false;update"
-            (cd codacy-plugins-test && sbt update)
-          requires:
-            - codacy/checkout_and_version
-      - codacy/sbt:
-          name: check_fmt
-          cmd: sbt ";scalafmt::test;test:scalafmt::test;sbt:scalafmt::test"
-          requires:
-            - populate_cache
-      - codacy/sbt:
-          name: compile
-          cmd: sbt compile
-          requires:
-            - populate_cache
-
-      - codacy/sbt:
-          name: test_patterns
-          persist_to_workspace: true
+          name: publish_docker_local
           cmd: |
             docker build -t codacy/alpine-jre-shellcheck -f Dockerfile .
-            sbt 'set version in Docker := "latest"' "set name := \"$CIRCLE_PROJECT_REPONAME\"" docker:publishLocal
-            git clone --depth 1 git://github.com/codacy/codacy-plugins-test.git codacy-plugins-test
-            (cd codacy-plugins-test &&
-                sbt -Dcodacy.tests.ignore.descriptions=true "runMain codacy.plugins.DockerTest json $CIRCLE_PROJECT_REPONAME:latest"
-                sbt -Dcodacy.tests.ignore.descriptions=true "runMain codacy.plugins.DockerTest pattern $CIRCLE_PROJECT_REPONAME:latest")
-            docker save --output workspace_docker.tar codacy/alpine-jre-shellcheck $CIRCLE_PROJECT_REPONAME:latest
+            sbt "set scalafmtUseIvy in ThisBuild := false;
+                 scalafmt::test;
+                 test:scalafmt::test;
+                 sbt:scalafmt::test;
+                 set version in Docker := \"latest\";
+                 docker:publishLocal"
+            docker save --output docker-image.tar $CIRCLE_PROJECT_REPONAME:latest
+          persist_to_workspace: true
           requires:
-            - compile
+            - codacy/checkout_and_version
+
+      - codacy_plugins_test/run:
+          name: plugins_test
+          run_multiple_tests: true
+          requires:
+            - publish_docker_local
+      
       - codacy/sbt:
           name: publish_dockerhub
           context: CodacyDocker
@@ -52,7 +42,7 @@ workflows:
             docker push codacy/$CIRCLE_PROJECT_REPONAME:$(cat .version)
             docker push codacy/$CIRCLE_PROJECT_REPONAME:latest
           requires:
-            - test_patterns
+            - plugins_test
           filters:
             branches:
               only:

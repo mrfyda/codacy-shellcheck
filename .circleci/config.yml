@@ -35,7 +35,7 @@ workflows:
           name: publish_dockerhub
           context: CodacyDocker
           cmd: |
-            docker load --input workspace_docker.tar
+            docker load --input docker-image.tar
             docker login -u $DOCKER_USER -p $DOCKER_PASS
             docker tag $CIRCLE_PROJECT_REPONAME codacy/$CIRCLE_PROJECT_REPONAME:$(cat .version)
             docker tag $CIRCLE_PROJECT_REPONAME codacy/$CIRCLE_PROJECT_REPONAME:latest

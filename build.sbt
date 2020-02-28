@@ -10,7 +10,7 @@ val languageVersion = "2.13.1"
 
 scalaVersion := languageVersion
 
-libraryDependencies ++= Seq("com.codacy" %% "codacy-engine-scala-seed" % "3.1.0" withSources ())
+libraryDependencies ++= Seq("com.codacy" %% "codacy-engine-scala-seed" % "4.0.0" withSources ())
 
 enablePlugins(AshScriptPlugin)
 

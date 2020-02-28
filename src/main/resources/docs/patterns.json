@@ -548,6 +548,11 @@
       "category": "BestPractice"
     },
     {
+      "patternId": "SC2011",
+      "level": "Warning",
+      "category": "CodeStyle"
+    },
+    {
       "patternId": "SC2012",
       "level": "Info",
       "category": "BestPractice"
@@ -905,12 +910,14 @@
     {
       "patternId": "SC2091",
       "level": "Warning",
-      "category": "CodeStyle"
+      "category": "Security",
+      "subcategory": "CommandInjection"
     },
     {
       "patternId": "SC2092",
       "level": "Warning",
-      "category": "CodeStyle"
+      "category": "Security",
+      "subcategory": "CommandInjection"
     },
     {
       "patternId": "SC2093",
@@ -1160,7 +1167,8 @@
     {
       "patternId": "SC2156",
       "level": "Warning",
-      "category": "CodeStyle"
+      "category": "Security",
+      "subcategory": "CommandInjection"
     },
     {
       "patternId": "SC2157",
@@ -1495,7 +1503,8 @@
     {
       "patternId": "SC2223",
       "level": "Warning",
-      "category": "CodeStyle"
+      "category": "Security",
+      "subcategory": "DoS"
     },
     {
       "patternId": "SC2224",
@@ -1613,8 +1622,18 @@
       "category": "CodeStyle"
     },
     {
+      "patternId": "SC2248",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
       "patternId": "SC2249",
       "level": "Error",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "SC2250",
+      "level": "Info",
       "category": "CodeStyle"
     },
     {

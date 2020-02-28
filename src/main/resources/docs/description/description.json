@@ -421,8 +421,8 @@
   },
   {
     "patternId": "SC1102",
-    "title": "Shells disambiguate $(( differently or not at all. If the first $( should start command substitution, add a space after it.",
-    "description": "Shells disambiguate $(( differently or not at all. If the first $( should start command substitution, add a space after it.",
+    "title": "Shells disambiguate `$((` differently or not at all. For `$(command substition)`, add space after `$(` . For `$((arithmetics))`, fix parsing errors.",
+    "description": "Shells disambiguate `$((` differently or not at all. For `$(command substition)`, add space after `$(` . For `$((arithmetics))`, fix parsing errors.",
     "timeToFix": 5
   },
   {
@@ -651,6 +651,12 @@
     "patternId": "SC2010",
     "title": "Don't use ls | grep. Use a glob or a for loop with a condition to allow non-alphanumeric filenames.",
     "description": "Don't use ls | grep. Use a glob or a for loop with a condition to allow non-alphanumeric filenames.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "SC2011",
+    "title": "Use `find -print0` or `find -exec` to better handle non-alphanumeric filenames.",
+    "description": "Use `find -print0` or `find -exec` to better handle non-alphanumeric filenames.",
     "timeToFix": 5
   },
   {
@@ -1345,8 +1351,8 @@
   },
   {
     "patternId": "SC2148",
-    "title": "Tips depend on target shell and yours is unknown. Add a shebang.",
-    "description": "Tips depend on target shell and yours is unknown. Add a shebang.",
+    "title": "Add a shebang line to the top of your script:",
+    "description": "Add a shebang line to the top of your script:",
     "timeToFix": 5
   },
   {
@@ -1932,9 +1938,21 @@
     "timeToFix": 5
   },
   {
+    "patternId": "SC2248",
+    "title": "Warn about variable references without braces.",
+    "description": "Warn about variable references without braces.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "SC2249",
     "title": "Consider adding a default *) case, even if it just exits with error.",
     "description": "Consider adding a default *) case, even if it just exits with error.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "SC2250",
+    "title": "Prefer putting braces around variable references even when not strictly required.",
+    "description": "Prefer putting braces around variable references even when not strictly required.",
     "timeToFix": 5
   },
   {

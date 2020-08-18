@@ -533,6 +533,11 @@
       "category": "CodeStyle"
     },
     {
+      "patternId": "SC1136",
+      "level": "Error",
+      "category": "CodeStyle"
+    },
+    {
       "patternId": "SC2000",
       "level": "Info",
       "category": "CodeStyle"
@@ -1683,6 +1688,26 @@
     },
     {
       "patternId": "SC2253",
+      "level": "Warning",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "SC2254",
+      "level": "Warning",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "SC2255",
+      "level": "Error",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "SC2256",
+      "level": "Warning",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "SC2257",
       "level": "Warning",
       "category": "CodeStyle"
     }

@@ -530,6 +530,11 @@
     "description": "Prefer escape over ending quote to make `$` literal. Instead of `\"It costs $\"5`, use `\"It costs \\$5\"`"
   },
   {
+    "patternId": "SC1136",
+    "title": "Unexpected characters after terminating `]`. Missing semicolon/linefeed?",
+    "description": "Unexpected characters after terminating `]`. Missing semicolon/linefeed?"
+  },
+  {
     "patternId": "SC2000",
     "title": "See if you can use ${#variable} instead",
     "description": "See if you can use ${#variable} instead"
@@ -1678,5 +1683,25 @@
     "patternId": "SC2253",
     "title": "Use -R to recurse, or explicitly a-r to remove read permissions.",
     "description": "Use -R to recurse, or explicitly a-r to remove read permissions."
+  },
+  {
+    "patternId": "SC2254",
+    "title": "Quote expansions in case patterns to match literally rather than as a glob.",
+    "description": "Quote expansions in case patterns to match literally rather than as a glob."
+  },
+  {
+    "patternId": "SC2255",
+    "title": "`[ ]` does not apply arithmetic evaluation. Evaluate with `$((..))` for numbers, or use string comparator for strings.",
+    "description": "`[ ]` does not apply arithmetic evaluation. Evaluate with `$((..))` for numbers, or use string comparator for strings."
+  },
+  {
+    "patternId": "SC2256",
+    "title": "This translated string is the name of a variable. Flip leading $ and \" if this should be a quoted substitution.",
+    "description": "This translated string is the name of a variable. Flip leading $ and \" if this should be a quoted substitution."
+  },
+  {
+    "patternId": "SC2257",
+    "title": "Arithmetic modifications in command redirections may be discarded. Do them separately.",
+    "description": "Arithmetic modifications in command redirections may be discarded. Do them separately."
   }
 ]

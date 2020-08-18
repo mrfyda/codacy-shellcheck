@@ -1,7 +1,7 @@
 #!/bin/bash
 
 SCRIPT_HOME="$( cd "$( dirname "$0" )" && pwd )"
-DOCS_HOME="${SCRIPT_HOME}/../src/main/resources/docs"
+DOCS_HOME="${SCRIPT_HOME}/../docs"
 DESCRIPTION_HOME="${DOCS_HOME}/description"
 VERSION="v0.7.1"
 

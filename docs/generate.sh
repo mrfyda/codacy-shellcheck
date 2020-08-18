@@ -54,7 +54,7 @@ for f in SC*; do
   pattern_id=`echo $f | awk '{print substr($0,0,6)}'`
   title=$(head -n 1 $f | sed -e 's/^[[:space:]]*//' | sed 's/^#* *//')
   [ -n "$descriptions" ] && descriptions+=","
-  descriptions+=$(jq -cMn --arg patternId "$pattern_id" --arg title "$title" '{"patternId": $patternId, "title": $title, "description": $title, "timeToFix": 5}')
+  descriptions+=$(jq -cMn --arg patternId "$pattern_id" --arg title "$title" '{"patternId": $patternId, "title": $title, "description": $title}')
 done
 
 jq -Mn --argjson descriptions "[$descriptions]" '$descriptions' > "${DESCRIPTION_HOME}/description.json"

@@ -1,45 +1,23 @@
-import com.typesafe.sbt.packager.docker.{Cmd, ExecCmd}
-
-organization := "codacy"
+organization := "com.codacy"
 
 name := "codacy-shellcheck"
 
-version := "1.0.0-SNAPSHOT"
+scalaVersion := "2.13.3"
 
-val languageVersion = "2.13.1"
+libraryDependencies += "com.codacy" %% "codacy-engine-scala-seed" % "4.1.1"
 
-scalaVersion := languageVersion
+enablePlugins(GraalVMNativeImagePlugin)
 
-libraryDependencies ++= Seq("com.codacy" %% "codacy-engine-scala-seed" % "4.0.0" withSources ())
+val graalVersion = "20.1.0-java11"
 
-enablePlugins(AshScriptPlugin)
-
-enablePlugins(DockerPlugin)
-
-version in Docker := "1.0"
-
-mappings in Universal ++= {
-  (resourceDirectory in Compile) map { (resourceDir: File) =>
-    val src = resourceDir / "docs"
-    val dest = "/docs"
-
-    for {
-      path <- src.allPaths.get if !path.isDirectory
-    } yield path -> path.toString.replaceFirst(src.toString, dest)
-  }
-}.value
-
-val dockerUser = "docker"
-val dockerGroup = "docker"
-
-daemonUser in Docker := dockerUser
-
-daemonGroup in Docker := dockerGroup
-
-dockerBaseImage := s"codacy/alpine-jre-shellcheck"
-
-dockerCommands := dockerCommands.value.flatMap {
-  case cmd @ Cmd("ADD", _) =>
-    List(Cmd("RUN", s"adduser -u 2004 -D $dockerUser"), cmd, Cmd("RUN", "mv /opt/docker/docs /docs"))
-  case other => List(other)
-}
+graalVMNativeImageGraalVersion := Some(graalVersion)
+containerBuildImage := Some(s"oracle/graalvm-ce:$graalVersion")
+graalVMNativeImageOptions ++= Seq(
+  "-O1",
+  "-H:+ReportExceptionStackTraces",
+  "--no-fallback",
+  "--no-server",
+  "--initialize-at-build-time",
+  "--report-unsupported-elements-at-runtime",
+  "--static"
+)

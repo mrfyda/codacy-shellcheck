@@ -8,5 +8,5 @@
 .metals
 .bloop
 .DS_Store
-docs/shellcheck
-docs/shellcheck.wiki
+doc-generator/shellcheck
+doc-generator/shellcheck.wiki

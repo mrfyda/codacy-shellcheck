@@ -1,6 +1,6 @@
 {
   "name": "shellcheck",
-  "version": "v0.7.0",
+  "version": "v0.7.1",
   "patterns": [
     {
       "patternId": "SC1000",
@@ -530,6 +530,11 @@
     {
       "patternId": "SC1135",
       "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "SC1136",
+      "level": "Error",
       "category": "CodeStyle"
     },
     {
@@ -1683,6 +1688,26 @@
     },
     {
       "patternId": "SC2253",
+      "level": "Warning",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "SC2254",
+      "level": "Warning",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "SC2255",
+      "level": "Error",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "SC2256",
+      "level": "Warning",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "SC2257",
       "level": "Warning",
       "category": "CodeStyle"
     }

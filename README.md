@@ -3,7 +3,12 @@
 
 # Codacy ShellCheck
 
-Create the docker: `sbt docker:publishLocal`
+Create the docker:
+
+```bash
+sbt universal:stage graalvm-native-image:packageBin
+docker build -t codacy-shellcheck .
+```
 
 The docker is supposed to be run with the following command:
 
@@ -21,20 +26,21 @@ and $srcDir must contain a valid `.codacy.json` configuration
 
 ## Test
 
+For a faster development loop you can create a Docker image based on the JVM instead of creating a native-image:
+
+```bash
+sbt universal:stage
+docker build -t codacy-shellcheck --target dev .
+```
+
 Follow the instructions at [codacy-plugins-test](https://github.com/codacy/codacy-plugins-test/blob/master/README.md#test-definition)
 
 ## Generating the documentation
 
-1. Update the version tag in `Dockerfile` and run:
+1. Update the `VERSION` variable in `generate.sh` and run:
 
 ```bash
-docker build -t codacy/alpine-jre-shellcheck -f Dockerfile .
-```
-
-2. Update the `VERSION` variable in `generate.sh` and run:
-
-```bash
-cd docs
+cd doc-generator
 ./generate.sh
 ```
 

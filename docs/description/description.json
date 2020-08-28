@@ -201,8 +201,8 @@
   },
   {
     "patternId": "SC1056",
-    "title": "!/bin/bash",
-    "description": "!/bin/bash"
+    "title": "Expected a '}'. If you have one, try a ; or \\\\n in front of it.",
+    "description": "Expected a '}'. If you have one, try a ; or \\\\n in front of it."
   },
   {
     "patternId": "SC1058",

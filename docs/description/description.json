@@ -946,8 +946,8 @@
   },
   {
     "patternId": "SC2091",
-    "title": "Remove surrounding $() to avoid executing output.",
-    "description": "Remove surrounding $() to avoid executing output."
+    "title": "Remove surrounding $() to avoid executing output (or use eval if intentional).",
+    "description": "Remove surrounding $() to avoid executing output (or use eval if intentional)."
   },
   {
     "patternId": "SC2092",

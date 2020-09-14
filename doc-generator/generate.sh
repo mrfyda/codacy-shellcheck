@@ -31,6 +31,7 @@ for f in SC*; do
   category=${category:=CodeStyle}
   subcategory=`cat $SCRIPT_HOME/categories.json | jq -SM ".[] | select((.patternId==\"$pattern_id\") and .category==\"Security\") | .subcategory" | tr -d '"'`
   severity=`grep -hR $internal_id ../shellcheck`
+  enabled=`cat $SCRIPT_HOME/defaults.json | jq "contains([\"$pattern_id\"])"`
   case $severity in
     *"err"*) level="Error" ;;
     *"ErrorC"*) level="Error" ;;
@@ -41,9 +42,9 @@ for f in SC*; do
     *) level="Info" ;;
   esac
   if [ "$subcategory" != "" ]; then
-    patterns+=$(jq -cMn --arg patternId "$pattern_id" --arg level "$level" --arg category "$category" --arg subcategory "$subcategory" '{"patternId": $patternId, "level": $level, "category": $category, "subcategory": $subcategory}')
+    patterns+=$(jq -cMn --arg patternId "$pattern_id" --arg level "$level" --arg category "$category" --arg subcategory "$subcategory" --argjson enabled $enabled '{"patternId": $patternId, "level": $level, "category": $category, "subcategory": $subcategory, "enabled": $enabled}')
   else
-    patterns+=$(jq -cMn --arg patternId "$pattern_id" --arg level "$level" --arg category "$category" '{"patternId": $patternId, "level": $level, "category": $category}')
+    patterns+=$(jq -cMn --arg patternId "$pattern_id" --arg level "$level" --arg category "$category" --argjson enabled $enabled '{"patternId": $patternId, "level": $level, "category": $category, "enabled": $enabled}')
   fi
 done
 

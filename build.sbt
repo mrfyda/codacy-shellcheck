@@ -8,10 +8,9 @@ libraryDependencies += "com.codacy" %% "codacy-engine-scala-seed" % "4.1.1"
 
 enablePlugins(GraalVMNativeImagePlugin)
 
-val graalVersion = "20.1.0-java11"
+val graalVersion = "java11-21.1.0"
 
 graalVMNativeImageGraalVersion := Some(graalVersion)
-containerBuildImage := Some(s"oracle/graalvm-ce:$graalVersion")
 graalVMNativeImageOptions ++= Seq(
   "-O1",
   "-H:+ReportExceptionStackTraces",

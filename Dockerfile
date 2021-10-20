@@ -1,4 +1,4 @@
-FROM alpine:3.12 as base
+FROM alpine:3.14.2 as base
 
 ARG SHELLCHECK_VERSION=0.7.1
 

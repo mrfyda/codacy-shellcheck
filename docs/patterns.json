@@ -1,6 +1,6 @@
 {
   "name": "shellcheck",
-  "version": "v0.7.1",
+  "version": "v0.7.2",
   "patterns": [
     {
       "patternId": "SC1000",
@@ -94,12 +94,6 @@
     },
     {
       "patternId": "SC1026",
-      "level": "Error",
-      "category": "CodeStyle",
-      "enabled": false
-    },
-    {
-      "patternId": "SC1027",
       "level": "Error",
       "category": "CodeStyle",
       "enabled": false
@@ -285,18 +279,6 @@
       "enabled": false
     },
     {
-      "patternId": "SC1067",
-      "level": "Info",
-      "category": "CodeStyle",
-      "enabled": false
-    },
-    {
-      "patternId": "SC1068",
-      "level": "Error",
-      "category": "CodeStyle",
-      "enabled": false
-    },
-    {
       "patternId": "SC1069",
       "level": "Warning",
       "category": "CodeStyle",
@@ -322,6 +304,12 @@
     },
     {
       "patternId": "SC1073",
+      "level": "Error",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC1074",
       "level": "Error",
       "category": "CodeStyle",
       "enabled": false
@@ -466,6 +454,12 @@
     },
     {
       "patternId": "SC1105",
+      "level": "Error",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC1106",
       "level": "Error",
       "category": "CodeStyle",
       "enabled": false
@@ -639,7 +633,31 @@
       "enabled": false
     },
     {
-      "patternId": "SC1136",
+      "patternId": "SC1139",
+      "level": "Error",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC1140",
+      "level": "Error",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC1141",
+      "level": "Error",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC1142",
+      "level": "Error",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC1143",
       "level": "Error",
       "category": "CodeStyle",
       "enabled": false
@@ -867,12 +885,6 @@
       "enabled": false
     },
     {
-      "patternId": "SC2039",
-      "level": "Warning",
-      "category": "CodeStyle",
-      "enabled": false
-    },
-    {
       "patternId": "SC2041",
       "level": "Warning",
       "category": "CodeStyle",
@@ -1060,7 +1072,7 @@
     },
     {
       "patternId": "SC2076",
-      "level": "Error",
+      "level": "Warning",
       "category": "CodeStyle",
       "enabled": false
     },
@@ -1260,6 +1272,12 @@
     },
     {
       "patternId": "SC2112",
+      "level": "Warning",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC2113",
       "level": "Warning",
       "category": "CodeStyle",
       "enabled": false
@@ -1520,12 +1538,6 @@
     {
       "patternId": "SC2168",
       "level": "Error",
-      "category": "CodeStyle",
-      "enabled": false
-    },
-    {
-      "patternId": "SC2169",
-      "level": "Warning",
       "category": "CodeStyle",
       "enabled": false
     },
@@ -2049,6 +2061,414 @@
     {
       "patternId": "SC2257",
       "level": "Warning",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC2259",
+      "level": "Error",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC2260",
+      "level": "Error",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC2261",
+      "level": "Error",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC2262",
+      "level": "Warning",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC2263",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC2264",
+      "level": "Error",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC2267",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC2268",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC2269",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC2270",
+      "level": "Error",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC2271",
+      "level": "Error",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC2272",
+      "level": "Error",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC2273",
+      "level": "Error",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC2274",
+      "level": "Error",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC2275",
+      "level": "Error",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC2276",
+      "level": "Error",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC2277",
+      "level": "Error",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC2278",
+      "level": "Error",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC2279",
+      "level": "Error",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC2280",
+      "level": "Error",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC2281",
+      "level": "Error",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC2282",
+      "level": "Error",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC2283",
+      "level": "Error",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC2284",
+      "level": "Error",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC2285",
+      "level": "Error",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC3001",
+      "level": "Warning",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC3002",
+      "level": "Warning",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC3003",
+      "level": "Warning",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC3004",
+      "level": "Warning",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC3006",
+      "level": "Warning",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC3010",
+      "level": "Warning",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC3012",
+      "level": "Warning",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC3013",
+      "level": "Warning",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC3014",
+      "level": "Warning",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC3015",
+      "level": "Warning",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC3017",
+      "level": "Warning",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC3018",
+      "level": "Warning",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC3019",
+      "level": "Warning",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC3020",
+      "level": "Warning",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC3021",
+      "level": "Warning",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC3022",
+      "level": "Warning",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC3023",
+      "level": "Warning",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC3024",
+      "level": "Warning",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC3025",
+      "level": "Warning",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC3026",
+      "level": "Warning",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC3028",
+      "level": "Warning",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC3031",
+      "level": "Warning",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC3034",
+      "level": "Warning",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC3035",
+      "level": "Warning",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC3037",
+      "level": "Warning",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC3038",
+      "level": "Warning",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC3039",
+      "level": "Warning",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC3040",
+      "level": "Warning",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC3043",
+      "level": "Warning",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC3044",
+      "level": "Warning",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC3045",
+      "level": "Warning",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC3046",
+      "level": "Warning",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC3047",
+      "level": "Warning",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC3048",
+      "level": "Warning",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC3049",
+      "level": "Warning",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC3050",
+      "level": "Warning",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC3053",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC3054",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC3055",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC3056",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC3057",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC3059",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "SC3060",
+      "level": "Info",
       "category": "CodeStyle",
       "enabled": false
     }

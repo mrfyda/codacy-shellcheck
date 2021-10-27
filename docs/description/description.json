@@ -71,18 +71,13 @@
   },
   {
     "patternId": "SC1020",
-    "title": "You need a space before the if single then \"]\" else \"]]\"",
-    "description": "You need a space before the if single then \"]\" else \"]]\""
+    "title": "You need a space before the \"]\" or \"]]\"",
+    "description": "You need a space before the \"]\" or \"]]\""
   },
   {
     "patternId": "SC1026",
     "title": "If grouping expressions inside [[..]], use ( .. ).",
     "description": "If grouping expressions inside [[..]], use ( .. )."
-  },
-  {
-    "patternId": "SC1027",
-    "title": "New page",
-    "description": "New page"
   },
   {
     "patternId": "SC1028",
@@ -101,8 +96,8 @@
   },
   {
     "patternId": "SC1034",
-    "title": "See similar error [[SC1033]]",
-    "description": "See similar error [[SC1033]]"
+    "title": "Test expression was opened with double `[` but closed with single `]]`. Make sure they match.",
+    "description": "Test expression was opened with double `[` but closed with single `]]`. Make sure they match."
   },
   {
     "patternId": "SC1035",
@@ -141,8 +136,8 @@
   },
   {
     "patternId": "SC1042",
-    "title": "Found 'eof' further down, but not on a separate line.",
-    "description": "Found 'eof' further down, but not on a separate line."
+    "title": "Close matches include '-eof' (!= 'eof').",
+    "description": "Close matches include '-eof' (!= 'eof')."
   },
   {
     "patternId": "SC1044",
@@ -235,16 +230,6 @@
     "description": "Don't use $ on the left side of assignments."
   },
   {
-    "patternId": "SC1067",
-    "title": "For indirection, use arrays, `declare \"var$n=value\"`, or (for sh) read/eval",
-    "description": "For indirection, use arrays, `declare \"var$n=value\"`, or (for sh) read/eval"
-  },
-  {
-    "patternId": "SC1068",
-    "title": "Don't put spaces around the = in assignments.",
-    "description": "Don't put spaces around the = in assignments."
-  },
-  {
     "patternId": "SC1069",
     "title": "You need a space before the [.",
     "description": "You need a space before the [."
@@ -268,6 +253,11 @@
     "patternId": "SC1073",
     "title": "Couldn't parse this (thing). Fix to allow more checks.",
     "description": "Couldn't parse this (thing). Fix to allow more checks."
+  },
+  {
+    "patternId": "SC1074",
+    "title": "Did you forget the `;;` after the previous case item?",
+    "description": "Did you forget the `;;` after the previous case item?"
   },
   {
     "patternId": "SC1075",
@@ -301,8 +291,8 @@
   },
   {
     "patternId": "SC1083",
-    "title": "This `{`/`}` is literal. Check expression (missing `;/\\n?`) or quote it.",
-    "description": "This `{`/`}` is literal. Check expression (missing `;/\\n?`) or quote it."
+    "title": "This `{`/`}` is literal. Check if `;` is missing or quote the expression.",
+    "description": "This `{`/`}` is literal. Check if `;` is missing or quote the expression."
   },
   {
     "patternId": "SC1084",
@@ -388,6 +378,11 @@
     "patternId": "SC1105",
     "title": "Shells disambiguate (( differently or not at all. If the first ( should start a subshell, add a space after it.",
     "description": "Shells disambiguate (( differently or not at all. If the first ( should start a subshell, add a space after it."
+  },
+  {
+    "patternId": "SC1106",
+    "title": "In arithmetic contexts, use `<` instead of `-lt`",
+    "description": "In arithmetic contexts, use `<` instead of `-lt`"
   },
   {
     "patternId": "SC1107",
@@ -530,9 +525,29 @@
     "description": "Prefer escape over ending quote to make `$` literal. Instead of `\"It costs $\"5`, use `\"It costs \\$5\"`"
   },
   {
-    "patternId": "SC1136",
-    "title": "Unexpected characters after terminating `]`. Missing semicolon/linefeed?",
-    "description": "Unexpected characters after terminating `]`. Missing semicolon/linefeed?"
+    "patternId": "SC1139",
+    "title": "Use || instead of '-o' between test commands.",
+    "description": "Use || instead of '-o' between test commands."
+  },
+  {
+    "patternId": "SC1140",
+    "title": "Unexpected parameters after condition. Missing &&/||, or bad expression?",
+    "description": "Unexpected parameters after condition. Missing &&/||, or bad expression?"
+  },
+  {
+    "patternId": "SC1141",
+    "title": "Unexpected tokens after compound command. Bad redirection or missing ;/&&/||/|?",
+    "description": "Unexpected tokens after compound command. Bad redirection or missing ;/&&/||/|?"
+  },
+  {
+    "patternId": "SC1142",
+    "title": "Use 'done < <(cmd)' to redirect from process substitution (currently missing one '<').",
+    "description": "Use 'done < <(cmd)' to redirect from process substitution (currently missing one '<')."
+  },
+  {
+    "patternId": "SC1143",
+    "title": "This backslash is part of a comment and does not continue the line.",
+    "description": "This backslash is part of a comment and does not continue the line."
   },
   {
     "patternId": "SC2000",
@@ -720,11 +735,6 @@
     "description": "Use -print0/-0 or find -exec + to allow for non-alphanumeric filenames."
   },
   {
-    "patternId": "SC2039",
-    "title": "In POSIX sh, *something* is undefined.",
-    "description": "In POSIX sh, *something* is undefined."
-  },
-  {
     "patternId": "SC2041",
     "title": "This is a literal string. To run as a command, use $(..) instead of '..' .",
     "description": "This is a literal string. To run as a command, use $(..) instead of '..' ."
@@ -746,8 +756,8 @@
   },
   {
     "patternId": "SC2046",
-    "title": "Quote this to prevent word splitting",
-    "description": "Quote this to prevent word splitting"
+    "title": "Quote this to prevent word splitting.",
+    "description": "Quote this to prevent word splitting."
   },
   {
     "patternId": "SC2048",
@@ -796,8 +806,8 @@
   },
   {
     "patternId": "SC2058",
-    "title": "Unknown unaryoperator.",
-    "description": "Unknown unaryoperator."
+    "title": "Unknown unary operator.",
+    "description": "Unknown unary operator."
   },
   {
     "patternId": "SC2059",
@@ -1050,9 +1060,14 @@
     "description": "'function' keyword is non-standard. Delete it."
   },
   {
+    "patternId": "SC2113",
+    "title": "`function` keyword is non-standard. Use `foo()` instead of `function foo`.",
+    "description": "`function` keyword is non-standard. Use `foo()` instead of `function foo`."
+  },
+  {
     "patternId": "SC2114",
-    "title": "Warning: deletes a system directory. ",
-    "description": "Warning: deletes a system directory. "
+    "title": "Warning: deletes a system directory.",
+    "description": "Warning: deletes a system directory."
   },
   {
     "patternId": "SC2115",
@@ -1166,8 +1181,8 @@
   },
   {
     "patternId": "SC2148",
-    "title": "Add a shebang line to the top of your script:",
-    "description": "Add a shebang line to the top of your script:"
+    "title": "Tips depend on target shell and yours is unknown. Add a shebang.",
+    "description": "Tips depend on target shell and yours is unknown. Add a shebang."
   },
   {
     "patternId": "SC2150",
@@ -1186,8 +1201,8 @@
   },
   {
     "patternId": "SC2153",
-    "title": "Possible Misspelling: MYVARIABLE may not be assigned, but MY_VARIABLE is.",
-    "description": "Possible Misspelling: MYVARIABLE may not be assigned, but MY_VARIABLE is."
+    "title": "Possible Misspelling: MYVARIABLE may not be assigned. Did you mean MY_VARIABLE?",
+    "description": "Possible Misspelling: MYVARIABLE may not be assigned. Did you mean MY_VARIABLE?"
   },
   {
     "patternId": "SC2154",
@@ -1265,14 +1280,9 @@
     "description": "'local' is only valid in functions."
   },
   {
-    "patternId": "SC2169",
-    "title": "In dash, *something* is not supported.",
-    "description": "In dash, *something* is not supported."
-  },
-  {
     "patternId": "SC2170",
-    "title": "Numerical -eq does not dereference in [..]. Expand or use string operator.",
-    "description": "Numerical -eq does not dereference in [..]. Expand or use string operator."
+    "title": "Invalid number for -eq. Use = to compare as string (or use $var to expand as a variable).",
+    "description": "Invalid number for -eq. Use = to compare as string (or use $var to expand as a variable)."
   },
   {
     "patternId": "SC2171",
@@ -1306,8 +1316,8 @@
   },
   {
     "patternId": "SC2177",
-    "title": "'time' is undefined for compound commands, time sh -c instead.",
-    "description": "'time' is undefined for compound commands, time sh -c instead."
+    "title": "'time' is undefined for compound commands, use time sh -c instead.",
+    "description": "'time' is undefined for compound commands, use time sh -c instead."
   },
   {
     "patternId": "SC2178",
@@ -1581,13 +1591,13 @@
   },
   {
     "patternId": "SC2233",
-    "title": "Remove superfluous `(..)` around condition.",
-    "description": "Remove superfluous `(..)` around condition."
+    "title": "Remove superfluous `(..)` around condition to avoid subshell overhead.",
+    "description": "Remove superfluous `(..)` around condition to avoid subshell overhead."
   },
   {
     "patternId": "SC2234",
-    "title": "Remove superfluous `(..)` around test command.",
-    "description": "Remove superfluous `(..)` around test command."
+    "title": "Remove superfluous `(..)` around test command to avoid subshell overhead.",
+    "description": "Remove superfluous `(..)` around test command to avoid subshell overhead."
   },
   {
     "patternId": "SC2235",
@@ -1703,5 +1713,345 @@
     "patternId": "SC2257",
     "title": "Arithmetic modifications in command redirections may be discarded. Do them separately.",
     "description": "Arithmetic modifications in command redirections may be discarded. Do them separately."
+  },
+  {
+    "patternId": "SC2259",
+    "title": "This redirection overrides piped input. To use both, merge or pass filenames.",
+    "description": "This redirection overrides piped input. To use both, merge or pass filenames."
+  },
+  {
+    "patternId": "SC2260",
+    "title": "This redirection overrides the output pipe. Use 'tee' to output to both.",
+    "description": "This redirection overrides the output pipe. Use 'tee' to output to both."
+  },
+  {
+    "patternId": "SC2261",
+    "title": "Multiple redirections compete for stdout. Use cat, tee, or pass filenames instead.",
+    "description": "Multiple redirections compete for stdout. Use cat, tee, or pass filenames instead."
+  },
+  {
+    "patternId": "SC2262",
+    "title": "This alias can't be defined and used in the same parsing unit. Use a function instead.",
+    "description": "This alias can't be defined and used in the same parsing unit. Use a function instead."
+  },
+  {
+    "patternId": "SC2263",
+    "title": "Since they're in the same parsing unit, this command will not refer to the previously mentioned alias.",
+    "description": "Since they're in the same parsing unit, this command will not refer to the previously mentioned alias."
+  },
+  {
+    "patternId": "SC2264",
+    "title": "This function unconditionally re-invokes itself. Missing `command`?",
+    "description": "This function unconditionally re-invokes itself. Missing `command`?"
+  },
+  {
+    "patternId": "SC2267",
+    "title": "GNU xargs -i is deprecated in favor of -I{}",
+    "description": "GNU xargs -i is deprecated in favor of -I{}"
+  },
+  {
+    "patternId": "SC2268",
+    "title": "Avoid x-prefix in comparisons as it no longer serves a purpose.",
+    "description": "Avoid x-prefix in comparisons as it no longer serves a purpose."
+  },
+  {
+    "patternId": "SC2269",
+    "title": "This variable is assigned to itself, so the assignment does nothing.",
+    "description": "This variable is assigned to itself, so the assignment does nothing."
+  },
+  {
+    "patternId": "SC2270",
+    "title": "To assign positional parameters, use 'set -- first second ..' (or use [ ] to compare).",
+    "description": "To assign positional parameters, use 'set -- first second ..' (or use [ ] to compare)."
+  },
+  {
+    "patternId": "SC2271",
+    "title": "For indirection, use arrays, `declare \"var$n=value\"`, or (for sh) read/eval",
+    "description": "For indirection, use arrays, `declare \"var$n=value\"`, or (for sh) read/eval"
+  },
+  {
+    "patternId": "SC2272",
+    "title": "Command name contains ==. For comparison, use [ \"$var\" = value ].",
+    "description": "Command name contains ==. For comparison, use [ \"$var\" = value ]."
+  },
+  {
+    "patternId": "SC2273",
+    "title": "Sequence of ===s found. Merge conflict or intended as a commented border?",
+    "description": "Sequence of ===s found. Merge conflict or intended as a commented border?"
+  },
+  {
+    "patternId": "SC2274",
+    "title": "Command name starts with ===. Intended as a commented border?",
+    "description": "Command name starts with ===. Intended as a commented border?"
+  },
+  {
+    "patternId": "SC2275",
+    "title": "Command name starts with =. Bad line break?",
+    "description": "Command name starts with =. Bad line break?"
+  },
+  {
+    "patternId": "SC2276",
+    "title": "This is interpreted as a command name containing '='. Bad assignment or comparison?",
+    "description": "This is interpreted as a command name containing '='. Bad assignment or comparison?"
+  },
+  {
+    "patternId": "SC2277",
+    "title": "Use BASH_ARGV0 to assign to $0 in bash (or use [ ] to compare).",
+    "description": "Use BASH_ARGV0 to assign to $0 in bash (or use [ ] to compare)."
+  },
+  {
+    "patternId": "SC2278",
+    "title": "$0 can't be assigned in Ksh (but it does reflect the current function).",
+    "description": "$0 can't be assigned in Ksh (but it does reflect the current function)."
+  },
+  {
+    "patternId": "SC2279",
+    "title": "$0 can't be assigned in Dash. This becomes a command name.",
+    "description": "$0 can't be assigned in Dash. This becomes a command name."
+  },
+  {
+    "patternId": "SC2280",
+    "title": "$0 can't be assigned this way, and there is no portable alternative.",
+    "description": "$0 can't be assigned this way, and there is no portable alternative."
+  },
+  {
+    "patternId": "SC2281",
+    "title": "Don't use $/${} on the left side of assignments.",
+    "description": "Don't use $/${} on the left side of assignments."
+  },
+  {
+    "patternId": "SC2282",
+    "title": "Variable names can't start with numbers, so this is interpreted as a command.",
+    "description": "Variable names can't start with numbers, so this is interpreted as a command."
+  },
+  {
+    "patternId": "SC2283",
+    "title": "Use [ ] to compare values, or remove spaces around = to assign (or quote '=' if literal).",
+    "description": "Use [ ] to compare values, or remove spaces around = to assign (or quote '=' if literal)."
+  },
+  {
+    "patternId": "SC2284",
+    "title": "Use [ x = y ] to compare values (or quote '==' if literal).",
+    "description": "Use [ x = y ] to compare values (or quote '==' if literal)."
+  },
+  {
+    "patternId": "SC2285",
+    "title": "Remove spaces around += to assign (or quote '+=' if literal).",
+    "description": "Remove spaces around += to assign (or quote '+=' if literal)."
+  },
+  {
+    "patternId": "SC3001",
+    "title": "In POSIX sh, process substitution is undefined.",
+    "description": "In POSIX sh, process substitution is undefined."
+  },
+  {
+    "patternId": "SC3002",
+    "title": "In POSIX sh, extglob is undefined.",
+    "description": "In POSIX sh, extglob is undefined."
+  },
+  {
+    "patternId": "SC3003",
+    "title": "In POSIX sh, $'..' is undefined.",
+    "description": "In POSIX sh, $'..' is undefined."
+  },
+  {
+    "patternId": "SC3004",
+    "title": "In POSIX sh, $\"..\" is undefined",
+    "description": "In POSIX sh, $\"..\" is undefined"
+  },
+  {
+    "patternId": "SC3006",
+    "title": "In POSIX sh, standalone ((..)) is undefined.",
+    "description": "In POSIX sh, standalone ((..)) is undefined."
+  },
+  {
+    "patternId": "SC3010",
+    "title": "",
+    "description": ""
+  },
+  {
+    "patternId": "SC3012",
+    "title": "In POSIX sh, lexicographical `\\<` is undefined.",
+    "description": "In POSIX sh, lexicographical `\\<` is undefined."
+  },
+  {
+    "patternId": "SC3013",
+    "title": "In POSIX sh, `-nt` is undefined.",
+    "description": "In POSIX sh, `-nt` is undefined."
+  },
+  {
+    "patternId": "SC3014",
+    "title": "In POSIX sh, `==` in place of `=` is undefined.",
+    "description": "In POSIX sh, `==` in place of `=` is undefined."
+  },
+  {
+    "patternId": "SC3015",
+    "title": "In POSIX sh, =~ regex matching is undefined.",
+    "description": "In POSIX sh, =~ regex matching is undefined."
+  },
+  {
+    "patternId": "SC3017",
+    "title": "In POSIX sh, unary `-a` in place of `-e` is undefined.",
+    "description": "In POSIX sh, unary `-a` in place of `-e` is undefined."
+  },
+  {
+    "patternId": "SC3018",
+    "title": "In POSIX sh, ++ is undefined.",
+    "description": "In POSIX sh, ++ is undefined."
+  },
+  {
+    "patternId": "SC3019",
+    "title": "In POSIX sh, exponentials are undefined.",
+    "description": "In POSIX sh, exponentials are undefined."
+  },
+  {
+    "patternId": "SC3020",
+    "title": "In POSIX sh, `&>` is undefined.",
+    "description": "In POSIX sh, `&>` is undefined."
+  },
+  {
+    "patternId": "SC3021",
+    "title": "In POSIX sh, `>&` is undefined.",
+    "description": "In POSIX sh, `>&` is undefined."
+  },
+  {
+    "patternId": "SC3022",
+    "title": "In POSIX sh, named file descriptors is undefined.",
+    "description": "In POSIX sh, named file descriptors is undefined."
+  },
+  {
+    "patternId": "SC3023",
+    "title": "In POSIX sh, FDs outside of 0-9 are undefined.",
+    "description": "In POSIX sh, FDs outside of 0-9 are undefined."
+  },
+  {
+    "patternId": "SC3024",
+    "title": "In POSIX sh, += is undefined.",
+    "description": "In POSIX sh, += is undefined."
+  },
+  {
+    "patternId": "SC3025",
+    "title": "In POSIX sh, /dev/{tcp,udp} is undefined.",
+    "description": "In POSIX sh, /dev/{tcp,udp} is undefined."
+  },
+  {
+    "patternId": "SC3026",
+    "title": "In POSIX sh, ^ in place of ! in glob bracket expressions is undefined.",
+    "description": "In POSIX sh, ^ in place of ! in glob bracket expressions is undefined."
+  },
+  {
+    "patternId": "SC3028",
+    "title": "In POSIX sh, VARIABLE is undefined.",
+    "description": "In POSIX sh, VARIABLE is undefined."
+  },
+  {
+    "patternId": "SC3031",
+    "title": "In POSIX sh, redirecting from/to globs is undefined.",
+    "description": "In POSIX sh, redirecting from/to globs is undefined."
+  },
+  {
+    "patternId": "SC3034",
+    "title": "In POSIX sh, $(<file) is undefined.",
+    "description": "In POSIX sh, $(<file) is undefined."
+  },
+  {
+    "patternId": "SC3035",
+    "title": "In POSIX sh, `` `<file` `` is undefined.",
+    "description": "In POSIX sh, `` `<file` `` is undefined."
+  },
+  {
+    "patternId": "SC3037",
+    "title": "In POSIX sh, echo flags are undefined.",
+    "description": "In POSIX sh, echo flags are undefined."
+  },
+  {
+    "patternId": "SC3038",
+    "title": "In POSIX sh, exec flags are undefined.",
+    "description": "In POSIX sh, exec flags are undefined."
+  },
+  {
+    "patternId": "SC3039",
+    "title": "In POSIX sh, 'let' is undefined.",
+    "description": "In POSIX sh, 'let' is undefined."
+  },
+  {
+    "patternId": "SC3040",
+    "title": "In POSIX sh, set option pipefail is undefined.",
+    "description": "In POSIX sh, set option pipefail is undefined."
+  },
+  {
+    "patternId": "SC3043",
+    "title": "In POSIX sh, `local` is undefined.",
+    "description": "In POSIX sh, `local` is undefined."
+  },
+  {
+    "patternId": "SC3044",
+    "title": "In POSIX sh, `declare` is undefined.",
+    "description": "In POSIX sh, `declare` is undefined."
+  },
+  {
+    "patternId": "SC3045",
+    "title": "In POSIX sh, some-command-with-flag is undefined.",
+    "description": "In POSIX sh, some-command-with-flag is undefined."
+  },
+  {
+    "patternId": "SC3046",
+    "title": "In POSIX sh, `source` in place of `.` is undefined.",
+    "description": "In POSIX sh, `source` in place of `.` is undefined."
+  },
+  {
+    "patternId": "SC3047",
+    "title": "In POSIX sh, trapping ERR is undefined.",
+    "description": "In POSIX sh, trapping ERR is undefined."
+  },
+  {
+    "patternId": "SC3048",
+    "title": "In POSIX sh, prefixing signal names with 'SIG' is undefined.",
+    "description": "In POSIX sh, prefixing signal names with 'SIG' is undefined."
+  },
+  {
+    "patternId": "SC3049",
+    "title": "In POSIX sh, using lower/mixed case for signal names is undefined.",
+    "description": "In POSIX sh, using lower/mixed case for signal names is undefined."
+  },
+  {
+    "patternId": "SC3050",
+    "title": "In POSIX sh, `printf %q` is undefined.",
+    "description": "In POSIX sh, `printf %q` is undefined."
+  },
+  {
+    "patternId": "SC3053",
+    "title": "In POSIX sh, indirect expansion is undefined.",
+    "description": "In POSIX sh, indirect expansion is undefined."
+  },
+  {
+    "patternId": "SC3054",
+    "title": "In POSIX sh, array references are undefined.",
+    "description": "In POSIX sh, array references are undefined."
+  },
+  {
+    "patternId": "SC3055",
+    "title": "In POSIX sh, array key expansion is undefined.",
+    "description": "In POSIX sh, array key expansion is undefined."
+  },
+  {
+    "patternId": "SC3056",
+    "title": "In POSIX sh, name matching prefixes are undefined.",
+    "description": "In POSIX sh, name matching prefixes are undefined."
+  },
+  {
+    "patternId": "SC3057",
+    "title": "In POSIX sh, string indexing is undefined.",
+    "description": "In POSIX sh, string indexing is undefined."
+  },
+  {
+    "patternId": "SC3059",
+    "title": "Case modification is not supported in dash and undefined in POSIX sh.",
+    "description": "Case modification is not supported in dash and undefined in POSIX sh."
+  },
+  {
+    "patternId": "SC3060",
+    "title": "In POSIX sh, string replacement is undefined.",
+    "description": "In POSIX sh, string replacement is undefined."
   }
 ]

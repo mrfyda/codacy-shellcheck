@@ -1,8 +1,8 @@
 [
   {
     "patternId": "SC1000",
-    "title": "$ is not used specially and should therefore be escaped.",
-    "description": "$ is not used specially and should therefore be escaped."
+    "title": "`$` is not used specially and should therefore be escaped.",
+    "description": "`$` is not used specially and should therefore be escaped."
   },
   {
     "patternId": "SC1001",
@@ -11,18 +11,13 @@
   },
   {
     "patternId": "SC1003",
-    "title": "Want to escape a single quote? echo 'This is how it'\\\\''s done'.",
-    "description": "Want to escape a single quote? echo 'This is how it'\\\\''s done'."
-  },
-  {
-    "patternId": "SC1004",
-    "title": "This backslash+linefeed is literal. Break outside single quotes if you just want to break the line.",
-    "description": "This backslash+linefeed is literal. Break outside single quotes if you just want to break the line."
+    "title": "Want to escape a single quote? `echo 'This is how it'\\''s done'`.",
+    "description": "Want to escape a single quote? `echo 'This is how it'\\''s done'`."
   },
   {
     "patternId": "SC1007",
-    "title": "Remove space after = if trying to assign a value (or for empty string, use var='' ... ).",
-    "description": "Remove space after = if trying to assign a value (or for empty string, use var='' ... )."
+    "title": "Remove space after `=` if trying to assign a value (or for empty string, use `var=''` ... ).",
+    "description": "Remove space after `=` if trying to assign a value (or for empty string, use `var=''` ... )."
   },
   {
     "patternId": "SC1008",
@@ -36,8 +31,8 @@
   },
   {
     "patternId": "SC1010",
-    "title": "Use semicolon or linefeed before 'done' (or quote to make it literal).\r",
-    "description": "Use semicolon or linefeed before 'done' (or quote to make it literal).\r"
+    "title": "Use semicolon or linefeed before `done` (or quote to make it literal).\r",
+    "description": "Use semicolon or linefeed before `done` (or quote to make it literal).\r"
   },
   {
     "patternId": "SC1011",
@@ -51,8 +46,8 @@
   },
   {
     "patternId": "SC1014",
-    "title": "Use 'if cmd; then ..' to check exit code, or 'if [ \"$(cmd)\" = .. ]' to check output.",
-    "description": "Use 'if cmd; then ..' to check exit code, or 'if [ \"$(cmd)\" = .. ]' to check output."
+    "title": "Use `if cmd; then ..` to check exit code, or `if [ \"$(cmd)\" = .. ]` to check output.",
+    "description": "Use `if cmd; then ..` to check exit code, or `if [ \"$(cmd)\" = .. ]` to check output."
   },
   {
     "patternId": "SC1017",
@@ -71,18 +66,18 @@
   },
   {
     "patternId": "SC1020",
-    "title": "You need a space before the \"]\" or \"]]\"",
-    "description": "You need a space before the \"]\" or \"]]\""
+    "title": "You need a space before the `]` or `]]`",
+    "description": "You need a space before the `]` or `]]`"
   },
   {
     "patternId": "SC1026",
-    "title": "If grouping expressions inside [[..]], use ( .. ).",
-    "description": "If grouping expressions inside [[..]], use ( .. )."
+    "title": "If grouping expressions inside `[[..]]`, use `( .. )`.",
+    "description": "If grouping expressions inside `[[..]]`, use `( .. )`."
   },
   {
     "patternId": "SC1028",
-    "title": "In [..] you have to escape \\\\( \\\\) or preferably combine [..] expressions.",
-    "description": "In [..] you have to escape \\\\( \\\\) or preferably combine [..] expressions."
+    "title": "In `[..]` you have to escape `\\( \\)` or preferably combine `[..]` expressions.",
+    "description": "In `[..]` you have to escape `\\( \\)` or preferably combine `[..]` expressions."
   },
   {
     "patternId": "SC1029",
@@ -111,13 +106,13 @@
   },
   {
     "patternId": "SC1037",
-    "title": "Braces are required for positionals over 9, e.g. ${10}.",
-    "description": "Braces are required for positionals over 9, e.g. ${10}."
+    "title": "Braces are required for positionals over 9, e.g. `${10}`.",
+    "description": "Braces are required for positionals over 9, e.g. `${10}`."
   },
   {
     "patternId": "SC1038",
-    "title": "Shells are space sensitive. Use '< <(cmd)', not '<<(cmd)'.",
-    "description": "Shells are space sensitive. Use '< <(cmd)', not '<<(cmd)'."
+    "title": "Shells are space sensitive. Use `< <(cmd)`, not `<<(cmd)`.",
+    "description": "Shells are space sensitive. Use `< <(cmd)`, not `<<(cmd)`."
   },
   {
     "patternId": "SC1039",
@@ -126,78 +121,78 @@
   },
   {
     "patternId": "SC1040",
-    "title": "When using <<-, you can only indent with tabs.",
-    "description": "When using <<-, you can only indent with tabs."
+    "title": "When using `<<-`, you can only indent with tabs.",
+    "description": "When using `<<-`, you can only indent with tabs."
   },
   {
     "patternId": "SC1041",
-    "title": "Found 'eof' further down, but not on a separate line.",
-    "description": "Found 'eof' further down, but not on a separate line."
+    "title": "Found `eof` further down, but not on a separate line.",
+    "description": "Found `eof` further down, but not on a separate line."
   },
   {
     "patternId": "SC1042",
-    "title": "Close matches include '-eof' (!= 'eof').",
-    "description": "Close matches include '-eof' (!= 'eof')."
+    "title": "Close matches include `-eof` (!= `eof`).",
+    "description": "Close matches include `-eof` (!= `eof`)."
   },
   {
     "patternId": "SC1044",
-    "title": "Couldn't find end token `EOF' in the here document.",
-    "description": "Couldn't find end token `EOF' in the here document."
+    "title": "Couldn't find end token `EOF` in the here document.",
+    "description": "Couldn't find end token `EOF` in the here document."
   },
   {
     "patternId": "SC1045",
-    "title": "It's not 'foo &; bar', just 'foo & bar'.",
-    "description": "It's not 'foo &; bar', just 'foo & bar'."
+    "title": "It's not `foo &; bar`, just `foo & bar`.",
+    "description": "It's not `foo &; bar`, just `foo & bar`."
   },
   {
     "patternId": "SC1046",
-    "title": "Couldn't find 'fi' for this 'if'.",
-    "description": "Couldn't find 'fi' for this 'if'."
+    "title": "Couldn't find `fi` for this `if`.",
+    "description": "Couldn't find `fi` for this `if`."
   },
   {
     "patternId": "SC1047",
-    "title": "\"Expected 'fi' matching previously mentioned 'if'.",
-    "description": "\"Expected 'fi' matching previously mentioned 'if'."
+    "title": "Expected `fi` matching previously mentioned `if`.",
+    "description": "Expected `fi` matching previously mentioned `if`."
   },
   {
     "patternId": "SC1048",
-    "title": "Can't have empty then clauses (use 'true' as a no-op).",
-    "description": "Can't have empty then clauses (use 'true' as a no-op)."
+    "title": "Can't have empty then clauses (use `true` as a no-op).",
+    "description": "Can't have empty then clauses (use `true` as a no-op)."
   },
   {
     "patternId": "SC1049",
-    "title": "Did you forget the 'then' for this 'if'?",
-    "description": "Did you forget the 'then' for this 'if'?"
+    "title": "Did you forget the `then` for this `if`?",
+    "description": "Did you forget the `then` for this `if`?"
   },
   {
     "patternId": "SC1050",
-    "title": "Expected 'then'.",
-    "description": "Expected 'then'."
+    "title": "Expected `then`.",
+    "description": "Expected `then`."
   },
   {
     "patternId": "SC1051",
-    "title": "Semicolons directly after 'then' are not allowed. Just remove it.",
-    "description": "Semicolons directly after 'then' are not allowed. Just remove it."
+    "title": "Semicolons directly after `then` are not allowed. Just remove it.",
+    "description": "Semicolons directly after `then` are not allowed. Just remove it."
   },
   {
     "patternId": "SC1052",
-    "title": "Semicolons directly after 'then' are not allowed. Just remove it.",
-    "description": "Semicolons directly after 'then' are not allowed. Just remove it."
+    "title": "Semicolons directly after `then` are not allowed. Just remove it.",
+    "description": "Semicolons directly after `then` are not allowed. Just remove it."
   },
   {
     "patternId": "SC1053",
-    "title": "Semicolons directly after 'else' are not allowed. Just remove it.",
-    "description": "Semicolons directly after 'else' are not allowed. Just remove it."
+    "title": "Semicolons directly after `else` are not allowed. Just remove it.",
+    "description": "Semicolons directly after `else` are not allowed. Just remove it."
   },
   {
     "patternId": "SC1054",
-    "title": "You need a space after the '{'.",
-    "description": "You need a space after the '{'."
+    "title": "You need a space after the `{`.",
+    "description": "You need a space after the `{`."
   },
   {
     "patternId": "SC1056",
-    "title": "Expected a '}'. If you have one, try a ; or \\\\n in front of it.",
-    "description": "Expected a '}'. If you have one, try a ; or \\\\n in front of it."
+    "title": "Expected a `}`. If you have one, try a `;` or `\\n` in front of it.",
+    "description": "Expected a `}`. If you have one, try a `;` or `\\n` in front of it."
   },
   {
     "patternId": "SC1058",
@@ -206,33 +201,33 @@
   },
   {
     "patternId": "SC1061",
-    "title": "Couldn't find 'done' for this 'do'.",
-    "description": "Couldn't find 'done' for this 'do'."
+    "title": "Couldn't find `done` for this `do`.",
+    "description": "Couldn't find `done` for this `do`."
   },
   {
     "patternId": "SC1062",
-    "title": "Expected 'done' matching previously mentioned 'do'.",
-    "description": "Expected 'done' matching previously mentioned 'do'."
+    "title": "Expected `done` matching previously mentioned `do`.",
+    "description": "Expected `done` matching previously mentioned `do`."
   },
   {
     "patternId": "SC1064",
-    "title": "Expected a { to open the function definition.",
-    "description": "Expected a { to open the function definition."
+    "title": "Expected a `{` to open the function definition.",
+    "description": "Expected a `{` to open the function definition."
   },
   {
     "patternId": "SC1065",
-    "title": "Trying to declare parameters? Don't. Use () and refer to params as $1, $2..",
-    "description": "Trying to declare parameters? Don't. Use () and refer to params as $1, $2.."
+    "title": "Trying to declare parameters? Don't. Use `()` and refer to params as `$1`, `$2`, ..",
+    "description": "Trying to declare parameters? Don't. Use `()` and refer to params as `$1`, `$2`, .."
   },
   {
     "patternId": "SC1066",
-    "title": "Don't use $ on the left side of assignments.",
-    "description": "Don't use $ on the left side of assignments."
+    "title": "Don't use `$` on the left side of assignments.",
+    "description": "Don't use `$` on the left side of assignments."
   },
   {
     "patternId": "SC1069",
-    "title": "You need a space before the [.",
-    "description": "You need a space before the [."
+    "title": "You need a space before the `[`.",
+    "description": "You need a space before the `[`."
   },
   {
     "patternId": "SC1070",
@@ -261,13 +256,13 @@
   },
   {
     "patternId": "SC1075",
-    "title": "Use 'elif' instead of 'else if'.",
-    "description": "Use 'elif' instead of 'else if'."
+    "title": "Use `elif` instead of `else if`.",
+    "description": "Use `elif` instead of `else if`."
   },
   {
     "patternId": "SC1077",
-    "title": "For command expansion, the tick should slant left (` vs ´).",
-    "description": "For command expansion, the tick should slant left (` vs ´)."
+    "title": "For command expansion, the tick should slant left (`` ` `` vs `´`).",
+    "description": "For command expansion, the tick should slant left (`` ` `` vs `´`)."
   },
   {
     "patternId": "SC1078",
@@ -281,13 +276,13 @@
   },
   {
     "patternId": "SC1081",
-    "title": "Scripts are case sensitive. Use 'if', not 'If'.",
-    "description": "Scripts are case sensitive. Use 'if', not 'If'."
+    "title": "Scripts are case sensitive. Use `if`, not `If`.",
+    "description": "Scripts are case sensitive. Use `if`, not `If`."
   },
   {
     "patternId": "SC1082",
-    "title": "This file has a UTF-8 BOM. Remove it with: LC_CTYPE=C sed '1s/^...//' < yourscript .",
-    "description": "This file has a UTF-8 BOM. Remove it with: LC_CTYPE=C sed '1s/^...//' < yourscript ."
+    "title": "This file has a UTF-8 BOM. Remove it with: `LC_CTYPE=C sed '1s/^...//' < yourscript`.",
+    "description": "This file has a UTF-8 BOM. Remove it with: `LC_CTYPE=C sed '1s/^...//' < yourscript`."
   },
   {
     "patternId": "SC1083",
@@ -296,18 +291,18 @@
   },
   {
     "patternId": "SC1084",
-    "title": "Use #!, not !#, for the shebang.",
-    "description": "Use #!, not !#, for the shebang."
+    "title": "Use `#!`, not `!#`, for the shebang.",
+    "description": "Use `#!`, not `!#`, for the shebang."
   },
   {
     "patternId": "SC1086",
-    "title": "Don't use $ on the iterator name in for loops.",
-    "description": "Don't use $ on the iterator name in for loops."
+    "title": "Don't use `$` on the iterator name in for loops.",
+    "description": "Don't use `$` on the iterator name in for loops."
   },
   {
     "patternId": "SC1087",
-    "title": "\"Use braces when expanding arrays, e.g. ${array[idx]} (or ${var}[.. to quiet).\"",
-    "description": "\"Use braces when expanding arrays, e.g. ${array[idx]} (or ${var}[.. to quiet).\""
+    "title": "Use braces when expanding arrays, e.g. `${array[idx]}` (or `${var}[..` to quiet).",
+    "description": "Use braces when expanding arrays, e.g. `${array[idx]}` (or `${var}[..` to quiet)."
   },
   {
     "patternId": "SC1088",
@@ -341,18 +336,18 @@
   },
   {
     "patternId": "SC1097",
-    "title": "Unexpected ==. For assignment, use =. For comparison, use [/[[.",
-    "description": "Unexpected ==. For assignment, use =. For comparison, use [/[[."
+    "title": "Unexpected `==`. For assignment, use `=`. For comparison, use `[`/`[[`.",
+    "description": "Unexpected `==`. For assignment, use `=`. For comparison, use `[`/`[[`."
   },
   {
     "patternId": "SC1098",
-    "title": "Quote/escape special characters when using eval, e.g. eval \"a=(b)\".",
-    "description": "Quote/escape special characters when using eval, e.g. eval \"a=(b)\"."
+    "title": "Quote/escape special characters when using `eval`, e.g. `eval \"a=(b)\"`.",
+    "description": "Quote/escape special characters when using `eval`, e.g. `eval \"a=(b)\"`."
   },
   {
     "patternId": "SC1099",
-    "title": "You need a space before the #.",
-    "description": "You need a space before the #."
+    "title": "You need a space before the `#`.",
+    "description": "You need a space before the `#`."
   },
   {
     "patternId": "SC1100",
@@ -361,8 +356,8 @@
   },
   {
     "patternId": "SC1101",
-    "title": "Delete trailing spaces after \\ to break line (or use quotes for literal space).",
-    "description": "Delete trailing spaces after \\ to break line (or use quotes for literal space)."
+    "title": "Delete trailing spaces after `\\` to break line (or use quotes for literal space).",
+    "description": "Delete trailing spaces after `\\` to break line (or use quotes for literal space)."
   },
   {
     "patternId": "SC1102",
@@ -371,13 +366,13 @@
   },
   {
     "patternId": "SC1104",
-    "title": "Use #!, not just !, for the shebang.",
-    "description": "Use #!, not just !, for the shebang."
+    "title": "Use `#!`, not just `!`, for the shebang.",
+    "description": "Use `#!`, not just `!`, for the shebang."
   },
   {
     "patternId": "SC1105",
-    "title": "Shells disambiguate (( differently or not at all. If the first ( should start a subshell, add a space after it.",
-    "description": "Shells disambiguate (( differently or not at all. If the first ( should start a subshell, add a space after it."
+    "title": "Shells disambiguate `((` differently or not at all. If the first `(` should start a subshell, add a space after it.",
+    "description": "Shells disambiguate `((` differently or not at all. If the first `(` should start a subshell, add a space after it."
   },
   {
     "patternId": "SC1106",
@@ -391,8 +386,8 @@
   },
   {
     "patternId": "SC1108",
-    "title": "You need a space before and after the = .",
-    "description": "You need a space before and after the = ."
+    "title": "You need a space before and after the `=` .",
+    "description": "You need a space before and after the `=` ."
   },
   {
     "patternId": "SC1109",
@@ -416,8 +411,8 @@
   },
   {
     "patternId": "SC1113",
-    "title": "Use #!, not just #, for the shebang.",
-    "description": "Use #!, not just #, for the shebang."
+    "title": "Use `#!`, not just `#`, for the shebang.",
+    "description": "Use `#!`, not just `#`, for the shebang."
   },
   {
     "patternId": "SC1114",
@@ -426,13 +421,13 @@
   },
   {
     "patternId": "SC1115",
-    "title": "Remove spaces between # and ! in the shebang.",
-    "description": "Remove spaces between # and ! in the shebang."
+    "title": "Remove spaces between `#` and `!` in the shebang.",
+    "description": "Remove spaces between `#` and `!` in the shebang."
   },
   {
     "patternId": "SC1116",
-    "title": "Missing $ on a $((..)) expression? (or use ( ( for arrays).",
-    "description": "Missing $ on a $((..)) expression? (or use ( ( for arrays)."
+    "title": "Missing `$` on a `$((..))` expression? (or use `( (` for arrays).",
+    "description": "Missing `$` on a `$((..))` expression? (or use `( (` for arrays)."
   },
   {
     "patternId": "SC1117",
@@ -446,8 +441,8 @@
   },
   {
     "patternId": "SC1119",
-    "title": "Add a linefeed between end token and terminating ')'.",
-    "description": "Add a linefeed between end token and terminating ')'."
+    "title": "Add a linefeed between end token and terminating `)`.",
+    "description": "Add a linefeed between end token and terminating `)`."
   },
   {
     "patternId": "SC1120",
@@ -456,8 +451,8 @@
   },
   {
     "patternId": "SC1121",
-    "title": "Add ;/& terminators (and other syntax) on the line with the <<, not here.",
-    "description": "Add ;/& terminators (and other syntax) on the line with the <<, not here."
+    "title": "Add `;`/`&` terminators (and other syntax) on the line with the `<<`, not here.",
+    "description": "Add `;`/`&` terminators (and other syntax) on the line with the `<<`, not here."
   },
   {
     "patternId": "SC1122",
@@ -471,13 +466,13 @@
   },
   {
     "patternId": "SC1124",
-    "title": "ShellCheck directives are only valid in front of complete commands like 'case' statements, not individual case branches.",
-    "description": "ShellCheck directives are only valid in front of complete commands like 'case' statements, not individual case branches."
+    "title": "ShellCheck directives are only valid in front of complete commands like `case` statements, not individual case branches.",
+    "description": "ShellCheck directives are only valid in front of complete commands like `case` statements, not individual case branches."
   },
   {
     "patternId": "SC1125",
-    "title": "Invalid key=value pair in directive",
-    "description": "Invalid key=value pair in directive"
+    "title": "Invalid `key=value` pair in directive",
+    "description": "Invalid `key=value` pair in directive"
   },
   {
     "patternId": "SC1126",
@@ -496,8 +491,8 @@
   },
   {
     "patternId": "SC1129",
-    "title": "You need a space before the !.",
-    "description": "You need a space before the !."
+    "title": "You need a space before the `!`.",
+    "description": "You need a space before the `!`."
   },
   {
     "patternId": "SC1130",
@@ -516,8 +511,13 @@
   },
   {
     "patternId": "SC1133",
-    "title": "Unexpected start of line. If breaking lines, |/||/&& should be at the end of the previous one.",
-    "description": "Unexpected start of line. If breaking lines, |/||/&& should be at the end of the previous one."
+    "title": "Unexpected start of line. If breaking lines, `|`/`||`/`&&` should be at the end of the previous one.",
+    "description": "Unexpected start of line. If breaking lines, `|`/`||`/`&&` should be at the end of the previous one."
+  },
+  {
+    "patternId": "SC1134",
+    "title": "Error parsing `shellcheckrc`:",
+    "description": "Error parsing `shellcheckrc`:"
   },
   {
     "patternId": "SC1135",
@@ -526,23 +526,23 @@
   },
   {
     "patternId": "SC1139",
-    "title": "Use || instead of '-o' between test commands.",
-    "description": "Use || instead of '-o' between test commands."
+    "title": "Use `||` instead of `-o` between test commands.",
+    "description": "Use `||` instead of `-o` between test commands."
   },
   {
     "patternId": "SC1140",
-    "title": "Unexpected parameters after condition. Missing &&/||, or bad expression?",
-    "description": "Unexpected parameters after condition. Missing &&/||, or bad expression?"
+    "title": "Unexpected parameters after condition. Missing `&&`/`||`, or bad expression?",
+    "description": "Unexpected parameters after condition. Missing `&&`/`||`, or bad expression?"
   },
   {
     "patternId": "SC1141",
-    "title": "Unexpected tokens after compound command. Bad redirection or missing ;/&&/||/|?",
-    "description": "Unexpected tokens after compound command. Bad redirection or missing ;/&&/||/|?"
+    "title": "Unexpected tokens after compound command. Bad redirection or missing `;`/`&&`/`||`/`|`?",
+    "description": "Unexpected tokens after compound command. Bad redirection or missing `;`/`&&`/`||`/`|`?"
   },
   {
     "patternId": "SC1142",
-    "title": "Use 'done < <(cmd)' to redirect from process substitution (currently missing one '<').",
-    "description": "Use 'done < <(cmd)' to redirect from process substitution (currently missing one '<')."
+    "title": "Use `done < <(cmd)` to redirect from process substitution (currently missing one `<`).",
+    "description": "Use `done < <(cmd)` to redirect from process substitution (currently missing one `<`)."
   },
   {
     "patternId": "SC1143",
@@ -551,28 +551,28 @@
   },
   {
     "patternId": "SC2000",
-    "title": "See if you can use ${#variable} instead",
-    "description": "See if you can use ${#variable} instead"
+    "title": "See if you can use `${#variable}` instead",
+    "description": "See if you can use `${#variable}` instead"
   },
   {
     "patternId": "SC2001",
-    "title": "SC2001: See if you can use ${variable//search/replace} instead.",
-    "description": "SC2001: See if you can use ${variable//search/replace} instead."
+    "title": "See if you can use `${variable//search/replace}` instead.",
+    "description": "See if you can use `${variable//search/replace}` instead."
   },
   {
     "patternId": "SC2002",
-    "title": "Useless cat. Consider 'cmd < file | ..' or 'cmd file | ..' instead.",
-    "description": "Useless cat. Consider 'cmd < file | ..' or 'cmd file | ..' instead."
+    "title": "Useless cat. Consider `cmd < file | ..` or `cmd file | ..` instead.",
+    "description": "Useless cat. Consider `cmd < file | ..` or `cmd file | ..` instead."
   },
   {
     "patternId": "SC2003",
-    "title": "expr is antiquated. Consider rewriting this using $((..)), ${} or __[[__ __]]__.",
-    "description": "expr is antiquated. Consider rewriting this using $((..)), ${} or __[[__ __]]__."
+    "title": "expr is antiquated. Consider rewriting this using `$((..))`, `${}` or `[[  ]]`.",
+    "description": "expr is antiquated. Consider rewriting this using `$((..))`, `${}` or `[[  ]]`."
   },
   {
     "patternId": "SC2004",
-    "title": "$/${} is unnecessary on arithmetic variables.",
-    "description": "$/${} is unnecessary on arithmetic variables."
+    "title": "`$`/`${}` is unnecessary on arithmetic variables.",
+    "description": "`$`/`${}` is unnecessary on arithmetic variables."
   },
   {
     "patternId": "SC2005",
@@ -586,18 +586,18 @@
   },
   {
     "patternId": "SC2007",
-    "title": "Use $((..)) instead of deprecated $[..]",
-    "description": "Use $((..)) instead of deprecated $[..]"
+    "title": "Use `$((..))` instead of deprecated `$[..]`.",
+    "description": "Use `$((..))` instead of deprecated `$[..]`."
   },
   {
     "patternId": "SC2009",
-    "title": "SC2009 Consider using pgrep instead of grepping ps output.",
-    "description": "SC2009 Consider using pgrep instead of grepping ps output."
+    "title": "Consider using `pgrep` instead of grepping `ps` output.",
+    "description": "Consider using `pgrep` instead of grepping `ps` output."
   },
   {
     "patternId": "SC2010",
-    "title": "Don't use ls | grep. Use a glob or a for loop with a condition to allow non-alphanumeric filenames.",
-    "description": "Don't use ls | grep. Use a glob or a for loop with a condition to allow non-alphanumeric filenames."
+    "title": "Don't use `ls | grep`. Use a glob or a for loop with a condition to allow non-alphanumeric filenames.",
+    "description": "Don't use `ls | grep`. Use a glob or a for loop with a condition to allow non-alphanumeric filenames."
   },
   {
     "patternId": "SC2011",
@@ -611,8 +611,8 @@
   },
   {
     "patternId": "SC2013",
-    "title": "To read lines rather than words, pipe/redirect to a 'while read' loop.",
-    "description": "To read lines rather than words, pipe/redirect to a 'while read' loop."
+    "title": "To read lines rather than words, pipe/redirect to a `while read` loop.",
+    "description": "To read lines rather than words, pipe/redirect to a `while read` loop."
   },
   {
     "patternId": "SC2014",
@@ -621,8 +621,8 @@
   },
   {
     "patternId": "SC2015",
-    "title": "Note that A && B || C is not if-then-else. C may run when A is true.",
-    "description": "Note that A && B || C is not if-then-else. C may run when A is true."
+    "title": "Note that `A && B || C` is not if-then-else. C may run when A is true.",
+    "description": "Note that `A && B || C` is not if-then-else. C may run when A is true."
   },
   {
     "patternId": "SC2016",
@@ -631,33 +631,38 @@
   },
   {
     "patternId": "SC2017",
-    "title": "Increase precision by replacing a/b\\*c with a\\*c/b.",
-    "description": "Increase precision by replacing a/b\\*c with a\\*c/b."
+    "title": "Increase precision by replacing `a/b*c` with `a*c/b`.",
+    "description": "Increase precision by replacing `a/b*c` with `a*c/b`."
   },
   {
     "patternId": "SC2018",
-    "title": "Use '[:lower:]' to support accents and foreign alphabets.",
-    "description": "Use '[:lower:]' to support accents and foreign alphabets."
+    "title": "Use `[:lower:]` to support accents and foreign alphabets.",
+    "description": "Use `[:lower:]` to support accents and foreign alphabets."
   },
   {
     "patternId": "SC2019",
-    "title": "Use '[:upper:]' to support accents and foreign alphabets.",
-    "description": "Use '[:upper:]' to support accents and foreign alphabets."
+    "title": "Use `[:upper:]` to support accents and foreign alphabets.",
+    "description": "Use `[:upper:]` to support accents and foreign alphabets."
   },
   {
     "patternId": "SC2020",
-    "title": "tr replaces sets of chars, not words (mentioned due to duplicates).",
-    "description": "tr replaces sets of chars, not words (mentioned due to duplicates)."
+    "title": "`tr` replaces sets of chars, not words (mentioned due to duplicates).",
+    "description": "`tr` replaces sets of chars, not words (mentioned due to duplicates)."
   },
   {
     "patternId": "SC2021",
-    "title": "Don't use [] around ranges in tr, it replaces literal square brackets.",
-    "description": "Don't use [] around ranges in tr, it replaces literal square brackets."
+    "title": "Don't use `[]` around ranges in `tr`, it replaces literal square brackets.",
+    "description": "Don't use `[]` around ranges in `tr`, it replaces literal square brackets."
   },
   {
     "patternId": "SC2022",
-    "title": "Note that unlike globs, o* here matches 'ooo' but not 'oscar'",
-    "description": "Note that unlike globs, o* here matches 'ooo' but not 'oscar'"
+    "title": "Note that unlike globs, `o*` here matches `ooo` but not `oscar`.",
+    "description": "Note that unlike globs, `o*` here matches `ooo` but not `oscar`."
+  },
+  {
+    "patternId": "SC2023",
+    "title": "The shell may override 'time' as seen in man time(1). Use 'command time ..' for that one.",
+    "description": "The shell may override 'time' as seen in man time(1). Use 'command time ..' for that one."
   },
   {
     "patternId": "SC2024",
@@ -666,8 +671,8 @@
   },
   {
     "patternId": "SC2025",
-    "title": "Make sure all escape sequences are enclosed in `\\[..\\]` to prevent line wrapping issues",
-    "description": "Make sure all escape sequences are enclosed in `\\[..\\]` to prevent line wrapping issues"
+    "title": "Make sure all escape sequences are enclosed in `\\[..\\]` to prevent line wrapping issues.",
+    "description": "Make sure all escape sequences are enclosed in `\\[..\\]` to prevent line wrapping issues."
   },
   {
     "patternId": "SC2026",
@@ -681,8 +686,8 @@
   },
   {
     "patternId": "SC2028",
-    "title": "echo won't expand escape sequences. Consider printf.",
-    "description": "echo won't expand escape sequences. Consider printf."
+    "title": "`echo` won't expand escape sequences. Consider `printf`.",
+    "description": "`echo` won't expand escape sequences. Consider `printf`."
   },
   {
     "patternId": "SC2029",
@@ -701,13 +706,18 @@
   },
   {
     "patternId": "SC2032",
-    "title": "Use own script or sh -c '..' to run this from su.",
-    "description": "Use own script or sh -c '..' to run this from su."
+    "title": "This function can't be invoked via su on line 42.",
+    "description": "This function can't be invoked via su on line 42."
   },
   {
     "patternId": "SC2033",
-    "title": "Shell functions can't be passed to external commands.",
-    "description": "Shell functions can't be passed to external commands."
+    "title": "Shell functions can't be passed to external commands. Use separate script or sh -c.",
+    "description": "Shell functions can't be passed to external commands. Use separate script or sh -c."
+  },
+  {
+    "patternId": "SC2034",
+    "title": "!/usr/bin/env bash",
+    "description": "!/usr/bin/env bash"
   },
   {
     "patternId": "SC2034",
@@ -716,38 +726,38 @@
   },
   {
     "patternId": "SC2035",
-    "title": "Use ./\\*glob* or -- \\*glob* so names with dashes won't become options.",
-    "description": "Use ./\\*glob* or -- \\*glob* so names with dashes won't become options."
+    "title": "Use `./*glob*` or `-- *glob*` so names with dashes won't become options.",
+    "description": "Use `./*glob*` or `-- *glob*` so names with dashes won't become options."
   },
   {
     "patternId": "SC2036",
-    "title": "If you wanted to assign the output of the pipeline, use a=$(b | c) .",
-    "description": "If you wanted to assign the output of the pipeline, use a=$(b | c) ."
+    "title": "If you wanted to assign the output of the pipeline, use `a=$(b | c)` .",
+    "description": "If you wanted to assign the output of the pipeline, use `a=$(b | c)` ."
   },
   {
     "patternId": "SC2037",
-    "title": "To assign the output of a command, use var=$(cmd) .",
-    "description": "To assign the output of a command, use var=$(cmd) ."
+    "title": "To assign the output of a command, use `var=$(cmd)` .",
+    "description": "To assign the output of a command, use `var=$(cmd)` ."
   },
   {
     "patternId": "SC2038",
-    "title": "Use -print0/-0 or find -exec + to allow for non-alphanumeric filenames.",
-    "description": "Use -print0/-0 or find -exec + to allow for non-alphanumeric filenames."
+    "title": "Use `-print0`/`-0` or `find -exec +` to allow for non-alphanumeric filenames.",
+    "description": "Use `-print0`/`-0` or `find -exec +` to allow for non-alphanumeric filenames."
   },
   {
     "patternId": "SC2041",
-    "title": "This is a literal string. To run as a command, use $(..) instead of '..' .",
-    "description": "This is a literal string. To run as a command, use $(..) instead of '..' ."
+    "title": "This is a literal string. To run as a command, use `$(..)` instead of `'..'` .",
+    "description": "This is a literal string. To run as a command, use `$(..)` instead of `'..'` ."
   },
   {
     "patternId": "SC2043",
-    "title": "This loop will only ever run once for a constant value. Did you perhaps mean to loop over dir/*, $var or $(cmd)?\"",
-    "description": "This loop will only ever run once for a constant value. Did you perhaps mean to loop over dir/*, $var or $(cmd)?\""
+    "title": "This loop will only ever run once for a constant value. Did you perhaps mean to loop over `dir/*`, `$var` or `$(cmd)`?",
+    "description": "This loop will only ever run once for a constant value. Did you perhaps mean to loop over `dir/*`, `$var` or `$(cmd)`?"
   },
   {
     "patternId": "SC2044",
-    "title": "For loops over find output are fragile. Use find -exec or a while read loop.",
-    "description": "For loops over find output are fragile. Use find -exec or a while read loop."
+    "title": "For loops over find output are fragile. Use `find -exec` or a `while read` loop.",
+    "description": "For loops over find output are fragile. Use `find -exec` or a `while read` loop."
   },
   {
     "patternId": "SC2045",
@@ -761,13 +771,13 @@
   },
   {
     "patternId": "SC2048",
-    "title": "Use \"$@\" (with quotes) to prevent whitespace problems.",
-    "description": "Use \"$@\" (with quotes) to prevent whitespace problems."
+    "title": "Use `\"$@\"` (with quotes) to prevent whitespace problems.",
+    "description": "Use `\"$@\"` (with quotes) to prevent whitespace problems."
   },
   {
     "patternId": "SC2049",
-    "title": "=~ is for regex, but this looks like a glob. Use = instead.",
-    "description": "=~ is for regex, but this looks like a glob. Use = instead."
+    "title": "`=~` is for regex, but this looks like a glob. Use `=` instead.",
+    "description": "`=~` is for regex, but this looks like a glob. Use `=` instead."
   },
   {
     "patternId": "SC2050",
@@ -781,8 +791,8 @@
   },
   {
     "patternId": "SC2053",
-    "title": "Quote the rhs of = in [[ ]] to prevent glob matching.",
-    "description": "Quote the rhs of = in [[ ]] to prevent glob matching."
+    "title": "Quote the rhs of `=` in `[[ ]]` to prevent glob matching.",
+    "description": "Quote the rhs of `=` in `[[ ]]` to prevent glob matching."
   },
   {
     "patternId": "SC2054",
@@ -791,13 +801,13 @@
   },
   {
     "patternId": "SC2055",
-    "title": "You probably wanted && here, otherwise it's always true.",
-    "description": "You probably wanted && here, otherwise it's always true."
+    "title": "You probably wanted `&&` here, otherwise it's always true.",
+    "description": "You probably wanted `&&` here, otherwise it's always true."
   },
   {
     "patternId": "SC2056",
-    "title": "You probably wanted && here",
-    "description": "You probably wanted && here"
+    "title": "You probably wanted `&&` here",
+    "description": "You probably wanted `&&` here"
   },
   {
     "patternId": "SC2057",
@@ -811,8 +821,8 @@
   },
   {
     "patternId": "SC2059",
-    "title": "Don't use variables in the printf format string. Use printf \"..%s..\" \"$foo\".",
-    "description": "Don't use variables in the printf format string. Use printf \"..%s..\" \"$foo\"."
+    "title": "Don't use variables in the `printf` format string. Use `printf \"..%s..\" \"$foo\"`.",
+    "description": "Don't use variables in the `printf` format string. Use `printf \"..%s..\" \"$foo\"`."
   },
   {
     "patternId": "SC2060",
@@ -821,8 +831,8 @@
   },
   {
     "patternId": "SC2061",
-    "title": "Quote the parameter to -name so the shell won't interpret it.",
-    "description": "Quote the parameter to -name so the shell won't interpret it."
+    "title": "Quote the parameter to `-name` so the shell won't interpret it.",
+    "description": "Quote the parameter to `-name` so the shell won't interpret it."
   },
   {
     "patternId": "SC2062",
@@ -851,8 +861,8 @@
   },
   {
     "patternId": "SC2067",
-    "title": "Missing ';' or + terminating -exec. You can't use |/||/&&, and ';' has to be a separate, quoted argument.",
-    "description": "Missing ';' or + terminating -exec. You can't use |/||/&&, and ';' has to be a separate, quoted argument."
+    "title": "Missing `;` or `+` terminating `-exec`. You can't use `|`/`||`/`&&`, and `;` has to be a separate, quoted argument.",
+    "description": "Missing `;` or `+` terminating `-exec`. You can't use `|`/`||`/`&&`, and `;` has to be a separate, quoted argument."
   },
   {
     "patternId": "SC2068",
@@ -861,23 +871,23 @@
   },
   {
     "patternId": "SC2069",
-    "title": "To redirect stdout+stderr, 2>&1 must be last (or use '{ cmd > file; } 2>&1' to clarify).",
-    "description": "To redirect stdout+stderr, 2>&1 must be last (or use '{ cmd > file; } 2>&1' to clarify)."
+    "title": "To redirect stdout+stderr, `2>&1` must be last (or use `{ cmd > file; } 2>&1` to clarify).",
+    "description": "To redirect stdout+stderr, `2>&1` must be last (or use `{ cmd > file; } 2>&1` to clarify)."
   },
   {
     "patternId": "SC2070",
-    "title": "`-n` doesn't work with unquoted arguments. Quote or use ``[[ ]]``.",
-    "description": "`-n` doesn't work with unquoted arguments. Quote or use ``[[ ]]``."
+    "title": "`-n` doesn't work with unquoted arguments. Quote or use `[[ ]]`.",
+    "description": "`-n` doesn't work with unquoted arguments. Quote or use `[[ ]]`."
   },
   {
     "patternId": "SC2071",
-    "title": "> is for string comparisons. Use -gt instead.",
-    "description": "> is for string comparisons. Use -gt instead."
+    "title": "`>` is for string comparisons. Use `-gt` instead.",
+    "description": "`>` is for string comparisons. Use `-gt` instead."
   },
   {
     "patternId": "SC2072",
-    "title": "Decimals are not supported. Either use integers only, or use bc or awk to compare.",
-    "description": "Decimals are not supported. Either use integers only, or use bc or awk to compare."
+    "title": "Decimals are not supported. Either use integers only, or use `bc` or `awk` to compare.",
+    "description": "Decimals are not supported. Either use integers only, or use `bc` or `awk` to compare."
   },
   {
     "patternId": "SC2073",
@@ -891,8 +901,8 @@
   },
   {
     "patternId": "SC2076",
-    "title": "Don't quote rhs of =~, it'll match literally rather than as a regex.",
-    "description": "Don't quote rhs of =~, it'll match literally rather than as a regex."
+    "title": "Don't quote rhs of `=~`, it'll match literally rather than as a regex.",
+    "description": "Don't quote rhs of `=~`, it'll match literally rather than as a regex."
   },
   {
     "patternId": "SC2077",
@@ -906,8 +916,8 @@
   },
   {
     "patternId": "SC2079",
-    "title": "(( )) doesn't support decimals. Use bc or awk.",
-    "description": "(( )) doesn't support decimals. Use bc or awk."
+    "title": "`(( ))` doesn't support decimals. Use `bc` or `awk`.",
+    "description": "`(( ))` doesn't support decimals. Use `bc` or `awk`."
   },
   {
     "patternId": "SC2080",
@@ -921,13 +931,13 @@
   },
   {
     "patternId": "SC2082",
-    "title": "To expand via indirection, use name=\"foo$n\"; echo \"${!name}\".",
-    "description": "To expand via indirection, use name=\"foo$n\"; echo \"${!name}\"."
+    "title": "To expand via indirection, use `name=\"foo$n\"; echo \"${!name}\"`.",
+    "description": "To expand via indirection, use `name=\"foo$n\"; echo \"${!name}\"`."
   },
   {
     "patternId": "SC2084",
-    "title": "Remove '$' or use '_=$((expr))' to avoid executing output.",
-    "description": "Remove '$' or use '_=$((expr))' to avoid executing output."
+    "title": "Remove `$` or use `_=$((expr))` to avoid executing output.",
+    "description": "Remove `$` or use `_=$((expr))` to avoid executing output."
   },
   {
     "patternId": "SC2086",
@@ -936,13 +946,13 @@
   },
   {
     "patternId": "SC2087",
-    "title": "Quote 'EOF' to make here document expansions happen on the server side rather than on the client.",
-    "description": "Quote 'EOF' to make here document expansions happen on the server side rather than on the client."
+    "title": "Quote `EOF` to make here document expansions happen on the server side rather than on the client.",
+    "description": "Quote `EOF` to make here document expansions happen on the server side rather than on the client."
   },
   {
     "patternId": "SC2088",
-    "title": "Tilde does not expand in quotes. Use $HOME.",
-    "description": "Tilde does not expand in quotes. Use $HOME."
+    "title": "Tilde does not expand in quotes. Use `$HOME`.",
+    "description": "Tilde does not expand in quotes. Use `$HOME`."
   },
   {
     "patternId": "SC2089",
@@ -956,8 +966,8 @@
   },
   {
     "patternId": "SC2091",
-    "title": "Remove surrounding $() to avoid executing output (or use eval if intentional).",
-    "description": "Remove surrounding $() to avoid executing output (or use eval if intentional)."
+    "title": "Remove surrounding `$()` to avoid executing output (or use `eval` if intentional).",
+    "description": "Remove surrounding `$()` to avoid executing output (or use `eval` if intentional)."
   },
   {
     "patternId": "SC2092",
@@ -966,18 +976,18 @@
   },
   {
     "patternId": "SC2093",
-    "title": "Remove \"exec \" if script should continue after this command.",
-    "description": "Remove \"exec \" if script should continue after this command."
+    "title": "Remove `exec ` if script should continue after this command.",
+    "description": "Remove `exec ` if script should continue after this command."
   },
   {
     "patternId": "SC2094",
-    "title": "SC2094 Make sure not to read and write the same file in the same pipeline.",
-    "description": "SC2094 Make sure not to read and write the same file in the same pipeline."
+    "title": "Make sure not to read and write the same file in the same pipeline.",
+    "description": "Make sure not to read and write the same file in the same pipeline."
   },
   {
     "patternId": "SC2095",
-    "title": "Use ssh -n to prevent ssh from swallowing stdin.",
-    "description": "Use ssh -n to prevent ssh from swallowing stdin."
+    "title": "Use `ssh -n` to prevent ssh from swallowing stdin.",
+    "description": "Use `ssh -n` to prevent ssh from swallowing stdin."
   },
   {
     "patternId": "SC2096",
@@ -1006,8 +1016,8 @@
   },
   {
     "patternId": "SC2101",
-    "title": "Named class needs outer [], e.g. [[:digit:]\\].",
-    "description": "Named class needs outer [], e.g. [[:digit:]\\]."
+    "title": "Named class needs outer `[]`, e.g. `[[:digit:]]`.",
+    "description": "Named class needs outer `[]`, e.g. `[[:digit:]]`."
   },
   {
     "patternId": "SC2102",
@@ -1016,13 +1026,13 @@
   },
   {
     "patternId": "SC2103",
-    "title": "Use a ( subshell ) to avoid having to cd back.",
-    "description": "Use a ( subshell ) to avoid having to cd back."
+    "title": "Use a `( subshell )` to avoid having to `cd` back.",
+    "description": "Use a `( subshell )` to avoid having to `cd` back."
   },
   {
     "patternId": "SC2104",
-    "title": "In functions, use return instead of break.",
-    "description": "In functions, use return instead of break."
+    "title": "In functions, use `return` instead of `break`.",
+    "description": "In functions, use `return` instead of `break`."
   },
   {
     "patternId": "SC2105",
@@ -1031,33 +1041,38 @@
   },
   {
     "patternId": "SC2106",
-    "title": "SC2106: This only exits the subshell caused by the pipeline.",
-    "description": "SC2106: This only exits the subshell caused by the pipeline."
+    "title": "This only exits the subshell caused by the pipeline.",
+    "description": "This only exits the subshell caused by the pipeline."
   },
   {
     "patternId": "SC2107",
-    "title": "Instead of [ a && b ], use [ a ] && [ b ].",
-    "description": "Instead of [ a && b ], use [ a ] && [ b ]."
+    "title": "Instead of `[ a && b ]`, use `[ a ] && [ b ]`.",
+    "description": "Instead of `[ a && b ]`, use `[ a ] && [ b ]`."
   },
   {
     "patternId": "SC2108",
-    "title": "In [\\[..]], use && instead of -a.",
-    "description": "In [\\[..]], use && instead of -a."
+    "title": "In `[[..]]`, use `&&` instead of `-a`.",
+    "description": "In `[[..]]`, use `&&` instead of `-a`."
   },
   {
     "patternId": "SC2109",
-    "title": "Instead of [ a || b ], use [ a ] || [ b ].",
-    "description": "Instead of [ a || b ], use [ a ] || [ b ]."
+    "title": "Instead of `[ a || b ]`, use `[ a ] || [ b ]`.",
+    "description": "Instead of `[ a || b ]`, use `[ a ] || [ b ]`."
   },
   {
     "patternId": "SC2110",
-    "title": "In [\\[..]], use || instead of -o.",
-    "description": "In [\\[..]], use || instead of -o."
+    "title": "In `[[..]]`, use `||` instead of `-o`.",
+    "description": "In `[[..]]`, use `||` instead of `-o`."
+  },
+  {
+    "patternId": "SC2111",
+    "title": "ksh does not allow 'function' keyword and '()' at the same time.",
+    "description": "ksh does not allow 'function' keyword and '()' at the same time."
   },
   {
     "patternId": "SC2112",
-    "title": "'function' keyword is non-standard. Delete it.",
-    "description": "'function' keyword is non-standard. Delete it."
+    "title": "`function` keyword is non-standard. Delete it.",
+    "description": "`function` keyword is non-standard. Delete it."
   },
   {
     "patternId": "SC2113",
@@ -1071,23 +1086,23 @@
   },
   {
     "patternId": "SC2115",
-    "title": "Use \"${var:?}\" to ensure this never expands to /* .",
-    "description": "Use \"${var:?}\" to ensure this never expands to /* ."
+    "title": "Use `\"${var:?}\"` to ensure this never expands to `/*` .",
+    "description": "Use `\"${var:?}\"` to ensure this never expands to `/*` ."
   },
   {
     "patternId": "SC2116",
-    "title": "SC2116 Useless echo? Instead of 'cmd $(echo foo)', just use 'cmd foo'.",
-    "description": "SC2116 Useless echo? Instead of 'cmd $(echo foo)', just use 'cmd foo'."
+    "title": "Useless echo? Instead of `cmd $(echo foo)`, just use `cmd foo`.",
+    "description": "Useless echo? Instead of `cmd $(echo foo)`, just use `cmd foo`."
   },
   {
     "patternId": "SC2117",
-    "title": "To run commands as another user, use su -c or sudo.",
-    "description": "To run commands as another user, use su -c or sudo."
+    "title": "To run commands as another user, use `su -c` or `sudo`.",
+    "description": "To run commands as another user, use `su -c` or `sudo`."
   },
   {
     "patternId": "SC2119",
-    "title": "Use foo \"$@\" if function's $1 should mean script's $1.",
-    "description": "Use foo \"$@\" if function's $1 should mean script's $1."
+    "title": "Use `foo \"$@\"` if function's `$1` should mean script's `$1`.",
+    "description": "Use `foo \"$@\"` if function's `$1` should mean script's `$1`."
   },
   {
     "patternId": "SC2120",
@@ -1096,23 +1111,23 @@
   },
   {
     "patternId": "SC2121",
-    "title": "To assign a variable, use just 'var=value', no 'set ..'.",
-    "description": "To assign a variable, use just 'var=value', no 'set ..'."
+    "title": "To assign a variable, use just `var=value`, not `set ..`.",
+    "description": "To assign a variable, use just `var=value`, not `set ..`."
   },
   {
     "patternId": "SC2122",
-    "title": ">= is not a valid operator. Use '! a < b' instead.",
-    "description": ">= is not a valid operator. Use '! a < b' instead."
+    "title": "`>=` is not a valid operator. Use `! a < b` instead.",
+    "description": "`>=` is not a valid operator. Use `! a < b` instead."
   },
   {
     "patternId": "SC2123",
-    "title": "PATH is the shell search path. Use another name.",
-    "description": "PATH is the shell search path. Use another name."
+    "title": "`PATH` is the shell search path. Use another name.",
+    "description": "`PATH` is the shell search path. Use another name."
   },
   {
     "patternId": "SC2124",
-    "title": "Assigning an array to a string! Assign as array, or use * instead of @ to concatenate.",
-    "description": "Assigning an array to a string! Assign as array, or use * instead of @ to concatenate."
+    "title": "Assigning an array to a string! Assign as array, or use `*` instead of `@` to concatenate.",
+    "description": "Assigning an array to a string! Assign as array, or use `*` instead of `@` to concatenate."
   },
   {
     "patternId": "SC2125",
@@ -1131,8 +1146,8 @@
   },
   {
     "patternId": "SC2129",
-    "title": "Consider using { cmd1; cmd2; } >> file instead of individual redirects.",
-    "description": "Consider using { cmd1; cmd2; } >> file instead of individual redirects."
+    "title": "Consider using `{ cmd1; cmd2; } >> file` instead of individual redirects.",
+    "description": "Consider using `{ cmd1; cmd2; } >> file` instead of individual redirects."
   },
   {
     "patternId": "SC2139",
@@ -1141,13 +1156,13 @@
   },
   {
     "patternId": "SC2140",
-    "title": "Word is on the form \"A\"B\"C\" (B indicated). Did you mean \"ABC\" or \"A\\\\\"B\\\\\"C\"?",
-    "description": "Word is on the form \"A\"B\"C\" (B indicated). Did you mean \"ABC\" or \"A\\\\\"B\\\\\"C\"?"
+    "title": "Word is of the form `\"A\"B\"C\"` (B indicated). Did you mean `\"ABC\"` or `\"A\\\\\"B\\\\\"C\"`?",
+    "description": "Word is of the form `\"A\"B\"C\"` (B indicated). Did you mean `\"ABC\"` or `\"A\\\\\"B\\\\\"C\"`?"
   },
   {
     "patternId": "SC2141",
-    "title": "Did you mean IFS=$'\\t' ?",
-    "description": "Did you mean IFS=$'\\t' ?"
+    "title": "Did you mean `IFS=$'\\t'` ?",
+    "description": "Did you mean `IFS=$'\\t'` ?"
   },
   {
     "patternId": "SC2142",
@@ -1156,23 +1171,23 @@
   },
   {
     "patternId": "SC2143",
-    "title": "Use grep -q instead of comparing output with [ -n .. ].",
-    "description": "Use grep -q instead of comparing output with [ -n .. ]."
+    "title": "Use `grep -q` instead of comparing output with `[ -n .. ]`.",
+    "description": "Use `grep -q` instead of comparing output with `[ -n .. ]`."
   },
   {
     "patternId": "SC2144",
-    "title": "-e doesn't work with globs. Use a for loop.",
-    "description": "-e doesn't work with globs. Use a for loop."
+    "title": "`-e` doesn't work with globs. Use a `for` loop.",
+    "description": "`-e` doesn't work with globs. Use a `for` loop."
   },
   {
     "patternId": "SC2145",
-    "title": "Argument mixes string and array. Use * or separate argument.",
-    "description": "Argument mixes string and array. Use * or separate argument."
+    "title": "Argument mixes string and array. Use `*` or separate argument.",
+    "description": "Argument mixes string and array. Use `*` or separate argument."
   },
   {
     "patternId": "SC2146",
-    "title": "This action ignores everything before the -o. Use \\\\( \\\\) to group.",
-    "description": "This action ignores everything before the -o. Use \\\\( \\\\) to group."
+    "title": "This action ignores everything before the `-o`. Use `\\( \\)` to group.",
+    "description": "This action ignores everything before the `-o`. Use `\\( \\)` to group."
   },
   {
     "patternId": "SC2147",
@@ -1186,8 +1201,8 @@
   },
   {
     "patternId": "SC2150",
-    "title": "-exec does not automatically invoke a shell. Use -exec sh -c .. for that.",
-    "description": "-exec does not automatically invoke a shell. Use -exec sh -c .. for that."
+    "title": "`-exec` does not automatically invoke a shell. Use `-exec sh -c ..` for that.",
+    "description": "`-exec` does not automatically invoke a shell. Use `-exec sh -c ..` for that."
   },
   {
     "patternId": "SC2151",
@@ -1221,43 +1236,43 @@
   },
   {
     "patternId": "SC2157",
-    "title": "Argument to implicit -n is always true due to literal strings.",
-    "description": "Argument to implicit -n is always true due to literal strings."
+    "title": "Argument to implicit `-n` is always true due to literal strings.",
+    "description": "Argument to implicit `-n` is always true due to literal strings."
   },
   {
     "patternId": "SC2158",
-    "title": "[ false ] is true. Remove the brackets",
-    "description": "[ false ] is true. Remove the brackets"
+    "title": "`[ false ]` is true. Remove the brackets",
+    "description": "`[ false ]` is true. Remove the brackets"
   },
   {
     "patternId": "SC2159",
-    "title": "[ 0 ] is true. Use 'false' instead",
-    "description": "[ 0 ] is true. Use 'false' instead"
+    "title": "`[ 0 ]` is true. Use `false` instead.",
+    "description": "`[ 0 ]` is true. Use `false` instead."
   },
   {
     "patternId": "SC2160",
-    "title": "Instead of '[ true ]', just use 'true'.",
-    "description": "Instead of '[ true ]', just use 'true'."
+    "title": "Instead of `[ true ]`, just use `true`.",
+    "description": "Instead of `[ true ]`, just use `true`."
   },
   {
     "patternId": "SC2161",
-    "title": "Instead of '[ 1 ]', use 'true'.",
-    "description": "Instead of '[ 1 ]', use 'true'."
+    "title": "Instead of `[ 1 ]`, use `true`.",
+    "description": "Instead of `[ 1 ]`, use `true`."
   },
   {
     "patternId": "SC2162",
-    "title": "read without -r will mangle backslashes",
-    "description": "read without -r will mangle backslashes"
+    "title": "`read` without `-r` will mangle backslashes.",
+    "description": "`read` without `-r` will mangle backslashes."
   },
   {
     "patternId": "SC2163",
-    "title": "This does not export 'FOO'. Remove $/${} for that, or use ${var?} to quiet.",
-    "description": "This does not export 'FOO'. Remove $/${} for that, or use ${var?} to quiet."
+    "title": "This does not export `FOO`. Remove `$`/`${}` for that, or use `${var?}` to quiet.",
+    "description": "This does not export `FOO`. Remove `$`/`${}` for that, or use `${var?}` to quiet."
   },
   {
     "patternId": "SC2164",
-    "title": "Use cd ... || exit in case cd fails.",
-    "description": "Use cd ... || exit in case cd fails."
+    "title": "Use `cd ... || exit` in case `cd` fails.",
+    "description": "Use `cd ... || exit` in case `cd` fails."
   },
   {
     "patternId": "SC2165",
@@ -1266,8 +1281,8 @@
   },
   {
     "patternId": "SC2166",
-    "title": "Prefer [ p ] && [ q ] as [ p -a q ] is not well defined.",
-    "description": "Prefer [ p ] && [ q ] as [ p -a q ] is not well defined."
+    "title": "Prefer `[ p ] && [ q ]` as `[ p -a q ]` is not well defined.",
+    "description": "Prefer `[ p ] && [ q ]` as `[ p -a q ]` is not well defined."
   },
   {
     "patternId": "SC2167",
@@ -1276,18 +1291,18 @@
   },
   {
     "patternId": "SC2168",
-    "title": "'local' is only valid in functions.",
-    "description": "'local' is only valid in functions."
+    "title": "`local` is only valid in functions.",
+    "description": "`local` is only valid in functions."
   },
   {
     "patternId": "SC2170",
-    "title": "Invalid number for -eq. Use = to compare as string (or use $var to expand as a variable).",
-    "description": "Invalid number for -eq. Use = to compare as string (or use $var to expand as a variable)."
+    "title": "Invalid number for `-eq`. Use `=` to compare as string (or use `$var` to expand as a variable).",
+    "description": "Invalid number for `-eq`. Use `=` to compare as string (or use `$var` to expand as a variable)."
   },
   {
     "patternId": "SC2171",
-    "title": "Found trailing ] outside test. Add missing [ or quote if intentional.",
-    "description": "Found trailing ] outside test. Add missing [ or quote if intentional."
+    "title": "Found trailing `]` outside test. Add missing `[` or quote if intentional.",
+    "description": "Found trailing `]` outside test. Add missing `[` or quote if intentional."
   },
   {
     "patternId": "SC2172",
@@ -1301,8 +1316,8 @@
   },
   {
     "patternId": "SC2174",
-    "title": "When used with -p, -m only applies to the deepest directory.",
-    "description": "When used with -p, -m only applies to the deepest directory."
+    "title": "When used with `-p`, `-m` only applies to the deepest directory.",
+    "description": "When used with `-p`, `-m` only applies to the deepest directory."
   },
   {
     "patternId": "SC2175",
@@ -1311,13 +1326,13 @@
   },
   {
     "patternId": "SC2176",
-    "title": "'time' is undefined for pipelines. time single stage or bash -c instead.",
-    "description": "'time' is undefined for pipelines. time single stage or bash -c instead."
+    "title": "`time` is undefined for pipelines. time single stage or `bash -c` instead.",
+    "description": "`time` is undefined for pipelines. time single stage or `bash -c` instead."
   },
   {
     "patternId": "SC2177",
-    "title": "'time' is undefined for compound commands, use time sh -c instead.",
-    "description": "'time' is undefined for compound commands, use time sh -c instead."
+    "title": "`time` is undefined for compound commands, use `time sh -c` instead.",
+    "description": "`time` is undefined for compound commands, use `time sh -c` instead."
   },
   {
     "patternId": "SC2178",
@@ -1326,8 +1341,8 @@
   },
   {
     "patternId": "SC2179",
-    "title": "Use array+=(\"item\") to append items to an array.",
-    "description": "Use array+=(\"item\") to append items to an array."
+    "title": "Use `array+=(\"item\")` to append items to an array.",
+    "description": "Use `array+=(\"item\")` to append items to an array."
   },
   {
     "patternId": "SC2180",
@@ -1336,8 +1351,8 @@
   },
   {
     "patternId": "SC2181",
-    "title": "Check exit code directly with e.g. 'if mycmd;', not indirectly with $?.",
-    "description": "Check exit code directly with e.g. 'if mycmd;', not indirectly with $?."
+    "title": "Check exit code directly with e.g. `if mycmd;`, not indirectly with `$?`.",
+    "description": "Check exit code directly with e.g. `if mycmd;`, not indirectly with `$?`."
   },
   {
     "patternId": "SC2182",
@@ -1356,8 +1371,8 @@
   },
   {
     "patternId": "SC2185",
-    "title": "Some finds don't have a default path. Specify '.' explicitly.",
-    "description": "Some finds don't have a default path. Specify '.' explicitly."
+    "title": "Some finds don't have a default path. Specify `.` explicitly.",
+    "description": "Some finds don't have a default path. Specify `.` explicitly."
   },
   {
     "patternId": "SC2186",
@@ -1366,33 +1381,33 @@
   },
   {
     "patternId": "SC2187",
-    "title": "Ash scripts will be checked as Dash. Add '# shellcheck shell=dash' to silence.",
-    "description": "Ash scripts will be checked as Dash. Add '# shellcheck shell=dash' to silence."
+    "title": "Ash scripts will be checked as Dash. Add `# shellcheck shell=dash` to silence.",
+    "description": "Ash scripts will be checked as Dash. Add `# shellcheck shell=dash` to silence."
   },
   {
     "patternId": "SC2188",
-    "title": "This redirection doesn't have a command. Move to its command (or use 'true' as no-op).",
-    "description": "This redirection doesn't have a command. Move to its command (or use 'true' as no-op)."
+    "title": "This redirection doesn't have a command. Move to its command (or use `true` as no-op).",
+    "description": "This redirection doesn't have a command. Move to its command (or use `true` as no-op)."
   },
   {
     "patternId": "SC2189",
-    "title": "You can't have | between this redirection and the command it should apply to.",
-    "description": "You can't have | between this redirection and the command it should apply to."
+    "title": "You can't have `|` between this redirection and the command it should apply to.",
+    "description": "You can't have `|` between this redirection and the command it should apply to."
   },
   {
     "patternId": "SC2190",
-    "title": "Elements in associative arrays need index, e.g. array=( [index]=value ) .",
-    "description": "Elements in associative arrays need index, e.g. array=( [index]=value ) ."
+    "title": "Elements in associative arrays need index, e.g. `array=( [index]=value )` .",
+    "description": "Elements in associative arrays need index, e.g. `array=( [index]=value )` ."
   },
   {
     "patternId": "SC2191",
-    "title": "The = here is literal. To assign by index, use ( [index]=value ) with no spaces. To keep as literal, quote it.",
-    "description": "The = here is literal. To assign by index, use ( [index]=value ) with no spaces. To keep as literal, quote it."
+    "title": "The `=` here is literal. To assign by index, use `( [index]=value )` with no spaces. To keep as literal, quote it.",
+    "description": "The `=` here is literal. To assign by index, use `( [index]=value )` with no spaces. To keep as literal, quote it."
   },
   {
     "patternId": "SC2192",
-    "title": "This array element has no value. Remove spaces after = or use \"\" for empty string.",
-    "description": "This array element has no value. Remove spaces after = or use \"\" for empty string."
+    "title": "This array element has no value. Remove spaces after `=` or use `\"\"` for empty string.",
+    "description": "This array element has no value. Remove spaces after `=` or use `\"\"` for empty string."
   },
   {
     "patternId": "SC2193",
@@ -1401,8 +1416,8 @@
   },
   {
     "patternId": "SC2194",
-    "title": "This word is constant. Did you forget the $ on a variable?",
-    "description": "This word is constant. Did you forget the $ on a variable?"
+    "title": "This word is constant. Did you forget the `$` on a variable?",
+    "description": "This word is constant. Did you forget the `$` on a variable?"
   },
   {
     "patternId": "SC2195",
@@ -1411,28 +1426,28 @@
   },
   {
     "patternId": "SC2196",
-    "title": "egrep is non-standard and deprecated. Use grep -E instead.",
-    "description": "egrep is non-standard and deprecated. Use grep -E instead."
+    "title": "`egrep` is non-standard and deprecated. Use `grep -E` instead.",
+    "description": "`egrep` is non-standard and deprecated. Use `grep -E` instead."
   },
   {
     "patternId": "SC2197",
-    "title": "fgrep is non-standard and deprecated. Use grep -F instead.",
-    "description": "fgrep is non-standard and deprecated. Use grep -F instead."
+    "title": "`fgrep` is non-standard and deprecated. Use `grep -F` instead.",
+    "description": "`fgrep` is non-standard and deprecated. Use `grep -F` instead."
   },
   {
     "patternId": "SC2198",
-    "title": "Arrays don't work as operands in [ ]. Use a loop (or concatenate with * instead of @).",
-    "description": "Arrays don't work as operands in [ ]. Use a loop (or concatenate with * instead of @)."
+    "title": "Arrays don't work as operands in `[ ]`. Use a loop (or concatenate with `*` instead of `@`).",
+    "description": "Arrays don't work as operands in `[ ]`. Use a loop (or concatenate with `*` instead of `@`)."
   },
   {
     "patternId": "SC2199",
-    "title": "Arrays implicitly concatenate in `[[ ]]`. Use a loop (or explicit * instead of @).",
-    "description": "Arrays implicitly concatenate in `[[ ]]`. Use a loop (or explicit * instead of @)."
+    "title": "Arrays implicitly concatenate in `[[ ]]`. Use a loop (or explicit `*` instead of `@`).",
+    "description": "Arrays implicitly concatenate in `[[ ]]`. Use a loop (or explicit `*` instead of `@`)."
   },
   {
     "patternId": "SC2200",
-    "title": "Brace expansions don't work as operands in [ ]. Use a loop.",
-    "description": "Brace expansions don't work as operands in [ ]. Use a loop."
+    "title": "Brace expansions don't work as operands in `[ ]`. Use a loop.",
+    "description": "Brace expansions don't work as operands in `[ ]`. Use a loop."
   },
   {
     "patternId": "SC2201",
@@ -1441,43 +1456,43 @@
   },
   {
     "patternId": "SC2202",
-    "title": "Globs don't work as operands in [ ]. Use a loop.",
-    "description": "Globs don't work as operands in [ ]. Use a loop."
+    "title": "Globs don't work as operands in `[ ]`. Use a loop.",
+    "description": "Globs don't work as operands in `[ ]`. Use a loop."
   },
   {
     "patternId": "SC2203",
-    "title": "Globs are ignored in `[[ ]]` except right of =/!=. Use a loop.",
-    "description": "Globs are ignored in `[[ ]]` except right of =/!=. Use a loop."
+    "title": "Globs are ignored in `[[ ]]` except right of `=`/`!=`. Use a loop.",
+    "description": "Globs are ignored in `[[ ]]` except right of `=`/`!=`. Use a loop."
   },
   {
     "patternId": "SC2204",
-    "title": "(..) is a subshell. Did you mean [ .. ], a test expression?",
-    "description": "(..) is a subshell. Did you mean [ .. ], a test expression?"
+    "title": "`(..)` is a subshell. Did you mean `[ .. ]`, a test expression?",
+    "description": "`(..)` is a subshell. Did you mean `[ .. ]`, a test expression?"
   },
   {
     "patternId": "SC2205",
-    "title": "(..) is a subshell. Did you mean [ .. ], a test expression?",
-    "description": "(..) is a subshell. Did you mean [ .. ], a test expression?"
+    "title": "`(..)` is a subshell. Did you mean `[ .. ]`, a test expression?",
+    "description": "`(..)` is a subshell. Did you mean `[ .. ]`, a test expression?"
   },
   {
     "patternId": "SC2206",
-    "title": "Quote to prevent word splitting/globbing, or split robustly with mapfile or read -a.",
-    "description": "Quote to prevent word splitting/globbing, or split robustly with mapfile or read -a."
+    "title": "Quote to prevent word splitting/globbing, or split robustly with mapfile or `read -a`.",
+    "description": "Quote to prevent word splitting/globbing, or split robustly with mapfile or `read -a`."
   },
   {
     "patternId": "SC2207",
-    "title": "Prefer mapfile or read -a to split command output (or quote to avoid splitting).",
-    "description": "Prefer mapfile or read -a to split command output (or quote to avoid splitting)."
+    "title": "Prefer `mapfile` or `read -a` to split command output (or quote to avoid splitting).",
+    "description": "Prefer `mapfile` or `read -a` to split command output (or quote to avoid splitting)."
   },
   {
     "patternId": "SC2208",
-    "title": "Use `[[ ]]` or quote arguments to -v to avoid glob expansion.",
-    "description": "Use `[[ ]]` or quote arguments to -v to avoid glob expansion."
+    "title": "Use `[[ ]]` or quote arguments to `-v` to avoid glob expansion.",
+    "description": "Use `[[ ]]` or quote arguments to `-v` to avoid glob expansion."
   },
   {
     "patternId": "SC2209",
-    "title": "Use var=$(command) to assign output (or quote to assign string).",
-    "description": "Use var=$(command) to assign output (or quote to assign string)."
+    "title": "Use `var=$(command)` to assign output (or quote to assign string).",
+    "description": "Use `var=$(command)` to assign output (or quote to assign string)."
   },
   {
     "patternId": "SC2210",
@@ -1486,18 +1501,18 @@
   },
   {
     "patternId": "SC2211",
-    "title": "This is a glob used as a command name. Was it supposed to be in ${..}, array, or is it missing quoting?",
-    "description": "This is a glob used as a command name. Was it supposed to be in ${..}, array, or is it missing quoting?"
+    "title": "This is a glob used as a command name. Was it supposed to be in `${..}`, array, or is it missing quoting?",
+    "description": "This is a glob used as a command name. Was it supposed to be in `${..}`, array, or is it missing quoting?"
   },
   {
     "patternId": "SC2212",
-    "title": "Use 'false' instead of empty [/[[ conditionals.",
-    "description": "Use 'false' instead of empty [/[[ conditionals."
+    "title": "Use `false` instead of empty `[`/`[[` conditionals.",
+    "description": "Use `false` instead of empty `[`/`[[` conditionals."
   },
   {
     "patternId": "SC2213",
-    "title": "getopts specified -n, but it's not handled by this 'case'.",
-    "description": "getopts specified -n, but it's not handled by this 'case'."
+    "title": "getopts specified `-n`, but it's not handled by this `case`.",
+    "description": "getopts specified `-n`, but it's not handled by this `case`."
   },
   {
     "patternId": "SC2214",
@@ -1511,13 +1526,13 @@
   },
   {
     "patternId": "SC2216",
-    "title": "Piping to 'rm', a command that doesn't read stdin. Wrong command or missing xargs?",
-    "description": "Piping to 'rm', a command that doesn't read stdin. Wrong command or missing xargs?"
+    "title": "Piping to `rm`, a command that doesn't read stdin. Wrong command or missing `xargs`?",
+    "description": "Piping to `rm`, a command that doesn't read stdin. Wrong command or missing `xargs`?"
   },
   {
     "patternId": "SC2217",
-    "title": "Redirecting to 'echo', a command that doesn't read stdin. Bad quoting or missing xargs?",
-    "description": "Redirecting to 'echo', a command that doesn't read stdin. Bad quoting or missing xargs?"
+    "title": "Redirecting to `echo`, a command that doesn't read stdin. Bad quoting or missing `xargs`?",
+    "description": "Redirecting to `echo`, a command that doesn't read stdin. Bad quoting or missing `xargs`?"
   },
   {
     "patternId": "SC2218",
@@ -1551,18 +1566,18 @@
   },
   {
     "patternId": "SC2224",
-    "title": "This mv has no destination. Check the arguments.",
-    "description": "This mv has no destination. Check the arguments."
+    "title": "This `mv` has no destination. Check the arguments.",
+    "description": "This `mv` has no destination. Check the arguments."
   },
   {
     "patternId": "SC2225",
-    "title": "This cp has no destination. Check the arguments.",
-    "description": "This cp has no destination. Check the arguments."
+    "title": "This `cp` has no destination. Check the arguments.",
+    "description": "This `cp` has no destination. Check the arguments."
   },
   {
     "patternId": "SC2226",
-    "title": "This ln has no destination. Check the arguments, or specify '.' explicitly.",
-    "description": "This ln has no destination. Check the arguments, or specify '.' explicitly."
+    "title": "This `ln` has no destination. Check the arguments, or specify `.` explicitly.",
+    "description": "This `ln` has no destination. Check the arguments, or specify `.` explicitly."
   },
   {
     "patternId": "SC2227",
@@ -1571,23 +1586,23 @@
   },
   {
     "patternId": "SC2229",
-    "title": "This does not read 'foo'. Remove $/${} for that, or use ${var?} to quiet.",
-    "description": "This does not read 'foo'. Remove $/${} for that, or use ${var?} to quiet."
+    "title": "This does not read `foo`. Remove `$`/`${}` for that, or use `${var?}` to quiet.",
+    "description": "This does not read `foo`. Remove `$`/`${}` for that, or use `${var?}` to quiet."
   },
   {
     "patternId": "SC2230",
-    "title": "which is non-standard. Use builtin 'command -v' instead.",
-    "description": "which is non-standard. Use builtin 'command -v' instead."
+    "title": "`which` is non-standard. Use builtin `command -v` instead.",
+    "description": "`which` is non-standard. Use builtin `command -v` instead."
   },
   {
     "patternId": "SC2231",
-    "title": "Quote expansions in this for loop glob to prevent wordsplitting, e.g. \"$dir\"/*.txt .",
-    "description": "Quote expansions in this for loop glob to prevent wordsplitting, e.g. \"$dir\"/*.txt ."
+    "title": "Quote expansions in this `for` loop glob to prevent wordsplitting, e.g. `\"$dir\"/*.txt` .",
+    "description": "Quote expansions in this `for` loop glob to prevent wordsplitting, e.g. `\"$dir\"/*.txt` ."
   },
   {
     "patternId": "SC2232",
-    "title": "Can't use sudo with builtins like cd. Did you want sudo sh -c .. instead?",
-    "description": "Can't use sudo with builtins like cd. Did you want sudo sh -c .. instead?"
+    "title": "Can't use `sudo` with builtins like `cd`. Did you want `sudo sh -c ..` instead?",
+    "description": "Can't use `sudo` with builtins like `cd`. Did you want `sudo sh -c ..` instead?"
   },
   {
     "patternId": "SC2233",
@@ -1641,13 +1656,13 @@
   },
   {
     "patternId": "SC2243",
-    "title": "Prefer explicit -n to check for output (or run command without [/[[ to check for success)",
-    "description": "Prefer explicit -n to check for output (or run command without [/[[ to check for success)"
+    "title": "Prefer explicit `-n` to check for output (or run command without `[`/`[[` to check for success)",
+    "description": "Prefer explicit `-n` to check for output (or run command without `[`/`[[` to check for success)"
   },
   {
     "patternId": "SC2244",
-    "title": "Prefer explicit -n to check non-empty string (or use =/-ne to check boolean/integer).",
-    "description": "Prefer explicit -n to check non-empty string (or use =/-ne to check boolean/integer)."
+    "title": "Prefer explicit `-n` to check non-empty string (or use `=`/`-ne` to check boolean/integer).",
+    "description": "Prefer explicit `-n` to check non-empty string (or use `=`/`-ne` to check boolean/integer)."
   },
   {
     "patternId": "SC2245",
@@ -1661,18 +1676,18 @@
   },
   {
     "patternId": "SC2247",
-    "title": "Flip leading $ and \" if this should be a quoted substitution.",
-    "description": "Flip leading $ and \" if this should be a quoted substitution."
+    "title": "Flip leading `$` and `\"` if this should be a quoted substitution.",
+    "description": "Flip leading `$` and `\"` if this should be a quoted substitution."
   },
   {
     "patternId": "SC2248",
-    "title": "Warn about variable references without braces.",
-    "description": "Warn about variable references without braces."
+    "title": "Warn about double quoting even when variables don't contain special characters.",
+    "description": "Warn about double quoting even when variables don't contain special characters."
   },
   {
     "patternId": "SC2249",
-    "title": "Consider adding a default *) case, even if it just exits with error.",
-    "description": "Consider adding a default *) case, even if it just exits with error."
+    "title": "Consider adding a default `*)` case, even if it just exits with error.",
+    "description": "Consider adding a default `*)` case, even if it just exits with error."
   },
   {
     "patternId": "SC2250",
@@ -1681,18 +1696,18 @@
   },
   {
     "patternId": "SC2251",
-    "title": "This ! is not on a condition and skips errexit. Use `&& exit 1` instead, or make sure $? is checked.",
-    "description": "This ! is not on a condition and skips errexit. Use `&& exit 1` instead, or make sure $? is checked."
+    "title": "This `!` is not on a condition and skips errexit. Use `&& exit 1` instead, or make sure `$?` is checked.",
+    "description": "This `!` is not on a condition and skips errexit. Use `&& exit 1` instead, or make sure `$?` is checked."
   },
   {
     "patternId": "SC2252",
-    "title": "You probably wanted && here, otherwise it's always true.",
-    "description": "You probably wanted && here, otherwise it's always true."
+    "title": "You probably wanted `&&` here, otherwise it's always true.",
+    "description": "You probably wanted `&&` here, otherwise it's always true."
   },
   {
     "patternId": "SC2253",
-    "title": "Use -R to recurse, or explicitly a-r to remove read permissions.",
-    "description": "Use -R to recurse, or explicitly a-r to remove read permissions."
+    "title": "Use `-R` to recurse, or explicitly `a-r` to remove read permissions.",
+    "description": "Use `-R` to recurse, or explicitly `a-r` to remove read permissions."
   },
   {
     "patternId": "SC2254",
@@ -1706,8 +1721,8 @@
   },
   {
     "patternId": "SC2256",
-    "title": "This translated string is the name of a variable. Flip leading $ and \" if this should be a quoted substitution.",
-    "description": "This translated string is the name of a variable. Flip leading $ and \" if this should be a quoted substitution."
+    "title": "This translated string is the name of a variable. Flip leading `$` and `\"` if this should be a quoted substitution.",
+    "description": "This translated string is the name of a variable. Flip leading `$` and `\"` if this should be a quoted substitution."
   },
   {
     "patternId": "SC2257",
@@ -1721,13 +1736,13 @@
   },
   {
     "patternId": "SC2260",
-    "title": "This redirection overrides the output pipe. Use 'tee' to output to both.",
-    "description": "This redirection overrides the output pipe. Use 'tee' to output to both."
+    "title": "This redirection overrides the output pipe. Use `tee` to output to both.",
+    "description": "This redirection overrides the output pipe. Use `tee` to output to both."
   },
   {
     "patternId": "SC2261",
-    "title": "Multiple redirections compete for stdout. Use cat, tee, or pass filenames instead.",
-    "description": "Multiple redirections compete for stdout. Use cat, tee, or pass filenames instead."
+    "title": "Multiple redirections compete for stdout. Use `cat`, `tee`, or pass filenames instead.",
+    "description": "Multiple redirections compete for stdout. Use `cat`, `tee`, or pass filenames instead."
   },
   {
     "patternId": "SC2262",
@@ -1746,8 +1761,8 @@
   },
   {
     "patternId": "SC2267",
-    "title": "GNU xargs -i is deprecated in favor of -I{}",
-    "description": "GNU xargs -i is deprecated in favor of -I{}"
+    "title": "GNU `xargs -i` is deprecated in favor of `-I{}`",
+    "description": "GNU `xargs -i` is deprecated in favor of `-I{}`"
   },
   {
     "patternId": "SC2268",
@@ -1761,8 +1776,8 @@
   },
   {
     "patternId": "SC2270",
-    "title": "To assign positional parameters, use 'set -- first second ..' (or use [ ] to compare).",
-    "description": "To assign positional parameters, use 'set -- first second ..' (or use [ ] to compare)."
+    "title": "To assign positional parameters, use `set -- first second ..` (or use `[ ]` to compare).",
+    "description": "To assign positional parameters, use `set -- first second ..` (or use `[ ]` to compare)."
   },
   {
     "patternId": "SC2271",
@@ -1771,53 +1786,53 @@
   },
   {
     "patternId": "SC2272",
-    "title": "Command name contains ==. For comparison, use [ \"$var\" = value ].",
-    "description": "Command name contains ==. For comparison, use [ \"$var\" = value ]."
+    "title": "Command name contains `==`. For comparison, use `[ \"$var\" = value ]`.",
+    "description": "Command name contains `==`. For comparison, use `[ \"$var\" = value ]`."
   },
   {
     "patternId": "SC2273",
-    "title": "Sequence of ===s found. Merge conflict or intended as a commented border?",
-    "description": "Sequence of ===s found. Merge conflict or intended as a commented border?"
+    "title": "Sequence of `===`s found. Merge conflict or intended as a commented border?",
+    "description": "Sequence of `===`s found. Merge conflict or intended as a commented border?"
   },
   {
     "patternId": "SC2274",
-    "title": "Command name starts with ===. Intended as a commented border?",
-    "description": "Command name starts with ===. Intended as a commented border?"
+    "title": "Command name starts with `===`. Intended as a commented border?",
+    "description": "Command name starts with `===`. Intended as a commented border?"
   },
   {
     "patternId": "SC2275",
-    "title": "Command name starts with =. Bad line break?",
-    "description": "Command name starts with =. Bad line break?"
+    "title": "Command name starts with `=`. Bad line break?",
+    "description": "Command name starts with `=`. Bad line break?"
   },
   {
     "patternId": "SC2276",
-    "title": "This is interpreted as a command name containing '='. Bad assignment or comparison?",
-    "description": "This is interpreted as a command name containing '='. Bad assignment or comparison?"
+    "title": "This is interpreted as a command name containing `=`. Bad assignment or comparison?",
+    "description": "This is interpreted as a command name containing `=`. Bad assignment or comparison?"
   },
   {
     "patternId": "SC2277",
-    "title": "Use BASH_ARGV0 to assign to $0 in bash (or use [ ] to compare).",
-    "description": "Use BASH_ARGV0 to assign to $0 in bash (or use [ ] to compare)."
+    "title": "Use `BASH_ARGV0` to assign to `$0` in bash (or use `[ ]` to compare).",
+    "description": "Use `BASH_ARGV0` to assign to `$0` in bash (or use `[ ]` to compare)."
   },
   {
     "patternId": "SC2278",
-    "title": "$0 can't be assigned in Ksh (but it does reflect the current function).",
-    "description": "$0 can't be assigned in Ksh (but it does reflect the current function)."
+    "title": "`$0` can't be assigned in Ksh (but it does reflect the current function).",
+    "description": "`$0` can't be assigned in Ksh (but it does reflect the current function)."
   },
   {
     "patternId": "SC2279",
-    "title": "$0 can't be assigned in Dash. This becomes a command name.",
-    "description": "$0 can't be assigned in Dash. This becomes a command name."
+    "title": "`$0` can't be assigned in Dash. This becomes a command name.",
+    "description": "`$0` can't be assigned in Dash. This becomes a command name."
   },
   {
     "patternId": "SC2280",
-    "title": "$0 can't be assigned this way, and there is no portable alternative.",
-    "description": "$0 can't be assigned this way, and there is no portable alternative."
+    "title": "`$0` can't be assigned this way, and there is no portable alternative.",
+    "description": "`$0` can't be assigned this way, and there is no portable alternative."
   },
   {
     "patternId": "SC2281",
-    "title": "Don't use $/${} on the left side of assignments.",
-    "description": "Don't use $/${} on the left side of assignments."
+    "title": "Don't use `$`/`${}` on the left side of assignments.",
+    "description": "Don't use `$`/`${}` on the left side of assignments."
   },
   {
     "patternId": "SC2282",
@@ -1826,18 +1841,153 @@
   },
   {
     "patternId": "SC2283",
-    "title": "Use [ ] to compare values, or remove spaces around = to assign (or quote '=' if literal).",
-    "description": "Use [ ] to compare values, or remove spaces around = to assign (or quote '=' if literal)."
+    "title": "Use `[ ]` to compare values, or remove spaces around `=` to assign (or quote `'='` if literal).",
+    "description": "Use `[ ]` to compare values, or remove spaces around `=` to assign (or quote `'='` if literal)."
   },
   {
     "patternId": "SC2284",
-    "title": "Use [ x = y ] to compare values (or quote '==' if literal).",
-    "description": "Use [ x = y ] to compare values (or quote '==' if literal)."
+    "title": "Use `[ x = y ]` to compare values (or quote `'=='` if literal).",
+    "description": "Use `[ x = y ]` to compare values (or quote `'=='` if literal)."
   },
   {
     "patternId": "SC2285",
-    "title": "Remove spaces around += to assign (or quote '+=' if literal).",
-    "description": "Remove spaces around += to assign (or quote '+=' if literal)."
+    "title": "Remove spaces around `+=` to assign (or quote `'+='` if literal).",
+    "description": "Remove spaces around `+=` to assign (or quote `'+='` if literal)."
+  },
+  {
+    "patternId": "SC2286",
+    "title": "This empty string is interpreted as a command name. Double check syntax (or use 'true' as a no-op).",
+    "description": "This empty string is interpreted as a command name. Double check syntax (or use 'true' as a no-op)."
+  },
+  {
+    "patternId": "SC2287",
+    "title": "This is interpreted as a command name ending with '/'. Double check syntax.",
+    "description": "This is interpreted as a command name ending with '/'. Double check syntax."
+  },
+  {
+    "patternId": "SC2288",
+    "title": "This is interpreted as a command name ending with apostrophe. Double check syntax.",
+    "description": "This is interpreted as a command name ending with apostrophe. Double check syntax."
+  },
+  {
+    "patternId": "SC2289",
+    "title": "This is interpreted as a command name containing a linefeed. Double check syntax.",
+    "description": "This is interpreted as a command name containing a linefeed. Double check syntax."
+  },
+  {
+    "patternId": "SC2290",
+    "title": "Remove spaces around = to assign.",
+    "description": "Remove spaces around = to assign."
+  },
+  {
+    "patternId": "SC2291",
+    "title": "Quote repeated spaces to avoid them collapsing into one.",
+    "description": "Quote repeated spaces to avoid them collapsing into one."
+  },
+  {
+    "patternId": "SC2292",
+    "title": "Prefer `[[ ]]` over `[ ]` for tests in Bash/Ksh.",
+    "description": "Prefer `[[ ]]` over `[ ]` for tests in Bash/Ksh."
+  },
+  {
+    "patternId": "SC2293",
+    "title": "When eval'ing @Q-quoted words, use * rather than @ as the index.",
+    "description": "When eval'ing @Q-quoted words, use * rather than @ as the index."
+  },
+  {
+    "patternId": "SC2294",
+    "title": "eval negates the benefit of arrays. Drop eval to preserve whitespace/symbols (or eval as string).",
+    "description": "eval negates the benefit of arrays. Drop eval to preserve whitespace/symbols (or eval as string)."
+  },
+  {
+    "patternId": "SC2295",
+    "title": "Expansions inside `${..}` need to be quoted separately, otherwise they will match as a pattern.",
+    "description": "Expansions inside `${..}` need to be quoted separately, otherwise they will match as a pattern."
+  },
+  {
+    "patternId": "SC2296",
+    "title": "Parameter expansions can't start with `{`. Double check syntax.",
+    "description": "Parameter expansions can't start with `{`. Double check syntax."
+  },
+  {
+    "patternId": "SC2297",
+    "title": "Double quotes must be outside `${}`: `${\"invalid\"}` vs `\"${valid}\"`.",
+    "description": "Double quotes must be outside `${}`: `${\"invalid\"}` vs `\"${valid}\"`."
+  },
+  {
+    "patternId": "SC2298",
+    "title": "`${$x}` is invalid. For expansion, use ${x}. For indirection, use arrays, ${!x} or (for sh) eval.",
+    "description": "`${$x}` is invalid. For expansion, use ${x}. For indirection, use arrays, ${!x} or (for sh) eval."
+  },
+  {
+    "patternId": "SC2299",
+    "title": "Parameter expansions can't be nested. Use temporary variables.",
+    "description": "Parameter expansions can't be nested. Use temporary variables."
+  },
+  {
+    "patternId": "SC2300",
+    "title": "Parameter expansion can't be applied to command substitutions. Use temporary variables.",
+    "description": "Parameter expansion can't be applied to command substitutions. Use temporary variables."
+  },
+  {
+    "patternId": "SC2301",
+    "title": "Parameter expansion starts with unexpected quotes. Double check syntax.",
+    "description": "Parameter expansion starts with unexpected quotes. Double check syntax."
+  },
+  {
+    "patternId": "SC2302",
+    "title": "This loops over values. To loop over keys, use `\"${!array[@]}\"`.",
+    "description": "This loops over values. To loop over keys, use `\"${!array[@]}\"`."
+  },
+  {
+    "patternId": "SC2303",
+    "title": "`i` is an array value, not a key. Use directly or loop over keys instead.",
+    "description": "`i` is an array value, not a key. Use directly or loop over keys instead."
+  },
+  {
+    "patternId": "SC2304",
+    "title": "`*` must be escaped to multiply: `\\*`. Modern `$((x * y))` avoids this issue.",
+    "description": "`*` must be escaped to multiply: `\\*`. Modern `$((x * y))` avoids this issue."
+  },
+  {
+    "patternId": "SC2305",
+    "title": "Quote regex argument to expr to avoid it expanding as a glob.",
+    "description": "Quote regex argument to expr to avoid it expanding as a glob."
+  },
+  {
+    "patternId": "SC2307",
+    "title": "'expr' expects 3+ arguments but sees 1. Make sure each operator/operand is a separate argument, and escape <>&|.",
+    "description": "'expr' expects 3+ arguments but sees 1. Make sure each operator/operand is a separate argument, and escape <>&|."
+  },
+  {
+    "patternId": "SC2308",
+    "title": "`expr length` has unspecified results. Prefer `${#var}`.",
+    "description": "`expr length` has unspecified results. Prefer `${#var}`."
+  },
+  {
+    "patternId": "SC2309",
+    "title": "-eq treats this as a variable. Use = to compare as string (or expand explicitly with $var)",
+    "description": "-eq treats this as a variable. Use = to compare as string (or expand explicitly with $var)"
+  },
+  {
+    "patternId": "SC2310",
+    "title": "This function is invoked in an 'if' condition so set -e will be disabled. Invoke separately if failures should cause the script to exit.",
+    "description": "This function is invoked in an 'if' condition so set -e will be disabled. Invoke separately if failures should cause the script to exit."
+  },
+  {
+    "patternId": "SC2311",
+    "title": "Bash implicitly disabled set -e for this function invocation because it's inside a command substitution. Add set -e; before it or enable inherit_errexit.",
+    "description": "Bash implicitly disabled set -e for this function invocation because it's inside a command substitution. Add set -e; before it or enable inherit_errexit."
+  },
+  {
+    "patternId": "SC2312",
+    "title": "Consider invoking this command separately to avoid masking its return value (or use '|| true' to ignore).",
+    "description": "Consider invoking this command separately to avoid masking its return value (or use '|| true' to ignore)."
+  },
+  {
+    "patternId": "SC2313",
+    "title": "Quote array indices to avoid them expanding as globs.",
+    "description": "Quote array indices to avoid them expanding as globs."
   },
   {
     "patternId": "SC3001",
@@ -1851,8 +2001,8 @@
   },
   {
     "patternId": "SC3003",
-    "title": "In POSIX sh, $'..' is undefined.",
-    "description": "In POSIX sh, $'..' is undefined."
+    "title": "In POSIX sh, `$'..'` is undefined.",
+    "description": "In POSIX sh, `$'..'` is undefined."
   },
   {
     "patternId": "SC3004",
@@ -1860,14 +2010,24 @@
     "description": "In POSIX sh, $\"..\" is undefined"
   },
   {
+    "patternId": "SC3005",
+    "title": "In POSIX sh, arithmetic for loops are undefined.",
+    "description": "In POSIX sh, arithmetic for loops are undefined."
+  },
+  {
     "patternId": "SC3006",
-    "title": "In POSIX sh, standalone ((..)) is undefined.",
-    "description": "In POSIX sh, standalone ((..)) is undefined."
+    "title": "In POSIX sh, standalone `((..))` is undefined.",
+    "description": "In POSIX sh, standalone `((..))` is undefined."
+  },
+  {
+    "patternId": "SC3009",
+    "title": "**In POSIX `sh`, brace expansion is undefined.**",
+    "description": "**In POSIX `sh`, brace expansion is undefined.**"
   },
   {
     "patternId": "SC3010",
-    "title": "",
-    "description": ""
+    "title": "In POSIX sh, `[[ ]]` is undefined.",
+    "description": "In POSIX sh, `[[ ]]` is undefined."
   },
   {
     "patternId": "SC3012",
@@ -1886,8 +2046,8 @@
   },
   {
     "patternId": "SC3015",
-    "title": "In POSIX sh, =~ regex matching is undefined.",
-    "description": "In POSIX sh, =~ regex matching is undefined."
+    "title": "In POSIX sh, `=~` regex matching is undefined.",
+    "description": "In POSIX sh, `=~` regex matching is undefined."
   },
   {
     "patternId": "SC3017",
@@ -1896,8 +2056,8 @@
   },
   {
     "patternId": "SC3018",
-    "title": "In POSIX sh, ++ is undefined.",
-    "description": "In POSIX sh, ++ is undefined."
+    "title": "In POSIX sh, `++` is undefined.",
+    "description": "In POSIX sh, `++` is undefined."
   },
   {
     "patternId": "SC3019",
@@ -1926,23 +2086,28 @@
   },
   {
     "patternId": "SC3024",
-    "title": "In POSIX sh, += is undefined.",
-    "description": "In POSIX sh, += is undefined."
+    "title": "In POSIX sh, `+=` is undefined.",
+    "description": "In POSIX sh, `+=` is undefined."
   },
   {
     "patternId": "SC3025",
-    "title": "In POSIX sh, /dev/{tcp,udp} is undefined.",
-    "description": "In POSIX sh, /dev/{tcp,udp} is undefined."
+    "title": "In POSIX sh, `/dev/{tcp,udp}` is undefined.",
+    "description": "In POSIX sh, `/dev/{tcp,udp}` is undefined."
   },
   {
     "patternId": "SC3026",
-    "title": "In POSIX sh, ^ in place of ! in glob bracket expressions is undefined.",
-    "description": "In POSIX sh, ^ in place of ! in glob bracket expressions is undefined."
+    "title": "In POSIX sh, `^` in place of `!` in glob bracket expressions is undefined.",
+    "description": "In POSIX sh, `^` in place of `!` in glob bracket expressions is undefined."
   },
   {
     "patternId": "SC3028",
     "title": "In POSIX sh, VARIABLE is undefined.",
     "description": "In POSIX sh, VARIABLE is undefined."
+  },
+  {
+    "patternId": "SC3030",
+    "title": "In POSIX sh, arrays are undefined.",
+    "description": "In POSIX sh, arrays are undefined."
   },
   {
     "patternId": "SC3031",
@@ -1951,8 +2116,8 @@
   },
   {
     "patternId": "SC3034",
-    "title": "In POSIX sh, $(<file) is undefined.",
-    "description": "In POSIX sh, $(<file) is undefined."
+    "title": "In POSIX sh, `$(<file)` is undefined.",
+    "description": "In POSIX sh, `$(<file)` is undefined."
   },
   {
     "patternId": "SC3035",
@@ -1971,13 +2136,13 @@
   },
   {
     "patternId": "SC3039",
-    "title": "In POSIX sh, 'let' is undefined.",
-    "description": "In POSIX sh, 'let' is undefined."
+    "title": "In POSIX sh, `let` is undefined.",
+    "description": "In POSIX sh, `let` is undefined."
   },
   {
     "patternId": "SC3040",
-    "title": "In POSIX sh, set option pipefail is undefined.",
-    "description": "In POSIX sh, set option pipefail is undefined."
+    "title": "In POSIX sh, set option *[name]* is undefined.",
+    "description": "In POSIX sh, set option *[name]* is undefined."
   },
   {
     "patternId": "SC3043",

@@ -716,11 +716,6 @@
   },
   {
     "patternId": "SC2034",
-    "title": "!/usr/bin/env bash",
-    "description": "!/usr/bin/env bash"
-  },
-  {
-    "patternId": "SC2034",
     "title": "foo appears unused. Verify it or export it.",
     "description": "foo appears unused. Verify it or export it."
   },

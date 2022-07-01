@@ -9,6 +9,6 @@
     </file>
     <file name="SC2003.sh">
         <error source="SC2003" line="4" message="expr is antiquated. Consider rewriting this using $((..)), ${} or [[ ]]." severity="info" />
-        <error source="SC2003" line="6" message="expr is antiquated. Consider rewriting this using $((..)), ${} or [[ ]]." severity="info" />
+        <error source="SC2308" line="6" message="'expr length' has unspecified results. Prefer ${#var}." severity="info" />
     </file>
 </checkstyle>

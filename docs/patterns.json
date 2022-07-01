@@ -867,12 +867,6 @@
       "enabled": true
     },
     {
-      "patternId": "SC2034",
-      "level": "Warning",
-      "category": "ErrorProne",
-      "enabled": true
-    },
-    {
       "patternId": "SC2035",
       "level": "Info",
       "category": "CodeStyle",

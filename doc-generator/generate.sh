@@ -6,7 +6,7 @@ DESCRIPTION_HOME="${DOCS_HOME}/description"
 VERSION="v0.9.0"
 
 rm -rf shellcheck shellcheck.wiki
-git clone -b $VERSION --single-branch --depth 1 https://github.com/koalaman/shellcheck.git
+git clone -b v$VERSION --single-branch --depth 1 https://github.com/koalaman/shellcheck.git
 git clone https://github.com/koalaman/shellcheck.wiki.git
 
 cd shellcheck.wiki

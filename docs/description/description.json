@@ -75,6 +75,11 @@
     "description": "If grouping expressions inside `[[..]]`, use `( .. )`."
   },
   {
+    "patternId": "SC1027",
+    "title": "Expected another argument for this operator.",
+    "description": "Expected another argument for this operator."
+  },
+  {
     "patternId": "SC1028",
     "title": "In `[..]` you have to escape `\\( \\)` or preferably combine `[..]` expressions.",
     "description": "In `[..]` you have to escape `\\( \\)` or preferably combine `[..]` expressions."
@@ -135,6 +140,11 @@
     "description": "Close matches include `-eof` (!= `eof`)."
   },
   {
+    "patternId": "SC1043",
+    "title": "Found EOF further down, but with wrong casing.",
+    "description": "Found EOF further down, but with wrong casing."
+  },
+  {
     "patternId": "SC1044",
     "title": "Couldn't find end token `EOF` in the here document.",
     "description": "Couldn't find end token `EOF` in the here document."
@@ -190,14 +200,34 @@
     "description": "You need a space after the `{`."
   },
   {
+    "patternId": "SC1055",
+    "title": "You need at least one command here. Use `true;` as a no-op.",
+    "description": "You need at least one command here. Use `true;` as a no-op."
+  },
+  {
     "patternId": "SC1056",
     "title": "Expected a `}`. If you have one, try a `;` or `\\n` in front of it.",
     "description": "Expected a `}`. If you have one, try a `;` or `\\n` in front of it."
   },
   {
+    "patternId": "SC1057",
+    "title": "Did you forget the `do` for this loop?",
+    "description": "Did you forget the `do` for this loop?"
+  },
+  {
     "patternId": "SC1058",
     "title": "Expected `do`.",
     "description": "Expected `do`."
+  },
+  {
+    "patternId": "SC1059",
+    "title": "Semicolon is not allowed directly after `do`. You can just delete it.",
+    "description": "Semicolon is not allowed directly after `do`. You can just delete it."
+  },
+  {
+    "patternId": "SC1060",
+    "title": "Can't have empty do clauses (use `true` as a no-op)",
+    "description": "Can't have empty do clauses (use `true` as a no-op)"
   },
   {
     "patternId": "SC1061",
@@ -208,6 +238,11 @@
     "patternId": "SC1062",
     "title": "Expected `done` matching previously mentioned `do`.",
     "description": "Expected `done` matching previously mentioned `do`."
+  },
+  {
+    "patternId": "SC1063",
+    "title": "You need a line feed or semicolon before the `do`.",
+    "description": "You need a line feed or semicolon before the `do`."
   },
   {
     "patternId": "SC1064",
@@ -260,6 +295,11 @@
     "description": "Use `elif` instead of `else if`."
   },
   {
+    "patternId": "SC1076",
+    "title": "Trying to do math? Use e.g. `[ $((i/2+7)) -ge 18 ]`.",
+    "description": "Trying to do math? Use e.g. `[ $((i/2+7)) -ge 18 ]`."
+  },
+  {
     "patternId": "SC1077",
     "title": "For command expansion, the tick should slant left (`` ` `` vs `´`).",
     "description": "For command expansion, the tick should slant left (`` ` `` vs `´`)."
@@ -275,9 +315,14 @@
     "description": "This is actually an end quote, but due to next char it looks suspect."
   },
   {
+    "patternId": "SC1080",
+    "title": "You need `\\` before line feeds to break lines in `[ ]`.",
+    "description": "You need `\\` before line feeds to break lines in `[ ]`."
+  },
+  {
     "patternId": "SC1081",
-    "title": "Scripts are case sensitive. Use `if`, not `If`.",
-    "description": "Scripts are case sensitive. Use `if`, not `If`."
+    "title": "Scripts are case-sensitive. Use `if`, not `If`.",
+    "description": "Scripts are case-sensitive. Use `if`, not `If`."
   },
   {
     "patternId": "SC1082",
@@ -325,6 +370,11 @@
     "description": "Not following: (error message here)"
   },
   {
+    "patternId": "SC1092",
+    "title": "Stopping at 100 `source` frames :O",
+    "description": "Stopping at 100 `source` frames :O"
+  },
+  {
     "patternId": "SC1094",
     "title": "Parsing of sourced file failed. Ignoring it.",
     "description": "Parsing of sourced file failed. Ignoring it."
@@ -361,8 +411,13 @@
   },
   {
     "patternId": "SC1102",
-    "title": "Shells disambiguate `$((` differently or not at all. For `$(command substition)`, add space after `$(` . For `$((arithmetics))`, fix parsing errors.",
-    "description": "Shells disambiguate `$((` differently or not at all. For `$(command substition)`, add space after `$(` . For `$((arithmetics))`, fix parsing errors."
+    "title": "Shells disambiguate `$((` differently or not at all. For `$(command substitution)`, add space after `$(` . For `$((arithmetics))`, fix parsing errors.",
+    "description": "Shells disambiguate `$((` differently or not at all. For `$(command substitution)`, add space after `$(` . For `$((arithmetics))`, fix parsing errors."
+  },
+  {
+    "patternId": "SC1103",
+    "title": "This shell type is unknown. Use e.g. `sh` or `bash`.",
+    "description": "This shell type is unknown. Use e.g. `sh` or `bash`."
   },
   {
     "patternId": "SC1104",
@@ -525,6 +580,16 @@
     "description": "Prefer escape over ending quote to make `$` literal. Instead of `\"It costs $\"5`, use `\"It costs \\$5\"`"
   },
   {
+    "patternId": "SC1137",
+    "title": "Missing second `(` to start arithmetic for ((;;)) loop",
+    "description": "Missing second `(` to start arithmetic for ((;;)) loop"
+  },
+  {
+    "patternId": "SC1138",
+    "title": "Shells are space sensitive. Use `< <(cmd)`, not `<< (cmd)`.",
+    "description": "Shells are space sensitive. Use `< <(cmd)`, not `<< (cmd)`."
+  },
+  {
     "patternId": "SC1139",
     "title": "Use `||` instead of `-o` between test commands.",
     "description": "Use `||` instead of `-o` between test commands."
@@ -548,6 +613,16 @@
     "patternId": "SC1143",
     "title": "This backslash is part of a comment and does not continue the line.",
     "description": "This backslash is part of a comment and does not continue the line."
+  },
+  {
+    "patternId": "SC1144",
+    "title": "`external-sources` can only be enabled in .shellcheckrc, not in individual files.",
+    "description": "`external-sources` can only be enabled in .shellcheckrc, not in individual files."
+  },
+  {
+    "patternId": "SC1145",
+    "title": "Unknown `external-sources` value. Expected `true`/`false`.",
+    "description": "Unknown `external-sources` value. Expected `true`/`false`."
   },
   {
     "patternId": "SC2000",
@@ -661,8 +736,8 @@
   },
   {
     "patternId": "SC2023",
-    "title": "The shell may override 'time' as seen in man time(1). Use 'command time ..' for that one.",
-    "description": "The shell may override 'time' as seen in man time(1). Use 'command time ..' for that one."
+    "title": "The shell may override `time` as seen in man time(1). Use `command time ..` for that one.",
+    "description": "The shell may override `time` as seen in man time(1). Use `command time ..` for that one."
   },
   {
     "patternId": "SC2024",
@@ -743,6 +818,11 @@
     "patternId": "SC2041",
     "title": "This is a literal string. To run as a command, use `$(..)` instead of `'..'` .",
     "description": "This is a literal string. To run as a command, use `$(..)` instead of `'..'` ."
+  },
+  {
+    "patternId": "SC2042",
+    "title": "Use spaces, not commas, to separate loop elements.",
+    "description": "Use spaces, not commas, to separate loop elements."
   },
   {
     "patternId": "SC2043",
@@ -895,6 +975,11 @@
     "description": "Can't use `=~` in `[ ]`. Use `[[..]]` instead."
   },
   {
+    "patternId": "SC2075",
+    "title": "Escaping `\\<` is required in `[..]`, but invalid in `[[..]]`",
+    "description": "Escaping `\\<` is required in `[..]`, but invalid in `[[..]]`"
+  },
+  {
     "patternId": "SC2076",
     "title": "Don't quote rhs of `=~`, it'll match literally rather than as a regex.",
     "description": "Don't quote rhs of `=~`, it'll match literally rather than as a regex."
@@ -928,6 +1013,11 @@
     "patternId": "SC2082",
     "title": "To expand via indirection, use `name=\"foo$n\"; echo \"${!name}\"`.",
     "description": "To expand via indirection, use `name=\"foo$n\"; echo \"${!name}\"`."
+  },
+  {
+    "patternId": "SC2083",
+    "title": "Don't add spaces after the slash in `./file`.",
+    "description": "Don't add spaces after the slash in `./file`."
   },
   {
     "patternId": "SC2084",
@@ -1061,8 +1151,8 @@
   },
   {
     "patternId": "SC2111",
-    "title": "ksh does not allow 'function' keyword and '()' at the same time.",
-    "description": "ksh does not allow 'function' keyword and '()' at the same time."
+    "title": "ksh does not allow `function` keyword and `()` at the same time.",
+    "description": "ksh does not allow `function` keyword and `()` at the same time."
   },
   {
     "patternId": "SC2112",
@@ -1093,6 +1183,11 @@
     "patternId": "SC2117",
     "title": "To run commands as another user, use `su -c` or `sudo`.",
     "description": "To run commands as another user, use `su -c` or `sudo`."
+  },
+  {
+    "patternId": "SC2118",
+    "title": "Ksh does not support `|&`. Use `2>&1 |`",
+    "description": "Ksh does not support `|&`. Use `2>&1 |`"
   },
   {
     "patternId": "SC2119",
@@ -1133,6 +1228,11 @@
     "patternId": "SC2126",
     "title": "Consider using `grep -c` instead of `grep | wc`",
     "description": "Consider using `grep -c` instead of `grep | wc`"
+  },
+  {
+    "patternId": "SC2127",
+    "title": "To use `${ ..; }`, specify `#!/usr/bin/env ksh`.",
+    "description": "To use `${ ..; }`, specify `#!/usr/bin/env ksh`."
   },
   {
     "patternId": "SC2128",
@@ -1676,8 +1776,8 @@
   },
   {
     "patternId": "SC2248",
-    "title": "Warn about double quoting even when variables don't contain special characters.",
-    "description": "Warn about double quoting even when variables don't contain special characters."
+    "title": "Prefer double quoting even when variables don't contain special characters.",
+    "description": "Prefer double quoting even when variables don't contain special characters."
   },
   {
     "patternId": "SC2249",
@@ -1753,6 +1853,16 @@
     "patternId": "SC2264",
     "title": "This function unconditionally re-invokes itself. Missing `command`?",
     "description": "This function unconditionally re-invokes itself. Missing `command`?"
+  },
+  {
+    "patternId": "SC2265",
+    "title": "Use && for logical AND. Single & will background and return true.",
+    "description": "Use && for logical AND. Single & will background and return true."
+  },
+  {
+    "patternId": "SC2266",
+    "title": "Use && for logical AND. Single & will background and return true.",
+    "description": "Use && for logical AND. Single & will background and return true."
   },
   {
     "patternId": "SC2267",
@@ -1950,6 +2060,11 @@
     "description": "Quote regex argument to expr to avoid it expanding as a glob."
   },
   {
+    "patternId": "SC2306",
+    "title": "Escape glob characters in arguments to expr to avoid pathname expansion.",
+    "description": "Escape glob characters in arguments to expr to avoid pathname expansion."
+  },
+  {
     "patternId": "SC2307",
     "title": "'expr' expects 3+ arguments but sees 1. Make sure each operator/operand is a separate argument, and escape <>&|.",
     "description": "'expr' expects 3+ arguments but sees 1. Make sure each operator/operand is a separate argument, and escape <>&|."
@@ -1985,6 +2100,56 @@
     "description": "Quote array indices to avoid them expanding as globs."
   },
   {
+    "patternId": "SC2314",
+    "title": "In bats, `!` does not cause a test failure.",
+    "description": "In bats, `!` does not cause a test failure."
+  },
+  {
+    "patternId": "SC2315",
+    "title": "In bats, `!` does not cause a test failure. Fold the `!` into the conditional!",
+    "description": "In bats, `!` does not cause a test failure. Fold the `!` into the conditional!"
+  },
+  {
+    "patternId": "SC2316",
+    "title": "This applies local to the variable named readonly, which is probably not what you want. Use a separate command or the appropriate `declare` options instead.",
+    "description": "This applies local to the variable named readonly, which is probably not what you want. Use a separate command or the appropriate `declare` options instead."
+  },
+  {
+    "patternId": "SC2317",
+    "title": "Command appears to be unreachable. Check usage (or ignore if invoked indirectly).",
+    "description": "Command appears to be unreachable. Check usage (or ignore if invoked indirectly)."
+  },
+  {
+    "patternId": "SC2318",
+    "title": "This assignment is used again in this `declare`, but won't have taken effect. Use two `declare`s.",
+    "description": "This assignment is used again in this `declare`, but won't have taken effect. Use two `declare`s."
+  },
+  {
+    "patternId": "SC2319",
+    "title": "This `$?` refers to a condition, not a command. Assign to a variable to avoid it being overwritten.",
+    "description": "This `$?` refers to a condition, not a command. Assign to a variable to avoid it being overwritten."
+  },
+  {
+    "patternId": "SC2320",
+    "title": "This `$?` refers to echo/printf, not a previous command. Assign to variable to avoid it being overwritten.",
+    "description": "This `$?` refers to echo/printf, not a previous command. Assign to variable to avoid it being overwritten."
+  },
+  {
+    "patternId": "SC2321",
+    "title": "Array indices are already arithmetic contexts. Prefer removing the `$((` and `))`.",
+    "description": "Array indices are already arithmetic contexts. Prefer removing the `$((` and `))`."
+  },
+  {
+    "patternId": "SC2322",
+    "title": "In arithmetic contexts, `((x))` is the same as `(x)`. Prefer only one layer of parentheses.",
+    "description": "In arithmetic contexts, `((x))` is the same as `(x)`. Prefer only one layer of parentheses."
+  },
+  {
+    "patternId": "SC2323",
+    "title": "`a[(x)]` is the same as `a[x]`. Prefer not wrapping in additional parentheses.",
+    "description": "`a[(x)]` is the same as `a[x]`. Prefer not wrapping in additional parentheses."
+  },
+  {
     "patternId": "SC3001",
     "title": "In POSIX sh, process substitution is undefined.",
     "description": "In POSIX sh, process substitution is undefined."
@@ -2015,14 +2180,29 @@
     "description": "In POSIX sh, standalone `((..))` is undefined."
   },
   {
+    "patternId": "SC3007",
+    "title": "In POSIX sh, `$[..]` in place of `$((..))` is undefined.",
+    "description": "In POSIX sh, `$[..]` in place of `$((..))` is undefined."
+  },
+  {
+    "patternId": "SC3008",
+    "title": "In POSIX sh, select loops are undefined.",
+    "description": "In POSIX sh, select loops are undefined."
+  },
+  {
     "patternId": "SC3009",
-    "title": "**In POSIX `sh`, brace expansion is undefined.**",
-    "description": "**In POSIX `sh`, brace expansion is undefined.**"
+    "title": "In POSIX `sh`, brace expansion is undefined.",
+    "description": "In POSIX `sh`, brace expansion is undefined."
   },
   {
     "patternId": "SC3010",
     "title": "In POSIX sh, `[[ ]]` is undefined.",
     "description": "In POSIX sh, `[[ ]]` is undefined."
+  },
+  {
+    "patternId": "SC3011",
+    "title": "In POSIX sh, here-strings are undefined.",
+    "description": "In POSIX sh, here-strings are undefined."
   },
   {
     "patternId": "SC3012",
@@ -2043,6 +2223,11 @@
     "patternId": "SC3015",
     "title": "In POSIX sh, `=~` regex matching is undefined.",
     "description": "In POSIX sh, `=~` regex matching is undefined."
+  },
+  {
+    "patternId": "SC3016",
+    "title": "In POSIX sh, unary `-v` (in place of `[ -n \"${var+x}\" ]`) is undefined.",
+    "description": "In POSIX sh, unary `-v` (in place of `[ -n \"${var+x}\" ]`) is undefined."
   },
   {
     "patternId": "SC3017",
@@ -2066,8 +2251,8 @@
   },
   {
     "patternId": "SC3021",
-    "title": "In POSIX sh, `>&` is undefined.",
-    "description": "In POSIX sh, `>&` is undefined."
+    "title": "In POSIX sh, `>& filename` (as opposed to `>& fd`) is undefined.",
+    "description": "In POSIX sh, `>& filename` (as opposed to `>& fd`) is undefined."
   },
   {
     "patternId": "SC3022",
@@ -2100,6 +2285,11 @@
     "description": "In POSIX sh, VARIABLE is undefined."
   },
   {
+    "patternId": "SC3029",
+    "title": "In POSIX sh, `|&` in place of `2>&1 |` is undefined.",
+    "description": "In POSIX sh, `|&` in place of `2>&1 |` is undefined."
+  },
+  {
     "patternId": "SC3030",
     "title": "In POSIX sh, arrays are undefined.",
     "description": "In POSIX sh, arrays are undefined."
@@ -2110,6 +2300,16 @@
     "description": "In POSIX sh, redirecting from/to globs is undefined."
   },
   {
+    "patternId": "SC3032",
+    "title": "In POSIX sh, coproc is undefined.",
+    "description": "In POSIX sh, coproc is undefined."
+  },
+  {
+    "patternId": "SC3033",
+    "title": "In POSIX sh, naming functions outside [a-zA-Z_][a-zA-Z0-9_]* is undefined.",
+    "description": "In POSIX sh, naming functions outside [a-zA-Z_][a-zA-Z0-9_]* is undefined."
+  },
+  {
     "patternId": "SC3034",
     "title": "In POSIX sh, `$(<file)` is undefined.",
     "description": "In POSIX sh, `$(<file)` is undefined."
@@ -2118,6 +2318,11 @@
     "patternId": "SC3035",
     "title": "In POSIX sh, `` `<file` `` is undefined.",
     "description": "In POSIX sh, `` `<file` `` is undefined."
+  },
+  {
+    "patternId": "SC3036",
+    "title": "In Dash, echo flags besides -n are not supported.",
+    "description": "In Dash, echo flags besides -n are not supported."
   },
   {
     "patternId": "SC3037",
@@ -2138,6 +2343,16 @@
     "patternId": "SC3040",
     "title": "In POSIX sh, set option *[name]* is undefined.",
     "description": "In POSIX sh, set option *[name]* is undefined."
+  },
+  {
+    "patternId": "SC3041",
+    "title": "In POSIX sh, set flag `-E` is undefined",
+    "description": "In POSIX sh, set flag `-E` is undefined"
+  },
+  {
+    "patternId": "SC3042",
+    "title": "In POSIX sh, set flag `--default` is undefined",
+    "description": "In POSIX sh, set flag `--default` is undefined"
   },
   {
     "patternId": "SC3043",
@@ -2178,6 +2393,16 @@
     "patternId": "SC3050",
     "title": "In POSIX sh, `printf %q` is undefined.",
     "description": "In POSIX sh, `printf %q` is undefined."
+  },
+  {
+    "patternId": "SC3051",
+    "title": "In POSIX sh, `source` in place of `.` is undefined",
+    "description": "In POSIX sh, `source` in place of `.` is undefined"
+  },
+  {
+    "patternId": "SC3052",
+    "title": "In POSIX sh, arithmetic base conversion is undefined",
+    "description": "In POSIX sh, arithmetic base conversion is undefined"
   },
   {
     "patternId": "SC3053",

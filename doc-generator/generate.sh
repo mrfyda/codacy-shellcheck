@@ -3,7 +3,7 @@
 SCRIPT_HOME="$( cd "$( dirname "$0" )" && pwd )"
 DOCS_HOME="${SCRIPT_HOME}/../docs"
 DESCRIPTION_HOME="${DOCS_HOME}/description"
-VERSION="0.8.0"
+VERSION="v0.9.0"
 
 rm -rf shellcheck shellcheck.wiki
 git clone -b v$VERSION --single-branch --depth 1 https://github.com/koalaman/shellcheck.git
